@@ -1,0 +1,72 @@
+<svg 
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 1200 1500">
+	
+	<!-- nappali felso falak -->
+	<line x1="200" y1="195" x2="530" y2="195" stroke-width="10" stroke="black"/>
+	<line x1="530" y1="195" x2="890" y2="195" stroke-width="2" stroke="black"/>
+	<line x1="890" y1="195" x2="919.5" y2="195" stroke-width="10" stroke="black"/>
+	<line x1="919" y1="195" x2="1079" y2="195" stroke-width="2" stroke="black"/>
+	<line x1="1079" y1="195" x2="1111" y2="195" stroke-width="10" stroke="black"/>
+	
+	<!-- nappali jobb oldali falak -->
+	<line x1="1116" y1="200" x2="1116" y2="232" stroke-width="10" stroke="black"/>
+	<line x1="1116" y1="232" x2="1116" y2="485" stroke-width="2" stroke="black"/>
+	<line x1="1116" y1="485" x2="1116" y2="588" stroke-width="10" stroke="black"/>
+	<line x1="1116" y1="588" x2="1116" y2="699" stroke-width="2" stroke="black"/>
+	<line x1="1116" y1="699" x2="1116" y2="764" stroke-width="10" stroke="black"/>
+	
+	<!-- nappali bal oldali falak -->
+	<line x1="195" y1="200" x2="195" y2="488" stroke-width="10" stroke="black"/>
+	<line x1="195" y1="488" x2="195" y2="598" stroke-width="2" stroke="black"/>
+	<line x1="195" y1="598" x2="195" y2="669" stroke-width="10" stroke="black"/>
+	
+	<!-- nappali also falak -->
+	<line x1="1111" y1="769" x2="755" y2="769" stroke-width="10" stroke="black"/>
+	<line x1="200" y1="674" x2="634" y2="674" stroke-width="10" stroke="black"/>
+	
+	<!-- kozlekedo jobb oldal falak -->
+	<line x1="760" y1="769" x2="760" y2="953" stroke-width="10" stroke="black"/>
+	<line x1="760" y1="953" x2="760" y2="1043" stroke-width="2" stroke="black"/>
+	<line x1="760" y1="1043" x2="760" y2="1167" stroke-width="10" stroke="black"/>
+	<line x1="760" y1="1167" x2="760" y2="1257" stroke-width="2" stroke="black"/>
+	<line x1="760" y1="1257" x2="760" y2="1268" stroke-width="10" stroke="black"/>
+	
+	<!-- kozlekedo bal oldal falak -->
+	<line x1="629" y1="674" x2="629" y2="785" stroke-width="10" stroke="black"/>
+	<line x1="629" y1="785" x2="629" y2="855" stroke-width="2" stroke="black"/>
+	<line x1="629" y1="855" x2="629" y2="904" stroke-width="10" stroke="black"/>
+	<line x1="629" y1="899" x2="429" y2="899" stroke-width="10" stroke="black"/>
+	<line x1="434" y1="904" x2="434" y2="1004" stroke-width="2" stroke="black"/>
+	<line x1="548" y1="1005" x2="548" y2="1276" stroke-width="10" stroke="black"/>
+	
+	<!-- kozlekedo also falak -->
+	<line x1="548" y1="1280" x2="608" y2="1280" stroke-width="10" stroke="black"/>
+	<line x1="608" y1="1280" x2="709" y2="1280" stroke-width="2" stroke="black"/>
+	<line x1="709" y1="1280" x2="755" y2="1280" stroke-width="10" stroke="black"/>
+	<line x1="760" y1="1285" x2="760" y2="1260" stroke-width="10" stroke="black"/>
+	
+	<!-- furdoszoba falak -->
+	<line x1="434" y1="899" x2="434" y2="674" stroke-width="10" stroke="black"/>
+	<line x1="195" y1="679" x2="195" y2="1004" stroke-width="10" stroke="black"/>
+	<line x1="200" y1="1009" x2="449" y2="1009" stroke-width="10" stroke="black"/>
+	<line x1="449" y1="1009" x2="543" y2="1009" stroke-width="2" stroke="black"/>
+	
+	<!-- haloszoba falak -->
+	<line x1="195" y1="1014" x2="195" y2="1367" stroke-width="10" stroke="black"/>
+	<line x1="200" y1="1367" x2="543" y2="1367" stroke-width="10" stroke="black"/>
+	<line x1="548" y1="1367" x2="548" y2="1002" stroke-width="10" stroke="black"/>
+	
+	<!-- csongi szoba falak -->
+	<line x1="1116" y1="774" x2="1116" y2="821" stroke-width="10" stroke="black"/>
+	<line x1="1116" y1="821" x2="1116" y2="1001" stroke-width="2" stroke="black"/>
+	<line x1="1116" y1="1001" x2="1116" y2="1081" stroke-width="10" stroke="black"/>
+	<line x1="1111" y1="1081" x2="765" y2="1081" stroke-width="10" stroke="black"/>
+	
+	<!-- nori szoba falak -->
+	<line x1="1116" y1="1086" x2="1116" y2="1445" stroke-width="10" stroke="black"/>
+	<line x1="1111" y1="1450" x2="1031" y2="1450" stroke-width="10" stroke="black"/>
+	<line x1="1031" y1="1450" x2="851" y2="1450" stroke-width="2" stroke="black"/>
+	<line x1="851" y1="1450" x2="771" y2="1450" stroke-width="10" stroke="black"/>
+	<line x1="769" y1="1450" x2="769" y2="1257" stroke-width="10" stroke="black"/>
+</svg>
