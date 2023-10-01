@@ -424,14 +424,18 @@
 		<circle cx="1071" cy="1465" r="10" fill="yellow"/>
 		<circle cx="658" cy="1310" r="10" fill="yellow"/>
 		
+		<text x="1065" y="1468" fill="black" font-size="12">A*</text>
 		<text x="700" y="1500" fill="black" font-size="12">Lámpa középen</text>
 		<text x="700" y="1515" fill="black" font-size="12">Mozgásérzékelő felett</text>
 		
+		<text x="653" y="1312" fill="black" font-size="12">A*</text>
 		<text x="1000" y="1500" fill="black" font-size="12">Lámpa középen</text>
 		<text x="1000" y="1515" fill="black" font-size="12">Lehető legmagasabban</text>
 		
+		<text x="235" y="1385" fill="black" font-size="12">A*</text>
 		<text x="240" y="1500" fill="black" font-size="12">Lámpa középen</text>
 		<text x="240" y="1515" fill="black" font-size="12">Lehető legmagasabban</text>
+		<text x="240" y="1530" fill="black" font-size="12">A* együtt kapcsolható</text>
 	</g>
 	
 	<!-- mosokonyha konnektorok -->
@@ -441,8 +445,6 @@
 		<text x="440" y="715" fill="black" font-size="12">Hőszivattyú</text>
 		<text x="440" y="730" fill="black" font-size="12">90cm magas</text>
 		<text x="440" y="745" fill="black" font-size="12">30cm faltól</text>
-		
-		
 		
 		<line x1="620" y1="595" x2="570" y2="686" stroke-width="0.25" stroke="black"/>
 		<line x1="620" y1="595" x2="584" y2="686" stroke-width="0.25" stroke="black"/>
