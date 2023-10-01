@@ -104,6 +104,14 @@
 		<line x1="208" y1="613" x2="215" y2="664" stroke-width="2" stroke="orange"/>
 		
 		<line x1="782" y1="1277" x2="940" y2="1280" stroke-width="2" stroke="orange"/>
+		
+		<line x1="429" y1="1017" x2="371" y2="1188" stroke-width="2" stroke="orange"/>
+		<line x1="203" y1="1060" x2="371" y2="1188" stroke-width="2" stroke="orange"/>
+		<line x1="429" y1="1022" x2="210" y2="1036" stroke-width="2" stroke="orange"/>
+		<line x1="208" y1="1060" x2="210" y2="1036" stroke-width="2" stroke="orange"/>
+		<line x1="203" y1="1308" x2="371" y2="1188" stroke-width="2" stroke="orange"/>
+		<line x1="205" y1="1308" x2="210" y2="1036" stroke-width="2" stroke="orange"/>
+		<line x1="210" y1="1308" x2="210" y2="1284" stroke-width="2" stroke="orange"/>
 	</g>
 	
 	
@@ -242,4 +250,75 @@
 		<text x="1000" y="1400" fill="black" font-size="12">20cm magas</text>
 		<text x="1000" y="1415" fill="black" font-size="12">30cm faltól</text>
 	</g>
+	
+	<!-- halo szoba kapcsolok -->
+	<g class="kapcsolo">
+		<line x1="429" y1="1020" x2="380" y2="1045" stroke-width="0.25" stroke="black"/>
+		<line x1="429" y1="1017" x2="429" y2="1027" stroke-width="10" stroke="blue"/>
+		<text x="350" y="1050" fill="black" font-size="12">90cm magas</text>
+		<text x="350" y="1065" fill="black" font-size="12">15cm ajtótól</text>
+		
+		<circle cx="371" cy="1188" r="10" fill="yellow"/>
+		<text x="385" y="1188" fill="black" font-size="12">- Csillár középen</text>
+		
+		<line x1="145" y1="990" x2="210" y2="1036" stroke-width="0.25" stroke="black"/>
+		<text x="80" y="965" fill="black" font-size="12">Falból kiálló lámpa</text>
+		<text x="80" y="980" fill="black" font-size="12">150cm magas</text>
+		<text x="80" y="995" fill="black" font-size="12">22cm faltól</text>
+		<circle cx="210" cy="1036" r="10" fill="yellow"/>
+		
+		<line x1="145" y1="1060" x2="210" y2="1060" stroke-width="0.25" stroke="black"/>
+		<line x1="203" y1="1060" x2="213" y2="1060" stroke-width="10" stroke="blue"/>
+		<text x="80" y="1050" fill="black" font-size="12">90cm magas</text>
+		<text x="80" y="1065" fill="black" font-size="12">22cm faltól</text>
+		
+		<line x1="210" y1="1284" x2="145" y2="1235" stroke-width="0.25" stroke="black"/>
+		<text x="80" y="1220" fill="black" font-size="12">Falból kiálló lámpa</text>
+		<text x="80" y="1235" fill="black" font-size="12">150cm magas</text>
+		<text x="80" y="1250" fill="black" font-size="12">270cm faltól</text>
+		<circle cx="210" cy="1284" r="10" fill="yellow"/>
+		
+		<line x1="145" y1="1308" x2="210" y2="1308" stroke-width="0.25" stroke="black"/>
+		<line x1="203" y1="1308" x2="213" y2="1308" stroke-width="10" stroke="blue"/>
+		<text x="80" y="1308" fill="black" font-size="12">90cm magas</text>
+		<text x="80" y="1323" fill="black" font-size="12">270cm faltól</text>
+	</g>
+	
+	<!-- halo szoba konnektorok -->
+	<g class="konnektor" >
+		<line x1="220" y1="1060" x2="150" y2="1105" stroke-width="0.25" stroke="black"/>
+		<circle cx="220" cy="1060" r="5" fill="red"/>
+		<circle cx="231" cy="1060" r="5" fill="red"/>
+		<text x="40" y="1100" fill="black" font-size="12">2 konnektor a kapcsoló</text>
+		<text x="40" y="1115" fill="black" font-size="12">mellett, a felettő lévő lámpával</text>
+		<text x="40" y="1130" fill="black" font-size="12">középre igazítva</text>
+		
+		<line x1="220" y1="1308" x2="150" y2="1355" stroke-width="0.25" stroke="black"/>
+		<circle cx="220" cy="1308" r="5" fill="red"/>
+		<circle cx="231" cy="1308" r="5" fill="red"/>
+		<text x="40" y="1348" fill="black" font-size="12">2 konnektor a kapcsoló</text>
+		<text x="40" y="1363" fill="black" font-size="12">mellett, a felettő lévő lámpával</text>
+		<text x="40" y="1378" fill="black" font-size="12">középre igazítva</text>
+		
+		
+		
+		
+		
+		
+		<line x1="795" y1="781" x2="795" y2="795" stroke-width="0.25" stroke="black"/>
+		<circle cx="795" cy="781" r="5" fill="red"/>
+		<text x="775" y="800" fill="black" font-size="12">20cm magas</text>
+		<text x="775" y="815" fill="black" font-size="12">30cm faltól</text>
+		
+		<line x1="1050" y1="804" x2="1103" y2="804" stroke-width="0.25" stroke="black"/>
+		<circle cx="1103" cy="804" r="5" fill="red"/>
+		<text x="1000" y="800" fill="black" font-size="12">20cm magas</text>
+		<text x="1000" y="815" fill="black" font-size="12">30cm faltól</text>
+		
+		<line x1="1060" y1="1080" x2="1081" y2="1098" stroke-width="0.25" stroke="black"/>
+		<circle cx="1081" cy="1098" r="5" fill="red"/>
+		<text x="1000" y="1070" fill="black" font-size="12">20cm magas</text>
+		<text x="1000" y="1085" fill="black" font-size="12">30cm faltól</text>
+	</g>
+	
 </svg>
