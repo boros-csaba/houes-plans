@@ -14,28 +14,88 @@
 	]]>
 	</style>
 	
-	<!-- nappali felso falak -->
-	<line x1="200" y1="195" x2="530" y2="195" stroke-width="10" stroke="black"/>
-	<line x1="530" y1="195" x2="890" y2="195" stroke-width="2" stroke="black"/>
-	<line x1="890" y1="195" x2="919.5" y2="195" stroke-width="10" stroke="black"/>
-	<line x1="919" y1="195" x2="1079" y2="195" stroke-width="2" stroke="black"/>
-	<line x1="1079" y1="195" x2="1111" y2="195" stroke-width="10" stroke="black"/>
+	<!-- falak -->
+	<g>
+		<!-- nappali felso falak -->
+		<line x1="200" y1="195" x2="530" y2="195" stroke-width="10" stroke="black"/>
+		<line x1="530" y1="195" x2="890" y2="195" stroke-width="2" stroke="black"/>
+		<line x1="890" y1="195" x2="919.5" y2="195" stroke-width="10" stroke="black"/>
+		<line x1="919" y1="195" x2="1079" y2="195" stroke-width="2" stroke="black"/>
+		<line x1="1079" y1="195" x2="1111" y2="195" stroke-width="10" stroke="black"/>
+		
+		<!-- nappali jobb oldali falak -->
+		<line x1="1116" y1="200" x2="1116" y2="232" stroke-width="10" stroke="black"/>
+		<line x1="1116" y1="232" x2="1116" y2="485" stroke-width="2" stroke="black"/>
+		<line x1="1116" y1="485" x2="1116" y2="588" stroke-width="10" stroke="black"/>
+		<line x1="1116" y1="588" x2="1116" y2="699" stroke-width="2" stroke="black"/>
+		<line x1="1116" y1="699" x2="1116" y2="764" stroke-width="10" stroke="black"/>
+		
+		<!-- nappali bal oldali falak -->
+		<line x1="195" y1="200" x2="195" y2="488" stroke-width="10" stroke="black"/>
+		<line x1="195" y1="488" x2="195" y2="598" stroke-width="2" stroke="black"/>
+		<line x1="195" y1="598" x2="195" y2="669" stroke-width="10" stroke="black"/>
+		
+		<!-- nappali also falak -->
+		<line x1="1111" y1="769" x2="755" y2="769" stroke-width="10" stroke="black"/>
+		<line x1="200" y1="674" x2="634" y2="674" stroke-width="10" stroke="black"/>
+		
+		<!-- kozlekedo jobb oldal falak -->
+		<line x1="760" y1="769" x2="760" y2="953" stroke-width="10" stroke="black"/>
+		<line x1="760" y1="953" x2="760" y2="1043" stroke-width="2" stroke="black"/>
+		<line x1="760" y1="1043" x2="760" y2="1167" stroke-width="10" stroke="black"/>
+		<line x1="760" y1="1167" x2="760" y2="1257" stroke-width="2" stroke="black"/>
+		<line x1="760" y1="1257" x2="760" y2="1268" stroke-width="10" stroke="black"/>
+		
+		<!-- kozlekedo bal oldal falak -->
+		<line x1="629" y1="674" x2="629" y2="785" stroke-width="10" stroke="black"/>
+		<line x1="629" y1="785" x2="629" y2="855" stroke-width="2" stroke="black"/>
+		<line x1="629" y1="855" x2="629" y2="904" stroke-width="10" stroke="black"/>
+		<line x1="629" y1="899" x2="429" y2="899" stroke-width="10" stroke="black"/>
+		<line x1="434" y1="904" x2="434" y2="1004" stroke-width="2" stroke="black"/>
+		<line x1="548" y1="1005" x2="548" y2="1276" stroke-width="10" stroke="black"/>
+		
+		<!-- kozlekedo also falak -->
+		<line x1="548" y1="1280" x2="608" y2="1280" stroke-width="10" stroke="black"/>
+		<line x1="608" y1="1280" x2="709" y2="1280" stroke-width="2" stroke="black"/>
+		<line x1="709" y1="1280" x2="755" y2="1280" stroke-width="10" stroke="black"/>
+		<line x1="760" y1="1285" x2="760" y2="1260" stroke-width="10" stroke="black"/>
+		
+		<!-- furdoszoba falak -->
+		<line x1="434" y1="899" x2="434" y2="674" stroke-width="10" stroke="black"/>
+		<line x1="195" y1="679" x2="195" y2="1004" stroke-width="10" stroke="black"/>
+		<line x1="200" y1="1009" x2="449" y2="1009" stroke-width="10" stroke="black"/>
+		<line x1="449" y1="1009" x2="543" y2="1009" stroke-width="2" stroke="black"/>
+		
+		<!-- haloszoba falak -->
+		<line x1="195" y1="1014" x2="195" y2="1367" stroke-width="10" stroke="black"/>
+		<line x1="200" y1="1367" x2="543" y2="1367" stroke-width="10" stroke="black"/>
+		<line x1="548" y1="1367" x2="548" y2="1002" stroke-width="10" stroke="black"/>
+		
+		<!-- nori szoba falak -->
+		<line x1="1116" y1="1086" x2="1116" y2="1445" stroke-width="10" stroke="black"/>
+		<line x1="1111" y1="1450" x2="1031" y2="1450" stroke-width="10" stroke="black"/>
+		<line x1="1031" y1="1450" x2="851" y2="1450" stroke-width="2" stroke="black"/>
+		<line x1="851" y1="1450" x2="771" y2="1450" stroke-width="10" stroke="black"/>
+		<line x1="769" y1="1450" x2="769" y2="1257" stroke-width="10" stroke="black"/>
+		
+		<!-- csongi szoba falak -->
+		<line x1="1116" y1="774" x2="1116" y2="821" stroke-width="10" stroke="black"/>
+		<line x1="1116" y1="821" x2="1116" y2="1001" stroke-width="2" stroke="black"/>
+		<line x1="1116" y1="1001" x2="1116" y2="1081" stroke-width="10" stroke="black"/>
+		<line x1="1111" y1="1081" x2="765" y2="1081" stroke-width="10" stroke="black"/>
+	</g>
 	
-	<!-- nappali jobb oldali falak -->
-	<line x1="1116" y1="200" x2="1116" y2="232" stroke-width="10" stroke="black"/>
-	<line x1="1116" y1="232" x2="1116" y2="485" stroke-width="2" stroke="black"/>
-	<line x1="1116" y1="485" x2="1116" y2="588" stroke-width="10" stroke="black"/>
-	<line x1="1116" y1="588" x2="1116" y2="699" stroke-width="2" stroke="black"/>
-	<line x1="1116" y1="699" x2="1116" y2="764" stroke-width="10" stroke="black"/>
+	<!-- kapcsoló vonalak-->
+	<g class="kapcsolo-vonal">
+		<line x1="515" y1="210" x2="240" y2="280" stroke-width="2" stroke="orange"/>
+		<line x1="265" y1="609" x2="515" y2="210" stroke-width="2" stroke="orange"/>
+		<line x1="772" y1="923" x2="940" y2="927" stroke-width="2" stroke="orange"/>
+		<line x1="203" y1="615" x2="265" y2="609" stroke-width="2" stroke="orange"/>
+		<line x1="515" y1="210" x2="365" y2="609" stroke-width="2" stroke="orange"/>
+		<line x1="515" y1="210" x2="465" y2="609" stroke-width="2" stroke="orange"/>
+		<line x1="515" y1="210" x2="565" y2="609" stroke-width="2" stroke="orange"/>
+	</g>
 	
-	<!-- nappali bal oldali falak -->
-	<line x1="195" y1="200" x2="195" y2="488" stroke-width="10" stroke="black"/>
-	<line x1="195" y1="488" x2="195" y2="598" stroke-width="2" stroke="black"/>
-	<line x1="195" y1="598" x2="195" y2="669" stroke-width="10" stroke="black"/>
-	
-	<!-- nappali also falak -->
-	<line x1="1111" y1="769" x2="755" y2="769" stroke-width="10" stroke="black"/>
-	<line x1="200" y1="674" x2="634" y2="674" stroke-width="10" stroke="black"/>
 	
 	<!-- nappali rész konnektorok -->
 	<g class="konnektor" >
@@ -52,8 +112,6 @@
 	
 	<!-- nappali rész kapcsolok -->
 	<g class="kapcsolo">
-		<line x1="515" y1="210" x2="240" y2="280" stroke-width="1" stroke="orange"/>
-		
 		<line x1="525" y1="210" x2="520" y2="210" stroke-width="0.25" stroke="black"/>
 		<line x1="515" y1="203" x2="515" y2="213" stroke-width="10" stroke="blue"/>
 		<text x="525" y="210" fill="black" font-size="12">90cm magas</text>
@@ -69,73 +127,32 @@
 	
 	<!-- tv rész kapcsolok -->
 	<g class="kapcsolo">
-		<line x1="265" y1="609" x2="515" y2="210" stroke-width="1" stroke="orange"/>
-		
-		<line x1="525" y1="210" x2="520" y2="210" stroke-width="0.25" stroke="black"/>
-		<line x1="515" y1="203" x2="515" y2="213" stroke-width="10" stroke="blue"/>
-		<text x="525" y="210" fill="black" font-size="12">90cm magas</text>
-		<text x="525" y="225" fill="black" font-size="12">15cm ablaktól</text>
+		<line x1="208" y1="613" x2="215" y2="575" stroke-width="0.25" stroke="black"/>
+		<line x1="203" y1="613" x2="213" y2="613" stroke-width="10" stroke="blue"/>
+		<text x="203" y="560" fill="black" font-size="12">90cm magas</text>
+		<text x="203" y="575" fill="black" font-size="12">15cm ablaktól</text>
 		
 		<line x1="265" y1="609" x2="265" y2="669" stroke-width="0.5" stroke="black"/>
 		<text x="265" y="645" fill="black" font-size="12">60cm</text>
 		<line x1="200" y1="609" x2="265" y2="609" stroke-width="0.5" stroke="black"/>
 		<text x="215" y="609" fill="black" font-size="12">65cm</text>
+		
+		<line x1="265" y1="609" x2="365" y2="609" stroke-width="0.5" stroke="black"/>
+		<text x="300" y="609" fill="black" font-size="12">100cm</text>
+		
+		<line x1="365" y1="609" x2="465" y2="609" stroke-width="0.5" stroke="black"/>
+		<text x="400" y="609" fill="black" font-size="12">100cm</text>
+		
+		<line x1="465" y1="609" x2="565" y2="609" stroke-width="0.5" stroke="black"/>
+		<text x="500" y="609" fill="black" font-size="12">100cm</text>
+		
 		<circle cx="265" cy="609" r="15" fill="yellow"/>
-		<text x="260" y="285" fill="black" font-size="12">- Sín lámpa</text>
-		
 		<circle cx="365" cy="609" r="15" fill="yellow"/>
-		
 		<circle cx="465" cy="609" r="15" fill="yellow"/>
-		
 		<circle cx="565" cy="609" r="15" fill="yellow"/>
 	</g>
 	
-	<!-- kozlekedo jobb oldal falak -->
-	<line x1="760" y1="769" x2="760" y2="953" stroke-width="10" stroke="black"/>
-	<line x1="760" y1="953" x2="760" y2="1043" stroke-width="2" stroke="black"/>
-	<line x1="760" y1="1043" x2="760" y2="1167" stroke-width="10" stroke="black"/>
-	<line x1="760" y1="1167" x2="760" y2="1257" stroke-width="2" stroke="black"/>
-	<line x1="760" y1="1257" x2="760" y2="1268" stroke-width="10" stroke="black"/>
 	
-	<!-- kozlekedo bal oldal falak -->
-	<line x1="629" y1="674" x2="629" y2="785" stroke-width="10" stroke="black"/>
-	<line x1="629" y1="785" x2="629" y2="855" stroke-width="2" stroke="black"/>
-	<line x1="629" y1="855" x2="629" y2="904" stroke-width="10" stroke="black"/>
-	<line x1="629" y1="899" x2="429" y2="899" stroke-width="10" stroke="black"/>
-	<line x1="434" y1="904" x2="434" y2="1004" stroke-width="2" stroke="black"/>
-	<line x1="548" y1="1005" x2="548" y2="1276" stroke-width="10" stroke="black"/>
-	
-	<!-- kozlekedo also falak -->
-	<line x1="548" y1="1280" x2="608" y2="1280" stroke-width="10" stroke="black"/>
-	<line x1="608" y1="1280" x2="709" y2="1280" stroke-width="2" stroke="black"/>
-	<line x1="709" y1="1280" x2="755" y2="1280" stroke-width="10" stroke="black"/>
-	<line x1="760" y1="1285" x2="760" y2="1260" stroke-width="10" stroke="black"/>
-	
-	<!-- furdoszoba falak -->
-	<line x1="434" y1="899" x2="434" y2="674" stroke-width="10" stroke="black"/>
-	<line x1="195" y1="679" x2="195" y2="1004" stroke-width="10" stroke="black"/>
-	<line x1="200" y1="1009" x2="449" y2="1009" stroke-width="10" stroke="black"/>
-	<line x1="449" y1="1009" x2="543" y2="1009" stroke-width="2" stroke="black"/>
-	
-	<!-- haloszoba falak -->
-	<line x1="195" y1="1014" x2="195" y2="1367" stroke-width="10" stroke="black"/>
-	<line x1="200" y1="1367" x2="543" y2="1367" stroke-width="10" stroke="black"/>
-	<line x1="548" y1="1367" x2="548" y2="1002" stroke-width="10" stroke="black"/>
-	
-	<!-- nori szoba falak -->
-	<line x1="1116" y1="1086" x2="1116" y2="1445" stroke-width="10" stroke="black"/>
-	<line x1="1111" y1="1450" x2="1031" y2="1450" stroke-width="10" stroke="black"/>
-	<line x1="1031" y1="1450" x2="851" y2="1450" stroke-width="2" stroke="black"/>
-	<line x1="851" y1="1450" x2="771" y2="1450" stroke-width="10" stroke="black"/>
-	<line x1="769" y1="1450" x2="769" y2="1257" stroke-width="10" stroke="black"/>
-	
-	
-	
-	<!-- csongi szoba falak -->
-	<line x1="1116" y1="774" x2="1116" y2="821" stroke-width="10" stroke="black"/>
-	<line x1="1116" y1="821" x2="1116" y2="1001" stroke-width="2" stroke="black"/>
-	<line x1="1116" y1="1001" x2="1116" y2="1081" stroke-width="10" stroke="black"/>
-	<line x1="1111" y1="1081" x2="765" y2="1081" stroke-width="10" stroke="black"/>
 	
 	<!-- csongi szoba konnektorok -->
 	<g class="konnektor" >
@@ -162,8 +179,6 @@
 	
 	<!-- csongi szoba kapcsolok -->
 	<g class="kapcsolo">
-		<line x1="772" y1="923" x2="940" y2="927" stroke-width="1" stroke="orange"/>
-		
 		<line x1="772" y1="918" x2="800" y2="900" stroke-width="0.25" stroke="black"/>
 		<line x1="772" y1="918" x2="772" y2="928" stroke-width="10" stroke="blue"/>
 		<text x="802" y="900" fill="black" font-size="12">90cm magas</text>
