@@ -2,6 +2,21 @@
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 1200 1500">
 	
+	
+	<style>
+	<![CDATA[
+		text.konnektor {
+			//fill: white !important;
+		}
+		circle.konnektor {
+			//fill: white !important;
+		}
+		line.konnektor {
+			//stroke: white !important;
+		}
+	]]>
+	</style>
+	
 	<!-- nappali felso falak -->
 	<line x1="200" y1="195" x2="530" y2="195" stroke-width="10" stroke="black"/>
 	<line x1="530" y1="195" x2="890" y2="195" stroke-width="2" stroke="black"/>
@@ -57,16 +72,48 @@
 	<line x1="200" y1="1367" x2="543" y2="1367" stroke-width="10" stroke="black"/>
 	<line x1="548" y1="1367" x2="548" y2="1002" stroke-width="10" stroke="black"/>
 	
-	<!-- csongi szoba falak -->
-	<line x1="1116" y1="774" x2="1116" y2="821" stroke-width="10" stroke="black"/>
-	<line x1="1116" y1="821" x2="1116" y2="1001" stroke-width="2" stroke="black"/>
-	<line x1="1116" y1="1001" x2="1116" y2="1081" stroke-width="10" stroke="black"/>
-	<line x1="1111" y1="1081" x2="765" y2="1081" stroke-width="10" stroke="black"/>
-	
 	<!-- nori szoba falak -->
 	<line x1="1116" y1="1086" x2="1116" y2="1445" stroke-width="10" stroke="black"/>
 	<line x1="1111" y1="1450" x2="1031" y2="1450" stroke-width="10" stroke="black"/>
 	<line x1="1031" y1="1450" x2="851" y2="1450" stroke-width="2" stroke="black"/>
 	<line x1="851" y1="1450" x2="771" y2="1450" stroke-width="10" stroke="black"/>
 	<line x1="769" y1="1450" x2="769" y2="1257" stroke-width="10" stroke="black"/>
+	
+	<!-- csongi szoba falak -->
+	<line x1="1116" y1="774" x2="1116" y2="821" stroke-width="10" stroke="black"/>
+	<line x1="1116" y1="821" x2="1116" y2="1001" stroke-width="2" stroke="black"/>
+	<line x1="1116" y1="1001" x2="1116" y2="1081" stroke-width="10" stroke="black"/>
+	<line x1="1111" y1="1081" x2="765" y2="1081" stroke-width="10" stroke="black"/>
+	
+	<!-- csongi szoba konnektorok -->
+	<line class="konnektor" x1="772" y1="938" x2="800" y2="990" stroke-width="0.25" stroke="black"/>
+	<circle class="konnektor" cx="772" cy="938" r="5" fill="red"/>
+	<text class="konnektor" x="802" y="990" fill="black" font-size="12">20cm magas</text>
+	<text class="konnektor" x="802" y="1005" fill="black" font-size="12">15cm ajtótól</text>
+	
+	<line class="konnektor" x1="795" y1="781" x2="795" y2="795" stroke-width="0.25" stroke="black"/>
+	<circle class="konnektor" cx="795" cy="781" r="5" fill="red"/>
+	<text class="konnektor" x="775" y="800" fill="black" font-size="12">20cm magas</text>
+	<text class="konnektor" x="775" y="815" fill="black" font-size="12">30cm faltól</text>
+	
+	<line class="konnektor" x1="1050" y1="804" x2="1103" y2="804" stroke-width="0.25" stroke="black"/>
+	<circle class="konnektor" cx="1103" cy="804" r="5" fill="red"/>
+	<text class="konnektor" x="1000" y="800" fill="black" font-size="12">20cm magas</text>
+	<text class="konnektor" x="1000" y="815" fill="black" font-size="12">30cm faltól</text>
+	
+	<line class="konnektor" x1="1060" y1="1050" x2="1081" y2="1068" stroke-width="0.25" stroke="black"/>
+	<circle class="konnektor" cx="1081" cy="1068" r="5" fill="red"/>
+	<text class="konnektor" x="1000" y="1040" fill="black" font-size="12">20cm magas</text>
+	<text class="konnektor" x="1000" y="1055" fill="black" font-size="12">30cm faltól</text>
+	
+	<!-- csongi szoba kapcsolok -->
+	<line x1="772" y1="923" x2="940" y2="927" stroke-width="1" stroke="orange"/>
+	
+	<line x1="772" y1="918" x2="800" y2="900" stroke-width="0.25" stroke="black"/>
+	<line x1="772" y1="918" x2="772" y2="928" stroke-width="10" stroke="blue"/>
+	<text x="802" y="900" fill="black" font-size="12">90cm magas</text>
+	<text x="802" y="915" fill="black" font-size="12">15cm ajtótól</text>
+	
+	<circle cx="940" cy="927" r="15" fill="yellow"/>
+	<text x="960" y="930" fill="black" font-size="12">- Csillár középen</text>
 </svg>
