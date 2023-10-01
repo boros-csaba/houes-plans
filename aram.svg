@@ -1,6 +1,6 @@
 <svg 
 	xmlns="http://www.w3.org/2000/svg"
-	viewBox="0 0 1200 1500">
+	viewBox="0 0 1200 1550">
 	
 	
 	<style>
@@ -68,7 +68,9 @@
 		
 		<!-- haloszoba falak -->
 		<line x1="195" y1="1014" x2="195" y2="1367" stroke-width="10" stroke="black"/>
-		<line x1="200" y1="1367" x2="543" y2="1367" stroke-width="10" stroke="black"/>
+		<line x1="200" y1="1367" x2="281" y2="1367" stroke-width="10" stroke="black"/>
+		<line x1="281" y1="1367" x2="461" y2="1367" stroke-width="2" stroke="black"/>
+		<line x1="461" y1="1367" x2="543" y2="1367" stroke-width="10" stroke="black"/>
 		<line x1="548" y1="1367" x2="548" y2="1002" stroke-width="10" stroke="black"/>
 		
 		<!-- nori szoba falak -->
@@ -114,6 +116,13 @@
 		
 		<line x1="598" y1="1252" x2="694" y2="1170" stroke-width="2" stroke="orange"/>
 		<line x1="598" y1="1252" x2="563" y2="1245" stroke-width="2" stroke="orange"/>
+		
+		<line x1="658" y1="1287" x2="563" y2="1325" stroke-width="2" stroke="orange"/>
+		<line x1="658" y1="1287" x2="754" y2="1325" stroke-width="2" stroke="orange"/>
+		
+		<line x1="598" y1="1252" x2="240" y2="1382" stroke-width="2" stroke="orange"/>
+		<line x1="598" y1="1252" x2="658" y2="1310" stroke-width="2" stroke="orange"/>
+		<line x1="598" y1="1252" x2="1071" y2="1465" stroke-width="2" stroke="orange"/>
 	</g>
 	
 	
@@ -308,13 +317,13 @@
 		<text x="40" y="1363" fill="black" font-size="12">mellett, a felettő lévő lámpával</text>
 		<text x="40" y="1378" fill="black" font-size="12">középre igazítva</text>
 		
-		<line x1="237" y1="1400" x2="230" y2="1354" stroke-width="0.25" stroke="black"/>
-		<line x1="237" y1="1400" x2="243" y2="1354" stroke-width="0.25" stroke="black"/>
+		<line x1="137" y1="1410" x2="230" y2="1354" stroke-width="0.25" stroke="black"/>
+		<line x1="137" y1="1410" x2="243" y2="1354" stroke-width="0.25" stroke="black"/>
 		<circle cx="230" cy="1354" r="5" fill="red"/>
 		<circle cx="243" cy="1354" r="5" fill="green"/>
-		<text x="200" y="1400" fill="black" font-size="12">konnektor és internet</text>
-		<text x="200" y="1415" fill="black" font-size="12">20cm magas</text>
-		<text x="200" y="1430" fill="black" font-size="12">30cm faltól</text>
+		<text x="100" y="1420" fill="black" font-size="12">konnektor és internet</text>
+		<text x="100" y="1435" fill="black" font-size="12">20cm magas</text>
+		<text x="100" y="1450" fill="black" font-size="12">30cm faltól</text>
 		
 		<line x1="535" y1="1035" x2="520" y2="1025" stroke-width="0.25" stroke="black"/>
 		<circle cx="535" cy="1035" r="5" fill="red"/>
@@ -376,6 +385,43 @@
 		<text x="680" y="1215" fill="black" font-size="12">egymás alatt, a kapcsoló 90cm magasan</text>
 		<text x="680" y="1230" fill="black" font-size="12">15cm ajtótól</text>
 		
+	</g>
+	
+	<!-- elso kinti kapcsolok -->
+	<g class="kapcsolo">
+		<line x1="658" y1="1282" x2="608" y2="1440" stroke-width="0.25" stroke="black"/>
+		<line x1="658" y1="1282" x2="658" y2="1292" stroke-width="10" stroke="DarkSalmon"/>
+		<text x="570" y="1450" fill="black" font-size="12">Mozgásérzékelő</text>
+		<text x="550" y="1465" fill="black" font-size="12">Ajtó felett 15cm, középen</text>
+		
+		<line x1="754" y1="1325" x2="754" y2="1367" stroke-width="0.25" stroke="black"/>		
+		<circle cx="563" cy="1325" r="10" fill="yellow"/>
+		<circle cx="754" cy="1325" r="10" fill="yellow"/>
+		<line x1="563" y1="1280" x2="563" y2="1367" stroke-width="0.25" stroke="black"/>
+		<text x="563" y="1350" fill="black" font-size="12">Középen</text>
+		<text x="563" y="1365" fill="black" font-size="12">160cm magas</text>
+		<text x="630" y="1375" fill="black" font-size="12">Szemben a másik lámpával</text>
+		<text x="695" y="1390" fill="black" font-size="12">160cm magas</text>
+	</g>
+	
+	<!-- kinti fények kapcsolok -->
+	<g class="kapcsolo">
+		<line x1="658" y1="1310" x2="700" y2="1500" stroke-width="0.25" stroke="black"/>
+		<line x1="1071" y1="1465" x2="1060" y2="1500" stroke-width="0.25" stroke="black"/>
+		<line x1="240" y1="1382" x2="240" y2="1500" stroke-width="0.25" stroke="black"/>
+	
+		<circle cx="240" cy="1382" r="10" fill="yellow"/>
+		<circle cx="1071" cy="1465" r="10" fill="yellow"/>
+		<circle cx="658" cy="1310" r="10" fill="yellow"/>
+		
+		<text x="700" y="1500" fill="black" font-size="12">Lámpa középen</text>
+		<text x="700" y="1515" fill="black" font-size="12">Mozgásérzékelő felett</text>
+		
+		<text x="1000" y="1500" fill="black" font-size="12">Lámpa középen</text>
+		<text x="1000" y="1515" fill="black" font-size="12">Lehető legmagasabban</text>
+		
+		<text x="240" y="1500" fill="black" font-size="12">Lámpa középen</text>
+		<text x="240" y="1515" fill="black" font-size="12">Lehető legmagasabban</text>
 	</g>
 	
 </svg>
