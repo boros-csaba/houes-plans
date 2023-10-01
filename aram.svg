@@ -109,6 +109,11 @@
 		<line x1="203" y1="1308" x2="371" y2="1188" stroke-width="2" stroke="orange"/>
 		<line x1="205" y1="1308" x2="210" y2="1036" stroke-width="2" stroke="orange"/>
 		<line x1="210" y1="1308" x2="210" y2="1284" stroke-width="2" stroke="orange"/>
+		
+		<line x1="644" y1="684" x2="693" y2="840" stroke-width="2" stroke="orange"/>
+		
+		<line x1="598" y1="1252" x2="694" y2="1170" stroke-width="2" stroke="orange"/>
+		<line x1="598" y1="1252" x2="563" y2="1245" stroke-width="2" stroke="orange"/>
 	</g>
 	
 	
@@ -174,7 +179,7 @@
 		<line x1="639" y1="684" x2="660" y2="684" stroke-width="0.25" stroke="black"/>
 		<line x1="639" y1="684" x2="649" y2="684" stroke-width="10" stroke="blue"/>
 		<text x="659" y="680" fill="black" font-size="12">90cm magas</text>
-		<text x="659" y="695" fill="black" font-size="12">15cm faltól</text>
+		<text x="659" y="695" fill="black" font-size="12">tartó oszlop mellett</text>
 		
 		<line x1="215" y1="664" x2="130" y2="640" stroke-width="0.25" stroke="black"/>
 		<circle cx="215" cy="664" r="10" fill="yellow"/>
@@ -182,8 +187,6 @@
 		<text x="100" y="620" fill="black" font-size="12">65cm magas</text>
 		<text x="100" y="635" fill="black" font-size="12">15cm saroktól</text>
 	</g>
-	
-	
 	
 	<!-- csongi szoba konnektorok -->
 	<g class="konnektor" >
@@ -333,6 +336,46 @@
 		<text x="400" y="1245" fill="black" font-size="12">40cm magas</text>
 		<text x="400" y="1260" fill="black" font-size="12">170cm faltól</text>
 		<text x="500" y="1320" fill="black" font-size="12">170cm</text>
+	</g>
+	
+	<!-- kozlekedo kapcsolok -->
+	<g class="kapcsolo">
+		<line x1="679" y1="839" x2="709" y2="839" stroke-width="2" stroke="yellow"/>
+		<line x1="679" y1="839" x2="679" y2="1169" stroke-width="2" stroke="yellow"/>
+		<line x1="679" y1="1169" x2="709" y2="1169" stroke-width="2" stroke="yellow"/>
+		<line x1="709" y1="839" x2="709" y2="1169" stroke-width="2" stroke="yellow"/>
+		
+		<line x1="694" y1="954" x2="550" y2="954" stroke-width="0.5" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="550" y1="899" x2="550" y2="1002" stroke-width="0.5" stroke="black" stroke-dasharray="5,5"/>
+		<text x="550" y="950" fill="black" font-size="12">középen</text>
+		
+		<text x="640" y="854" fill="black" font-size="12">középen</text>
+		<line x1="635" y1="854" x2="760" y2="854" stroke-width="0.5" stroke="black"/>
+		<line x1="694" y1="854" x2="694" y2="954" stroke-width="0.5" stroke="black"/>
+		<text x="694" y="904" fill="black" font-size="12">100cm</text>
+		<line x1="694" y1="954" x2="694" y2="1054" stroke-width="0.5" stroke="black"/>
+		<text x="694" y="1004" fill="black" font-size="12">100cm</text>
+		<line x1="694" y1="1054" x2="694" y2="1154" stroke-width="0.5" stroke="black"/>
+		<text x="694" y="1104" fill="black" font-size="12">100cm</text>
+		<circle cx="694" cy="854" r="10" fill="yellow"/>
+		<circle cx="694" cy="954" r="10" fill="yellow"/>
+		<circle cx="694" cy="1054" r="10" fill="yellow"/>
+		<circle cx="694" cy="1154" r="10" fill="yellow"/>
+		
+		<line x1="563" y1="1245" x2="575" y2="1215" stroke-width="0.5" stroke="black"/>
+		<circle cx="563" cy="1245" r="10" fill="yellow"/>
+		<text x="580" y="1200" fill="black" font-size="12">LED kiállás</text>
+		<text x="580" y="1215" fill="black" font-size="12">20cm magas</text>
+		<text x="580" y="1230" fill="black" font-size="12">30cm faltól</text>
+		
+		<line x1="598" y1="1255" x2="680" y2="1215" stroke-width="0.25" stroke="black"/>
+		<line x1="598" y1="1235" x2="598" y2="1245" stroke-width="10" stroke="pink"/>
+		<line x1="598" y1="1247" x2="598" y2="1257" stroke-width="10" stroke="blue"/>
+		<line x1="598" y1="1260" x2="598" y2="1270" stroke-width="10" stroke="brown"/>
+		<text x="680" y="1200" fill="black" font-size="12">Riasztó, Kapcsolók és Kaputelefon</text>
+		<text x="680" y="1215" fill="black" font-size="12">egymás alatt, a kapcsoló 90cm magasan</text>
+		<text x="680" y="1230" fill="black" font-size="12">15cm ajtótól</text>
+		
 	</g>
 	
 </svg>
