@@ -94,6 +94,12 @@
 		<line x1="515" y1="210" x2="365" y2="609" stroke-width="2" stroke="orange"/>
 		<line x1="515" y1="210" x2="465" y2="609" stroke-width="2" stroke="orange"/>
 		<line x1="515" y1="210" x2="565" y2="609" stroke-width="2" stroke="orange"/>
+		
+		<line x1="639" y1="684" x2="265" y2="609" stroke-width="2" stroke="orange"/>
+		<line x1="639" y1="684" x2="365" y2="609" stroke-width="2" stroke="orange"/>
+		<line x1="639" y1="684" x2="465" y2="609" stroke-width="2" stroke="orange"/>
+		<line x1="639" y1="684" x2="565" y2="609" stroke-width="2" stroke="orange"/>
+		<line x1="639" y1="684" x2="240" y2="280" stroke-width="2" stroke="orange"/>
 	</g>
 	
 	
@@ -150,6 +156,12 @@
 		<circle cx="365" cy="609" r="15" fill="yellow"/>
 		<circle cx="465" cy="609" r="15" fill="yellow"/>
 		<circle cx="565" cy="609" r="15" fill="yellow"/>
+		
+		<!-- -->
+		<line x1="639" y1="684" x2="660" y2="684" stroke-width="0.25" stroke="black"/>
+		<line x1="639" y1="684" x2="649" y2="684" stroke-width="10" stroke="blue"/>
+		<text x="659" y="680" fill="black" font-size="12">90cm magas</text>
+		<text x="659" y="695" fill="black" font-size="12">15cm faltól</text>
 	</g>
 	
 	
