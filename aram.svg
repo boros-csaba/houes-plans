@@ -130,6 +130,9 @@
 		<line x1="598" y1="1252" x2="1071" y2="1465" stroke-width="2" stroke="orange"/>
 		
 		<line x1="531" y1="786" x2="612" y2="770" stroke-width="2" stroke="orange"/>
+		
+		<line x1="422" y1="882" x2="334" y2="850" stroke-width="2" stroke="orange"/>
+		<line x1="422" y1="882" x2="400" y2="862" stroke-width="2" stroke="orange"/>
 	</g>
 	
 	
@@ -471,15 +474,52 @@
 		<text x="500" y="880" fill="black" font-size="12">15cm ajtótól</text>
 	</g>
 	
-	<!-- kinti fények kapcsolok -->
+	<!-- furdo konnektorok -->
+	<g class="konnektor" >
+	<line x1="422" y1="900" x2="410" y2="940" stroke-width="0.25" stroke="black"/>
+		<line x1="464" y1="686" x2="465" y2="710" stroke-width="0.25" stroke="black"/>
+		<circle cx="422" cy="900" r="5" fill="red"/>
+		<text x="365" y="950" fill="black" font-size="12">15cm ajtótól</text>
+		<text x="365" y="965" fill="black" font-size="12">kapcsoló felett</text>
+
+	</g>
+	
+	<!-- furdo fények kapcsolok -->
 	<g class="kapcsolo">
 		<circle cx="531" cy="786" r="10" fill="yellow"/>
-		<text x="440" y="790" fill="black" font-size="12">Csillár középen - </text>
+	
+		<line x1="317" y1="674" x2="317" y2="1009" stroke-width="0.25" stroke="black"/>
+		<line x1="427" y1="887" x2="400" y2="890" stroke-width="0.25" stroke="black"/>
+		<circle cx="317" cy="786" r="10" fill="yellow"/>
+		<circle cx="317" cy="897" r="10" fill="yellow"/>
+		<circle cx="400" cy="862" r="10" fill="yellow"/>
+		
+		<text x="317" y="740" fill="black" font-size="12">111cm</text>
+		<text x="316" y="850" fill="black" font-size="12">111cm</text>
+		<text x="317" y="960" fill="black" font-size="12">111cm</text>
 		
 		<line x1="612" y1="770" x2="600" y2="760" stroke-width="0.25" stroke="black"/>
 		<text x="550" y="755" fill="black" font-size="12">90cm magas</text>
 		<text x="550" y="770" fill="black" font-size="12">15cm ajtótól</text>
 		<line x1="612" y1="770" x2="622" y2="770" stroke-width="10" stroke="blue"/>
+		
+		<line x1="422" y1="882" x2="422" y2="892" stroke-width="10" stroke="blue"/>
+		
+		<line x1="302" y1="771" x2="332" y2="771" stroke-width="2" stroke="yellow"/>
+		<line x1="302" y1="771" x2="302" y2="912" stroke-width="2" stroke="yellow"/>
+		<line x1="302" y1="912" x2="332" y2="912" stroke-width="2" stroke="yellow"/>
+		<line x1="332" y1="771" x2="332" y2="912" stroke-width="2" stroke="yellow"/>
+		
+		<line x1="400" y1="862" x2="410" y2="800" stroke-width="0.25" stroke="black"/>
+		
+		<text x="345" y="800" fill="black" font-size="12">Csillár plafonból</text>
+		<text x="345" y="815" fill="black" font-size="12">35cm ajtótól</text>
+		<text x="345" y="830" fill="black" font-size="12">20cm faltól</text>
+		
+		<text x="345" y="900" fill="black" font-size="12">15cm ajtótól</text>
+		<text x="345" y="915" fill="black" font-size="12">130cm magas</text>
+		
+		
 	</g>
 	
 </svg>
