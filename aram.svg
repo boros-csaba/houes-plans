@@ -38,8 +38,13 @@
 		<!-- nappali also falak -->
 		<line x1="1111" y1="769" x2="755" y2="769" stroke-width="10" stroke="black"/>
 		<line x1="200" y1="674" x2="634" y2="674" stroke-width="10" stroke="black"/>
+		<line x1="614" y1="679" x2="614" y2="699" stroke-width="10" stroke="black"/>
+		<line x1="609" y1="694" x2="629" y2="694" stroke-width="10" stroke="black"/>
 		
-		<!-- kozlekedo jobb oldal falak -->
+		<line x1="614" y1="879" x2="634" y2="879" stroke-width="10" stroke="black"/>
+		<line x1="614" y1="874" x2="614" y2="894" stroke-width="10" stroke="black"/>
+		
+		<!-- kozlekedoz jobb oldal falak -->
 		<line x1="760" y1="769" x2="760" y2="953" stroke-width="10" stroke="black"/>
 		<line x1="760" y1="953" x2="760" y2="1043" stroke-width="2" stroke="black"/>
 		<line x1="760" y1="1043" x2="760" y2="1167" stroke-width="10" stroke="black"/>
@@ -123,6 +128,8 @@
 		<line x1="598" y1="1252" x2="240" y2="1382" stroke-width="2" stroke="orange"/>
 		<line x1="598" y1="1252" x2="658" y2="1310" stroke-width="2" stroke="orange"/>
 		<line x1="598" y1="1252" x2="1071" y2="1465" stroke-width="2" stroke="orange"/>
+		
+		<line x1="531" y1="786" x2="612" y2="770" stroke-width="2" stroke="orange"/>
 	</g>
 	
 	
@@ -422,6 +429,57 @@
 		
 		<text x="240" y="1500" fill="black" font-size="12">Lámpa középen</text>
 		<text x="240" y="1515" fill="black" font-size="12">Lehető legmagasabban</text>
+	</g>
+	
+	<!-- mosokonyha konnektorok -->
+	<g class="konnektor" >
+		<line x1="464" y1="686" x2="465" y2="710" stroke-width="0.25" stroke="black"/>
+		<circle cx="464" cy="686" r="5" fill="red"/>
+		<text x="440" y="715" fill="black" font-size="12">Hőszivattyú</text>
+		<text x="440" y="730" fill="black" font-size="12">90cm magas</text>
+		<text x="440" y="745" fill="black" font-size="12">30cm faltól</text>
+		
+		
+		
+		<line x1="620" y1="595" x2="570" y2="686" stroke-width="0.25" stroke="black"/>
+		<line x1="620" y1="595" x2="584" y2="686" stroke-width="0.25" stroke="black"/>
+		<circle cx="584" cy="686" r="5" fill="red"/>
+		<circle cx="570" cy="686" r="5" fill="red"/>
+		<text x="604" y="560" fill="black" font-size="12">Mosógép, szárítógép</text>
+		<text x="604" y="575" fill="black" font-size="12">90cm magas</text>
+		<text x="604" y="590" fill="black" font-size="12">30cm oszloptól</text>
+		
+		<line x1="595" y1="686" x2="634" y2="660" stroke-width="0.25" stroke="black"/>
+		<circle cx="595" cy="686" r="5" fill="red"/>
+		<text x="634" y="630" fill="black" font-size="12">Szellőztetőgép kiállás</text>
+		<text x="634" y="645" fill="black" font-size="12">200cm magas</text>
+		<text x="634" y="660" fill="black" font-size="12">30cm oszloptól</text>
+		
+		<line x1="618" y1="715" x2="600" y2="715" stroke-width="0.25" stroke="black"/>
+		<circle cx="618" cy="715" r="5" fill="red"/>
+		<text x="540" y="715" fill="black" font-size="12">100cm magas</text>
+		<text x="540" y="730" fill="black" font-size="12">15cm oszloptól</text>
+		
+		<line x1="618" y1="783" x2="550" y2="820" stroke-width="0.25" stroke="black"/>
+		<circle cx="618" cy="783" r="5" fill="red"/>
+		<text x="500" y="820" fill="black" font-size="12">90cm magas</text>
+		<text x="500" y="835" fill="black" font-size="12">15cm ajtótól</text>
+		
+		<line x1="595" y1="888" x2="550" y2="880" stroke-width="0.25" stroke="black"/>
+		<circle cx="595" cy="888" r="5" fill="red"/>
+		<text x="500" y="865" fill="black" font-size="12">130cm magas</text>
+		<text x="500" y="880" fill="black" font-size="12">15cm ajtótól</text>
+	</g>
+	
+	<!-- kinti fények kapcsolok -->
+	<g class="kapcsolo">
+		<circle cx="531" cy="786" r="10" fill="yellow"/>
+		<text x="440" y="790" fill="black" font-size="12">Csillár középen - </text>
+		
+		<line x1="612" y1="770" x2="600" y2="760" stroke-width="0.25" stroke="black"/>
+		<text x="550" y="755" fill="black" font-size="12">90cm magas</text>
+		<text x="550" y="770" fill="black" font-size="12">15cm ajtótól</text>
+		<line x1="612" y1="770" x2="622" y2="770" stroke-width="10" stroke="blue"/>
 	</g>
 	
 </svg>
