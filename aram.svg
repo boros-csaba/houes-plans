@@ -91,14 +91,11 @@
 		<line x1="265" y1="609" x2="515" y2="210" stroke-width="2" stroke="orange"/>
 		<line x1="772" y1="923" x2="940" y2="940" stroke-width="2" stroke="orange"/>
 		<line x1="203" y1="615" x2="265" y2="609" stroke-width="2" stroke="orange"/>
-		<line x1="515" y1="210" x2="365" y2="609" stroke-width="2" stroke="orange"/>
-		<line x1="515" y1="210" x2="465" y2="609" stroke-width="2" stroke="orange"/>
-		<line x1="515" y1="210" x2="565" y2="609" stroke-width="2" stroke="orange"/>
+		
+		<line x1="515" y1="210" x2="465" y2="595" stroke-width="2" stroke="orange"/>
 		
 		<line x1="639" y1="684" x2="265" y2="609" stroke-width="2" stroke="orange"/>
-		<line x1="639" y1="684" x2="365" y2="609" stroke-width="2" stroke="orange"/>
-		<line x1="639" y1="684" x2="465" y2="609" stroke-width="2" stroke="orange"/>
-		<line x1="639" y1="684" x2="565" y2="609" stroke-width="2" stroke="orange"/>
+		<line x1="639" y1="684" x2="465" y2="624" stroke-width="2" stroke="orange"/>
 		<line x1="639" y1="684" x2="240" y2="280" stroke-width="2" stroke="orange"/>
 		
 		<line x1="208" y1="613" x2="215" y2="664" stroke-width="2" stroke="orange"/>
@@ -168,6 +165,11 @@
 		<circle cx="365" cy="609" r="10" fill="yellow"/>
 		<circle cx="465" cy="609" r="10" fill="yellow"/>
 		<circle cx="565" cy="609" r="10" fill="yellow"/>
+		
+		<line x1="350" y1="594" x2="580" y2="594" stroke-width="2" stroke="yellow"/>
+		<line x1="350" y1="624" x2="580" y2="624" stroke-width="2" stroke="yellow"/>
+		<line x1="350" y1="594" x2="350" y2="624" stroke-width="2" stroke="yellow"/>
+		<line x1="580" y1="594" x2="580" y2="624" stroke-width="2" stroke="yellow"/>
 		
 		<line x1="639" y1="684" x2="660" y2="684" stroke-width="0.25" stroke="black"/>
 		<line x1="639" y1="684" x2="649" y2="684" stroke-width="10" stroke="blue"/>
@@ -282,6 +284,9 @@
 		<line x1="203" y1="1308" x2="213" y2="1308" stroke-width="10" stroke="blue"/>
 		<text x="80" y="1308" fill="black" font-size="12">90cm magas</text>
 		<text x="80" y="1323" fill="black" font-size="12">270cm faltól</text>
+		
+		<line x1="210" y1="1284" x2="210" y2="1010" stroke-width="0.5" stroke="black"/>
+		<text x="210" y="1264" fill="black" font-size="12">270cm</text>
 	</g>
 	
 	<!-- halo szoba konnektorok -->
@@ -300,25 +305,34 @@
 		<text x="40" y="1363" fill="black" font-size="12">mellett, a felettő lévő lámpával</text>
 		<text x="40" y="1378" fill="black" font-size="12">középre igazítva</text>
 		
+		<line x1="237" y1="1400" x2="230" y2="1354" stroke-width="0.25" stroke="black"/>
+		<line x1="237" y1="1400" x2="243" y2="1354" stroke-width="0.25" stroke="black"/>
+		<circle cx="230" cy="1354" r="5" fill="red"/>
+		<circle cx="243" cy="1354" r="5" fill="green"/>
+		<text x="200" y="1400" fill="black" font-size="12">konnektor és internet</text>
+		<text x="200" y="1415" fill="black" font-size="12">20cm magas</text>
+		<text x="200" y="1430" fill="black" font-size="12">30cm faltól</text>
 		
+		<line x1="535" y1="1035" x2="520" y2="1025" stroke-width="0.25" stroke="black"/>
+		<circle cx="535" cy="1035" r="5" fill="red"/>
+		<text x="460" y="1020" fill="black" font-size="12">20cm magas</text>
+		<text x="460" y="1035" fill="black" font-size="12">30cm faltól</text>
 		
-		
-		
-		
-		<line x1="795" y1="781" x2="795" y2="795" stroke-width="0.25" stroke="black"/>
-		<circle cx="795" cy="781" r="5" fill="red"/>
-		<text x="775" y="800" fill="black" font-size="12">20cm magas</text>
-		<text x="775" y="815" fill="black" font-size="12">30cm faltól</text>
-		
-		<line x1="1050" y1="804" x2="1103" y2="804" stroke-width="0.25" stroke="black"/>
-		<circle cx="1103" cy="804" r="5" fill="red"/>
-		<text x="1000" y="800" fill="black" font-size="12">20cm magas</text>
-		<text x="1000" y="815" fill="black" font-size="12">30cm faltól</text>
-		
-		<line x1="1060" y1="1080" x2="1081" y2="1098" stroke-width="0.25" stroke="black"/>
-		<circle cx="1081" cy="1098" r="5" fill="red"/>
-		<text x="1000" y="1070" fill="black" font-size="12">20cm magas</text>
-		<text x="1000" y="1085" fill="black" font-size="12">30cm faltól</text>
+		<line x1="450" y1="1220" x2="535" y2="1142" stroke-width="0.25" stroke="black"/>
+		<line x1="450" y1="1220" x2="535" y2="1156" stroke-width="0.25" stroke="black"/>
+		<line x1="450" y1="1220" x2="535" y2="1169" stroke-width="0.25" stroke="black"/>
+		<line x1="450" y1="1220" x2="535" y2="1182" stroke-width="0.25" stroke="black"/>
+		<line x1="450" y1="1220" x2="535" y2="1195" stroke-width="0.25" stroke="black"/>
+		<line x1="535" y1="1370" x2="535" y2="1195" stroke-width="0.5" stroke="black"/>
+		<circle cx="535" cy="1142" r="5" fill="purple"/>
+		<circle cx="535" cy="1156" r="5" fill="green"/>
+		<circle cx="535" cy="1169" r="5" fill="red"/>
+		<circle cx="535" cy="1182" r="5" fill="red"/>
+		<circle cx="535" cy="1195" r="5" fill="red"/>
+		<text x="400" y="1230" fill="black" font-size="12">3 konnector, internet, tv</text>
+		<text x="400" y="1245" fill="black" font-size="12">40cm magas</text>
+		<text x="400" y="1260" fill="black" font-size="12">170cm faltól</text>
+		<text x="500" y="1320" fill="black" font-size="12">170cm</text>
 	</g>
 	
 </svg>
