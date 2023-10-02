@@ -563,13 +563,27 @@
 		<text x="50" y="715" fill="black" font-size="12">30 cm faltól</text>
 		<text x="50" y="730" fill="black" font-size="12">65 cm magasan</text>
 	
-	
-		<line x1="422" y1="900" x2="410" y2="940" stroke-width="0.25" stroke="black"/>
-		<line x1="464" y1="686" x2="465" y2="710" stroke-width="0.25" stroke="black"/>
-		
-		<text x="365" y="950" fill="black" font-size="12">15cm ajtótól</text>
-		<text x="365" y="965" fill="black" font-size="12">kapcsoló felett</text>
+		<line x1="604" y1="662" x2="580" y2="545" stroke-width="0.25" stroke="black"/>
+		<circle cx="604" cy="662" r="5" fill="red"/>
+		<text x="530" y="530" fill="black" font-size="12">40cm magas</text>
+		<text x="530" y="545" fill="black" font-size="12">30cm faltól</text>
 
+		<line x1="400" y1="693" x2="484" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="400" y1="693" x2="472" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="400" y1="693" x2="460" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="400" y1="693" x2="448" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="400" y1="693" x2="436" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="400" y1="693" x2="424" y2="662" stroke-width="0.25" stroke="black"/>
+		<circle cx="484" cy="662" r="5" fill="red"/>
+		<circle cx="472" cy="662" r="5" fill="red"/>
+		<circle cx="460" cy="662" r="5" fill="red"/>
+		<circle cx="448" cy="662" r="5" fill="red"/>
+		<circle cx="436" cy="662" r="5" fill="green"/>
+		<circle cx="424" cy="662" r="5" fill="purple"/>
+		<text x="300" y="700" fill="black" font-size="12">4 konnektor, internet és tv</text>
+		<text x="360" y="715" fill="black" font-size="12">150cm faltól</text>
+		<text x="360" y="730" fill="black" font-size="12">40cm magas</text>
+		
 	</g>
 	
 </svg>
