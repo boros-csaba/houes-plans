@@ -590,6 +590,12 @@
 		<circle cx="1105" cy="216" r="5" fill="red"/>
 		<text x="1155" y="216" fill="black" font-size="12">20cm magas</text>
 		<text x="1155" y="231" fill="black" font-size="12">középen</text>
+		
+		<line x1="1080" y1="380" x2="1105" y2="536" stroke-width="0.25" stroke="black"/>
+		<circle cx="1105" cy="536" r="5" fill="red"/>
+		<text x="950" y="350" fill="black" font-size="12">Kiállás főzőlapnak,</text>
+		<text x="950" y="365" fill="black" font-size="12">mosogatógépnek, konnektoroknak</text>
+		<text x="950" y="380" fill="black" font-size="12">és kapcsolható beépített led lámpa</text>
 	</g>
 	
 </svg>
