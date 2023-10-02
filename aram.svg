@@ -568,6 +568,7 @@
 		<text x="530" y="530" fill="black" font-size="12">40cm magas</text>
 		<text x="530" y="545" fill="black" font-size="12">30cm faltól</text>
 
+		<line x1="484" y1="662" x2="634" y2="662" stroke-width="0.25" stroke="black"/>
 		<line x1="400" y1="693" x2="484" y2="662" stroke-width="0.25" stroke="black"/>
 		<line x1="400" y1="693" x2="472" y2="662" stroke-width="0.25" stroke="black"/>
 		<line x1="400" y1="693" x2="460" y2="662" stroke-width="0.25" stroke="black"/>
@@ -583,7 +584,12 @@
 		<text x="300" y="700" fill="black" font-size="12">4 konnektor, internet és tv</text>
 		<text x="360" y="715" fill="black" font-size="12">150cm faltól</text>
 		<text x="360" y="730" fill="black" font-size="12">40cm magas</text>
+		<text x="500" y="662" fill="black" font-size="12">150cm</text>
 		
+		<line x1="1105" y1="216" x2="1155" y2="216" stroke-width="0.25" stroke="black"/>
+		<circle cx="1105" cy="216" r="5" fill="red"/>
+		<text x="1155" y="216" fill="black" font-size="12">20cm magas</text>
+		<text x="1155" y="231" fill="black" font-size="12">középen</text>
 	</g>
 	
 </svg>
