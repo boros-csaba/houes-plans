@@ -100,10 +100,10 @@
 		<line x1="1116" y1="1031" x2="1116" y2="1111" stroke-width="10" stroke="black"/>
 		<line x1="1111" y1="1111" x2="765" y2="1111" stroke-width="10" stroke="black"/>
 		
-		<line x1="400" y1="200" x2="400" y2="-200" stroke-width="10" stroke="black"/>
-		<line x1="400" y1="-200" x2="1416" y2="-200" stroke-width="10" stroke="black"/>
-		<line x1="1416" y1="-200" x2="1416" y2="699" stroke-width="10" stroke="black"/>
-		<line x1="1416" y1="699" x2="1116" y2="699" stroke-width="10" stroke="black"/>
+		<line x1="400" y1="200" x2="400" y2="-200" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="400" y1="-200" x2="1416" y2="-200" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="1416" y1="-200" x2="1416" y2="699" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="1416" y1="699" x2="1116" y2="699" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
 	</g>
 	
 	<!-- furdo fények kapcsolok -->
@@ -137,6 +137,8 @@
 		<line x1="203" y1="1308" x2="371" y2="1188" stroke-width="2" stroke="orange"/>
 		<line x1="205" y1="1308" x2="210" y2="1036" stroke-width="2" stroke="orange"/>
 		<line x1="210" y1="1308" x2="210" y2="1284" stroke-width="2" stroke="orange"/>
+		<line x1="429" y1="1017" x2="210" y2="1284" stroke-width="2" stroke="orange"/>
+		<line x1="203" y1="1060" x2="210" y2="1284" stroke-width="2" stroke="orange"/>
 		
 		<line x1="740" y1="785" x2="693" y2="840" stroke-width="2" stroke="orange"/>
 		
@@ -366,14 +368,14 @@
 		<circle cx="220" cy="1060" r="5" fill="red"/>
 		<circle cx="231" cy="1060" r="5" fill="red"/>
 		<text x="40" y="1100" fill="black" font-size="12">2 konnektor a kapcsoló</text>
-		<text x="40" y="1115" fill="black" font-size="12">mellett, a felettő lévő lámpával</text>
+		<text x="40" y="1115" fill="black" font-size="12">mellett, a felette lévő lámpával</text>
 		<text x="40" y="1130" fill="black" font-size="12">középre igazítva</text>
 		
 		<line x1="220" y1="1308" x2="150" y2="1355" stroke-width="0.25" stroke="black"/>
 		<circle cx="220" cy="1308" r="5" fill="red"/>
 		<circle cx="231" cy="1308" r="5" fill="red"/>
 		<text x="40" y="1348" fill="black" font-size="12">2 konnektor a kapcsoló</text>
-		<text x="40" y="1363" fill="black" font-size="12">mellett, a felettő lévő lámpával</text>
+		<text x="40" y="1363" fill="black" font-size="12">mellett, a felette lévő lámpával</text>
 		<text x="40" y="1378" fill="black" font-size="12">középre igazítva</text>
 		
 		<line x1="137" y1="1410" x2="230" y2="1354" stroke-width="0.25" stroke="black"/>
@@ -516,7 +518,6 @@
 		<text x="700" y="430" fill="black" font-size="12">sziget közepén</text>
 		<circle cx="1020" cy="536" r="10" fill="yellow"/>
 		<circle cx="861" cy="536" r="10" fill="yellow"/>
-		
 	</g>
 	
 	<!-- mosokonyha konnektorok -->
@@ -663,7 +664,23 @@
 	<g>
 		<line x1="1170" y1="733" x2="1126" y2="733" stroke-width="0.25" stroke="black"/>
 		<circle cx="1126" cy="733" r="5" fill="red"/>
-		<text x="1170" y="733" fill="black" font-size="12">Kiállás jakuzzinak</text>
+		<text x="1170" y="733" fill="black" font-size="12">Kiállás jakuzzinak erős áram, robot fűnyírónak</text>
+		
+		<line x1="300" y1="150" x2="350" y2="190" stroke-width="0.25" stroke="black"/>
+		<text x="0" y="140" fill="black" font-size="12">Kiállás elektromos grill, hűtőszekrény kertben, medence, internet kert végéig</text>
+		<text x="0" y="155" fill="black" font-size="12">kamera kert végéig, pince áram, öntöző rendszer</text>
+		<text x="0" y="170" fill="black" font-size="12">kapcsolható kerti hangulat fény, kapcsolható kerti erős fény</text>
+		<text x="0" y="185" fill="black" font-size="12">kapcsolható terasz hangulat fények, kapcsolható terasz erős fények, terasz konnektor</text>
+		<circle cx="350" cy="190" r="5" fill="red"/>
+		
+		<line x1="500" y1="1375" x2="400" y2="1445" stroke-width="0.25" stroke="black"/>
+		<text x="350" y="1450" fill="black" font-size="12">Kiállás elektromos kapunak</text>
+		<text x="350" y="1465" fill="black" font-size="12">hangulat világítás</text>
+		<circle cx="500" cy="1375" r="5" fill="red"/>
+		
+		<line x1="548" y1="1070" x2="600" y2="990" stroke-width="0.25" stroke="black"/>
+		<text x="550" y="980" fill="black" font-size="12">Biztosíték tábla és router</text>
+		<text x="550" y="995" fill="black" font-size="12">50cm saroktól, magasan</text>
 	</g>
 	
 </svg>
