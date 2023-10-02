@@ -1,6 +1,6 @@
 <svg 
 	xmlns="http://www.w3.org/2000/svg"
-	viewBox="0 0 1200 1550">
+	viewBox="0 -250 1200 1800">
 	
 	
 	<style>
@@ -90,6 +90,11 @@
 		<line x1="1116" y1="851" x2="1116" y2="1031" stroke-width="2" stroke="black"/>
 		<line x1="1116" y1="1031" x2="1116" y2="1111" stroke-width="10" stroke="black"/>
 		<line x1="1111" y1="1111" x2="765" y2="1111" stroke-width="10" stroke="black"/>
+		
+		<line x1="400" y1="200" x2="400" y2="-200" stroke-width="10" stroke="black"/>
+		<line x1="400" y1="-200" x2="1416" y2="-200" stroke-width="10" stroke="black"/>
+		<line x1="1416" y1="-200" x2="1416" y2="699" stroke-width="10" stroke="black"/>
+		<line x1="1416" y1="699" x2="1116" y2="699" stroke-width="10" stroke="black"/>
 	</g>
 	
 	<!-- kapcsoló vonalak-->
@@ -133,6 +138,12 @@
 		
 		<line x1="422" y1="882" x2="334" y2="850" stroke-width="2" stroke="orange"/>
 		<line x1="422" y1="882" x2="400" y2="862" stroke-width="2" stroke="orange"/>
+		
+		<line x1="598" y1="1252" x2="1131" y2="812" stroke-width="2" stroke="orange"/>
+		<line x1="598" y1="1252" x2="1131" y2="1111" stroke-width="2" stroke="orange"/>
+		<line x1="598" y1="1252" x2="1131" y2="1410" stroke-width="2" stroke="orange"/>
+		
+		<line x1="515" y1="207" x2="1131" y2="536" stroke-width="2" stroke="orange"/>
 	</g>
 	
 	
@@ -436,6 +447,15 @@
 		<text x="240" y="1500" fill="black" font-size="12">Lámpa középen</text>
 		<text x="240" y="1515" fill="black" font-size="12">Lehető legmagasabban</text>
 		<text x="240" y="1530" fill="black" font-size="12">A* együtt kapcsolható</text>
+	
+		<circle cx="1131" cy="812" r="10" fill="yellow"/>
+		<circle cx="1131" cy="1111" r="10" fill="yellow"/>
+		<circle cx="1131" cy="1410" r="10" fill="yellow"/>
+		<text x="1125" y="814" fill="black" font-size="12">B*</text>
+		<text x="1125" y="1114" fill="black" font-size="12">B*</text>
+		<text x="1125" y="1413" fill="black" font-size="12">B*</text>
+		
+		<circle cx="1131" cy="536" r="10" fill="yellow"/>
 	</g>
 	
 	<!-- mosokonyha konnektorok -->
@@ -520,8 +540,36 @@
 		
 		<text x="345" y="900" fill="black" font-size="12">15cm ajtótól</text>
 		<text x="345" y="915" fill="black" font-size="12">130cm magas</text>
+	</g>
+	
+	<!-- tv konnektorok -->
+	<g class="konnektor" >
+	
+		<line x1="160" y1="700" x2="235" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="160" y1="700" x2="247" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="160" y1="700" x2="259" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="160" y1="700" x2="271" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="160" y1="700" x2="283" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="160" y1="700" x2="295" y2="662" stroke-width="0.25" stroke="black"/>
+		<line x1="160" y1="700" x2="307" y2="662" stroke-width="0.25" stroke="black"/>
+		<circle cx="235" cy="662" r="5" fill="red"/>
+		<circle cx="247" cy="662" r="5" fill="red"/>
+		<circle cx="259" cy="662" r="5" fill="red"/>
+		<circle cx="271" cy="662" r="5" fill="red"/>
+		<circle cx="283" cy="662" r="5" fill="red"/>
+		<circle cx="295" cy="662" r="5" fill="red"/>
+		<circle cx="307" cy="662" r="5" fill="green"/>
+		<text x="50" y="700" fill="black" font-size="12">6 konnektor és internet</text>
+		<text x="50" y="715" fill="black" font-size="12">30 cm faltól</text>
+		<text x="50" y="730" fill="black" font-size="12">65 cm magasan</text>
+	
+	
+		<line x1="422" y1="900" x2="410" y2="940" stroke-width="0.25" stroke="black"/>
+		<line x1="464" y1="686" x2="465" y2="710" stroke-width="0.25" stroke="black"/>
 		
-		
+		<text x="365" y="950" fill="black" font-size="12">15cm ajtótól</text>
+		<text x="365" y="965" fill="black" font-size="12">kapcsoló felett</text>
+
 	</g>
 	
 </svg>
