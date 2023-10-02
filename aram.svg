@@ -97,6 +97,13 @@
 		<line x1="1416" y1="699" x2="1116" y2="699" stroke-width="10" stroke="black"/>
 	</g>
 	
+	<!-- furdo fények kapcsolok -->
+	<g class="butor">
+		<line x1="1111" y1="486" x2="761" y2="486" stroke-width="1" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="761" y1="586" x2="761" y2="486" stroke-width="1" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="1111" y1="586" x2="761" y2="586" stroke-width="1" stroke="black" stroke-dasharray="5,5"/>
+	</g>
+	
 	<!-- kapcsoló vonalak-->
 	<g class="kapcsolo-vonal">
 		<line x1="515" y1="210" x2="240" y2="280" stroke-width="2" stroke="orange"/>
