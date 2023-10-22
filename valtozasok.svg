@@ -1,6 +1,6 @@
 <svg 
 	xmlns="http://www.w3.org/2000/svg"
-	viewBox="0 -250 1200 2500">
+	viewBox="0 -50 1200 1700">
 	
 	
 	<style>
@@ -11,10 +11,18 @@
 		g.kapcsolo {
 			//visibility: hidden;
 		}
+		
+		g.hidden {
+			visibility: hidden;
+		}
 	]]>
 	</style>
 	
 	<g>
+	
+		
+	
+	
 		<circle cx="15" cy="-215" r="5" fill="red"/>
 		<text x="30" y="-212" fill="black" font-size="13"  font-weight="bold">konnektor, kiállás</text>
 		<circle cx="15" cy="-190" r="5" fill="green"/>
@@ -106,10 +114,10 @@
 		<line x1="1116" y1="1031" x2="1116" y2="1111" stroke-width="10" stroke="black"/>
 		<line x1="1111" y1="1111" x2="765" y2="1111" stroke-width="10" stroke="black"/>
 		
-		<line x1="400" y1="200" x2="400" y2="-200" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
-		<line x1="400" y1="-200" x2="1416" y2="-200" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
-		<line x1="1416" y1="-200" x2="1416" y2="699" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
-		<line x1="1416" y1="699" x2="1116" y2="699" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="300" y1="200" x2="300" y2="-150" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="300" y1="-150" x2="1366" y2="-150" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="1366" y1="-150" x2="1366" y2="525" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
+		<line x1="1366" y1="525" x2="1116" y2="525" stroke-width="10" stroke="black" stroke-dasharray="5,5"/>
 	</g>
 	
 	<!-- furdo fények kapcsolok -->
@@ -200,6 +208,15 @@
 		<circle cx="250" cy="208" r="5" fill="red"/>
 		<text x="275" y="210" fill="black" font-size="13"  font-weight="bold">20cm magas</text>
 		<text x="275" y="225" fill="black" font-size="13"  font-weight="bold">50cm faltól</text>
+		
+		<text x="400" y="70" fill="black" font-size="13"  font-weight="bold">Kinti konnektor, 20 cm magas</text>
+		<text x="400" y="85" fill="black" font-size="13"  font-weight="bold">100 cm ablaktól</text>
+		<line x1="430" y1="185" x2="500" y2="85" stroke-width="0.25" stroke="black"/>
+		<text x="470" y="185" fill="black" font-size="13"  font-weight="bold">100 cm</text>
+		<line x1="430" y1="185" x2="530" y2="185" stroke-width="0.25" stroke="black"/>
+		<circle cx="430" cy="185" r="5" fill="red"/>
+		
+		
 	</g>
 	
 	<!-- nappali rész kapcsolok -->
@@ -421,10 +438,10 @@
 	
 	<!-- kozlekedo kapcsolok -->
 	<g class="kapcsolo">
-		<line x1="679" y1="839" x2="709" y2="839" stroke-width="2" stroke="yellow"/>
-		<line x1="679" y1="839" x2="679" y2="1169" stroke-width="2" stroke="yellow"/>
-		<line x1="679" y1="1169" x2="709" y2="1169" stroke-width="2" stroke="yellow"/>
-		<line x1="709" y1="839" x2="709" y2="1169" stroke-width="2" stroke="yellow"/>
+		<line x1="679" y1="740" x2="709" y2="740" stroke-width="2" stroke="yellow"/>
+		<line x1="679" y1="740" x2="679" y2="1210" stroke-width="2" stroke="yellow"/>
+		<line x1="679" y1="1210" x2="709" y2="1210" stroke-width="2" stroke="yellow"/>
+		<line x1="709" y1="740" x2="709" y2="1210" stroke-width="2" stroke="yellow"/>
 		
 		<line x1="694" y1="954" x2="550" y2="954" stroke-width="0.5" stroke="black" stroke-dasharray="5,5"/>
 		<line x1="550" y1="899" x2="550" y2="1002" stroke-width="0.5" stroke="black" stroke-dasharray="5,5"/>
@@ -438,6 +455,7 @@
 		<text x="694" y="1004" fill="black" font-size="13"  font-weight="bold">100cm</text>
 		<line x1="694" y1="1054" x2="694" y2="1154" stroke-width="0.5" stroke="black"/>
 		<text x="694" y="1104" fill="black" font-size="13"  font-weight="bold">100cm</text>
+		<circle cx="694" cy="754" r="10" fill="yellow"/>
 		<circle cx="694" cy="854" r="10" fill="yellow"/>
 		<circle cx="694" cy="954" r="10" fill="yellow"/>
 		<circle cx="694" cy="1054" r="10" fill="yellow"/>
@@ -674,12 +692,12 @@
 		<circle cx="1126" cy="733" r="5" fill="red"/>
 		<text x="1170" y="733" fill="black" font-size="13"  font-weight="bold">Kiállás jakuzzinak erős áram, robot fűnyírónak</text>
 		
-		<line x1="300" y1="150" x2="350" y2="190" stroke-width="0.25" stroke="black"/>
+		<line x1="300" y1="150" x2="250" y2="190" stroke-width="0.25" stroke="black"/>
 		<text x="0" y="125" fill="black" font-size="13"  font-weight="bold">Kiállás elektromos grill, hűtőszekrény kertben, medence, internet kert végéig</text>
 		<text x="0" y="140" fill="black" font-size="13"  font-weight="bold">kamera kert végéig, pince áram, öntöző rendszer</text>
 		<text x="0" y="155" fill="black" font-size="13"  font-weight="bold">kapcsolható kerti hangulat fény, kapcsolható kerti erős fény</text>
-		<text x="0" y="170" fill="black" font-size="13"  font-weight="bold">kapcsolható terasz hangulat fények, kapcsolható terasz erős fények, terasz konnektor</text>
-		<circle cx="350" cy="190" r="5" fill="red"/>
+		<text x="0" y="170" fill="black" font-size="13"  font-weight="bold">kapcsolható terasz hangulat fények</text>
+		<circle cx="250" cy="190" r="5" fill="red"/>
 		
 		<line x1="500" y1="1375" x2="400" y2="1445" stroke-width="0.25" stroke="black"/>
 		<text x="350" y="1450" fill="black" font-size="13"  font-weight="bold">Kiállás elektromos kapunak</text>
@@ -724,6 +742,17 @@
 		<text x="600" y="1095" fill="black" font-size="13"  font-weight="bold">100cm magas</text>
 		<text x="600" y="1110" fill="black" font-size="13"  font-weight="bold">30cm faltól</text>
 		
+		
+		
+		<text x="1000" y="100" fill="black" font-size="13"  font-weight="bold">Kinti konnektor 20 cm magasan, középen</text>
+		<line x1="1100" y1="185" x2="1150" y2="100" stroke-width="0.25" stroke="black"/>
+		<circle cx="1100" cy="185" r="5" fill="red"/>
+		
+		<line x1="515" y1="203" x2="711" y2="185" stroke-width="2" stroke="orange"/>
+		<text x="600" y="100" fill="black" font-size="13"  font-weight="bold">Kapcsolható terasz világítás és egy áram kábel pl szúnyog riasztónak.</text>
+		<text x="600" y="115" fill="black" font-size="13"  font-weight="bold">Pergola felettre, ajtó kózepén</text>
+		<line x1="711" y1="185" x2="800" y2="115" stroke-width="0.25" stroke="black"/>
+		<circle cx="711" cy="185" r="5" fill="red"/>
 	</g>
 	
 </svg>
