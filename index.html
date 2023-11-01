@@ -14,13 +14,17 @@
         <viewpoint position="14, 5, 90" bind="true" centerOfRotation="14, 0, 21"></viewpoint>
 
         <inline url="terrain.x3d"></inline>
+
+        <transform translation="20 0 20" rotation="1 0 0 -1.57" >
+            <inline url="man.x3d"></inline>
+        </transform>
 		 
-		<transform translation='-3 0 0'> 
+		<transform translation='0.4 0 0'> 
 		  <shape> 
 			 <appearance> 
 			   <material diffuseColor='0 1 0'></material> 
 			 </appearance> 
-			 <cone></cone> 
+			 <box size="0.1 1.8 5"></box> 
 		  </shape> 
 		</transform> 
 		<transform translation='3 0 0'> 
