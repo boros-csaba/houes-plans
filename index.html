@@ -2,19 +2,19 @@
    <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
      <title>My first X3DOM page</title> 
-     <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script> 
+     <script type='text/javascript' src='https://www.x3dom.org/release/x3dom-full.js'> </script> 
      <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'></link> 
    </head> 
    <body> 
-    
-	 <x3d width='500px' height='400px'> 
-	   <scene> 
-		<shape> 
-		   <appearance> 
-			 <material diffuseColor='1 0 0'></material> 
-		   </appearance> 
-		   <box></box> 
-		</shape> 
+
+	 <x3d width='100%' height='100%'> 
+
+	   <scene>
+
+        <viewpoint position="14, 5, 90" bind="true" centerOfRotation="14, 0, 21"></viewpoint>
+
+        <inline url="terrain.x3d"></inline>
+		 
 		<transform translation='-3 0 0'> 
 		  <shape> 
 			 <appearance> 
@@ -32,6 +32,8 @@
 		  </shape> 
 		</transform> 
 	   </scene> 
+
 	</x3d> 
+
    </body> 
 </html> 
