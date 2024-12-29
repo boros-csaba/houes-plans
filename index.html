@@ -30,8 +30,6 @@ cuboid(5.05|7.05|0 4.25|0.95|0.25){555}
 cuboid(10.8|6.05|0 4.15|1.95|0.25){555}
 cuboid(4.6|7.05|0 0.4|12.6|0){F5DEB3}
 
-// terasz 
-cuboid(6.65|19.65|0 8.30|4.35|0.25){555}
 
 // terasz szint terep
 quadrangle(15.3|7.4|0 26|7.4|0 24|19.6|0 15.3|19.6|0){0f0}
@@ -152,9 +150,6 @@ cuboid(6.35|23.6|0 8.9|0.3|0){F5DEB3}
 quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 
 
-
-
-
 // garázs
 cuboid(17|0|-3 5|6.5|0)[0 0 0]{555}
 cuboid(17|6.5|-3 5|0,3|1,5)[0 0 0]{555}
@@ -199,8 +194,22 @@ cuboid(2.5|6|-1 6.75|0.35|1)[0 0 0]{555}
 
 cylinder(17|37|4 0.15|1.5|1.5)
 	`;
+	val += terasz();
 	input.val(val);
 });
+
+function terasz() {
+	var x = 6.65;
+	var y = 19.65;
+	var w = 8.25;
+	var l = 4;
+	var h = 0.25;
+
+	return `
+// terasz
+cuboid(${x}|${y}|0 ${w}|${l}|${0.25}){555}
+	`;
+}
 
 </script>
 
@@ -266,7 +275,7 @@ cylinder(17|37|4 0.15|1.5|1.5)
 
 								<div id="axesswitcher">
 									<label for="axes-visible">
-										<input type="checkbox" name="axes-visible" id="axes-visible">
+										<input type="checkbox" name="axes-visible" id="axes-visible" checked>
 										Axes
 									</label>
 								</div>
@@ -274,7 +283,7 @@ cylinder(17|37|4 0.15|1.5|1.5)
 								<div id="planeswitcher">
 									<span>Coordinate planes:</span>
 									<label for="planexy-visible">
-										<input type="checkbox" name="plane-visible" id="planexy-visible">
+										<input type="checkbox" name="plane-visible" id="planexy-visible" checked>
 										xy
 									</label>
 									<label for="planexz-visible">
