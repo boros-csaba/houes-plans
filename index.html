@@ -12,11 +12,15 @@
 
 <script>
 
+var grassColor = '54db00';
+var csempeColor = 'e1d5c3';
+
 $(function onEdit() {
+
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(0|20|10 10|40|0)
+	camera(0|17|10 10|20|0)
 	
 // szomszéd telekek
 quadrangle(0|50|3.25 27|50|5.85 27|40|5.85 0|40|3.25){f00}
@@ -115,18 +119,7 @@ quadrangle(8.8|33|3.25 18.5|34|4.4 18.5|33|3.9 8.8|33|3.25){0f0}
 
 // konyha
 cuboid(18.75|34|4.4 8|5.7|0)[0 0 0]{0f0}
-cuboid(19.5|34.5|4.45 6|4|0)[0 0 0]{fad7a0}
 quadrangle(18.5|34|4.4 26.7|34|4.4 26.7|33|3.9 18.5|33|3.9){0f0}
-
-
-
-
-
-
-// ház - todo pontos méretek
-cuboid(15|6|0 0.3|17.7|0){F5DEB3}
-cuboid(6.35|19.6|0 0.3|4|0){F5DEB3}
-cuboid(6.35|23.6|0 8.9|0.3|0){F5DEB3} 
 
 
 
@@ -217,10 +210,16 @@ function terasz() {
 	var w = 8.25;
 	var l = 4;
 	var h = 0.25;
-
+	var ph = 2.3;
 	return `
 // terasz
-cuboid(${x}|${y}|0 ${w}|${l}|${0.25}){555}
+cuboid(${x}|${y}|0 ${w}|${l}|${0.25}){${csempeColor}}
+cuboid(${x}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
+cuboid(${x+w/2-0.07}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
+cuboid(${x+w-0.15}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
+cuboid(${x}|${y+l-0.15}|${h+ph} ${w}|0.15|0.15){4C2F26}
+cuboid(${x}|${y+0.05}|${h+ph} 0.15|${l-0.05}|0.15){4C2F26}
+cuboid(${x+w-0.15}|${y+0.05}|${h+ph} 0.15|${l-0.05}|0.15){4C2F26}
 	`;
 }
 
@@ -239,8 +238,8 @@ function konyha() {
 	var ph = 2.3;
 	return `
 // konyha
-cuboid(0.3|32.2|3.25 8|7.5|0.02){0f0}
-cuboid(${x}|${y}|3.25 6|4|0.15){e1d5c3}
+cuboid(0.3|32.2|3.25 8|7.5|0.02){${grassColor}}
+cuboid(${x}|${y}|3.25 6|4|0.15){${csempeColor}}
 // pergola
 cuboid(${x}|${y}|${s} 0.15|0.15|${ph}){4C2F26}
 cuboid(${x}|${y+4-0.15}|${s} 0.15|0.15|${ph}){4C2F26}
