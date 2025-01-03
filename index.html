@@ -12,9 +12,6 @@
 
 <script>
 
-var grassColor = '54db00';
-var csempeColor = 'e1d5c3';
-
 $(function onEdit() {
 
 	var input = $('#val_drawings');
@@ -172,6 +169,7 @@ cuboid(2.5|6|-1 6.75|0.35|1)[0 0 0]{555}
 cylinder(17|37|4 0.15|1.5|1.5)
 	`;
 
+	val += terep();
 	val += jobbHatsoTamfal();
 	val += terasz();
 	val += konyha();
@@ -182,6 +180,15 @@ cylinder(17|37|4 0.15|1.5|1.5)
 });
 
 var tamfalSzin = 'fff';
+var grassColor = '54db00';
+var csempeColor = 'e1d5c3';
+
+function terep() {
+	return `
+point(10|25|0.25 "2.6m")
+lineseg(10|23.65|0.25 10|26.25|0.25)
+	`;
+}
 
 function jobbHatsoTamfal() {
 	return `
