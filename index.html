@@ -174,7 +174,7 @@ var terkoSzin = 'd37a43';
 
 var utcaBalOldalSzint = -3.8;
 var utcaJobbOldalSzint = -2.5;
-var utEsTelekHatarTavolsag = 3;
+var utEsTelekHatarTavolsag = 3.5;
 
 function terep() {
 	return `
@@ -288,18 +288,24 @@ function kocsibeallo() {
 	var x = 17;
 	var sz = 6;
 	var m = 6.5;
-	var szint = -3;
-	var lejtes = 0.5;
+	var lejtes = 0.05 * m;
 
-	var utcaLejtesPerMeter = utcaJobbOldalSzint;
+	var utcaLejtesPerMeter = (utcaJobbOldalSzint-utcaBalOldalSzint)/27;
+	var utcaSzintBealloBalOldalon = utcaJobbOldalSzint - (27-x)*utcaLejtesPerMeter; 
+	var utcaSzintBealloJobbOldalon = utcaJobbOldalSzint - (27-x-sz)*utcaLejtesPerMeter; 
+	console.log(utcaJobbOldalSzint-utcaBalOldalSzint, utcaBalOldalSzint);
 
+	var kintiMaxLejtesPerMeter = 0.25;
+	var szint = utcaSzintBealloJobbOldalon + kintiMaxLejtesPerMeter*utEsTelekHatarTavolsag;
+	console.log(szint, szint+lejtes);
 	var val = `
 $cuboid(17|0|-3 ${sz}|6.5|0)[0 0 0]{${terkoSzin}}
 
 quadrangle(${x}|${m}|${szint+lejtes} ${x+sz}|${m}|${szint+lejtes} ${x+sz}|0|${szint} ${x}|0|${szint}){${terkoSzin}}
+quadrangle(${x}|0|${szint} ${x+sz}|0|${szint} ${x+sz}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloJobbOldalon} ${x}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloBalOldalon}){${terkoSzin}}
 `;
-	val += rangeRover(x + 0.75, 0.5, -3);
-	val += claMercedes(x + sz - 2.3, 1, -3);
+	val += rangeRover(x + 0.75, 0.5, szint);
+	val += claMercedes(x + sz - 2.3, 1, szint);
 
 	return val;
 }
