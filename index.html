@@ -17,12 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(0|17|10 10|20|0)
-	
-// szomszéd telekek
-quadrangle(0|50|3.25 27|50|5.85 27|40|5.85 0|40|3.25){f00}
-quadrangle(-10|40|3.25 0|40|3.25 0|0|-2.5 -10|0|-2.5){f00}
-quadrangle(27|40|5.85 37|40|5.85 37|0|-1.2 27|0|-1.2 ){f00}
+	camera(0|-27|10 10|0|0)
 
 // ház
 cuboid(5|8|0.25 10|11.7|3){fff}
@@ -167,6 +162,7 @@ cylinder(17|37|4 0.15|1.5|1.5)
 	`;
 
 	val += terep();
+	val += meretek();
 	val += alsoTamfal();
 	val += jobbHatsoTamfal();
 	val += terasz();
@@ -182,6 +178,21 @@ var grassColor = '54db00';
 var csempeColor = 'e1d5c3';
 
 function terep() {
+	var utcaJobbOldalSzint = -2.5;
+	var utEsTelekHatarTavolsag = 3;
+
+	return `
+// szomszéd telkek
+quadrangle(0|50|3.25 27|50|5.85 27|40|5.85 0|40|3.25){f00}
+quadrangle(-10|40|3.25 0|40|3.25 0|0|-2.2 -10|0|-2.2){f00}
+quadrangle(27|40|5.85 37|40|5.85 37|0|-0.9 27|0|-0.9){f00}
+
+// utca
+quadrangle(-10|${-utEsTelekHatarTavolsag}|-3.8 37|${-utEsTelekHatarTavolsag}|${utcaJobbOldalSzint} 37|${-utEsTelekHatarTavolsag-5}|${utcaJobbOldalSzint} -10|${-utEsTelekHatarTavolsag-5}|-3.8){666}
+`;
+}
+
+function meretek() { //todo kiszervezni
 	return `
 point(10|25|0.25 "2.6m")
 lineseg(10|23.65|0.25 10|26.25|0.25)
@@ -272,7 +283,6 @@ cuboid(${x}|${y+4-0.15}|${s+ph} 6|0.15|0.15){4C2F26}
 cuboid(${x+6-0.15}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
 	`;
 }
-
 </script>
 
 
