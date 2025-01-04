@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(0|-27|10 10|0|0)
+	camera(0|10|10 5|20|0)
 
 // ház
 cuboid(5|8|0.25 10|11.7|3){fff}
@@ -175,6 +175,7 @@ var terkoSzin = 'd37a43';
 var utcaBalOldalSzint = -3.8;
 var utcaJobbOldalSzint = -2.5;
 var utEsTelekHatarTavolsag = 3.5;
+var hazBalHatsoSarokY = 19.65; // todo
 
 function terep() {
 	return `
@@ -194,6 +195,10 @@ cylinder(3|1.75|-2 0.15|0.42|0.42){555}
 
 // viztartaly
 cylinder(${5-1.85}|${6+3.5}|0 0.15|0.32|0.32){555}
+
+// hoszivattyu
+cuboid(${5-1}|${hazBalHatsoSarokY-1.5-1.6}|0 1|1.6|0.1)[0 0 0]{555}
+cuboid(${5-1+0.1}|${hazBalHatsoSarokY-1.5-1.5}|0.4 0.4|1.4|1)[0 0 0]{fff}
 `;
 }
 
@@ -239,7 +244,7 @@ cuboid(18.75|39,75|4.35 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
 
 function terasz() {
 	var x = 6.65;
-	var y = 19.65;
+	var y = hazBalHatsoSarokY;
 	var w = 8.25;
 	var l = 4;
 	var h = 0.25;
