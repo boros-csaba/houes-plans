@@ -118,13 +118,13 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 
 
  kerites
-cuboid(0|0|-2.5 3|0,3|1,5)[0 0 0]{E1C16E}
-cuboid(3|0|-2.7 3|0,3|1,5)[0 0 0]{E1C16E}
-cuboid(6|0|-2.9 4|0,3|1,5)[0 0 0]{E1C16E}
-cuboid(11|0|-3 3|0,3|1,5)[0 0 0]{E1C16E}
-cuboid(14|0|-3 3.5|0,3|1,5)[0 0 0]{E1C16E}
-cuboid(21.5|0|-3 5.5|0,3|1,5)[0 0 0]{E1C16E}
-quadrangle(22|0.3|-1.6 27|0.3|-1.6 27|7.4|0 22|7.4|0){0f0}
+#cuboid(0|0|-2.5 3|0,3|1,5)[0 0 0]{E1C16E}
+#cuboid(3|0|-2.7 3|0,3|1,5)[0 0 0]{E1C16E}
+#cuboid(6|0|-2.9 4|0,3|1,5)[0 0 0]{E1C16E}
+#cuboid(11|0|-3 3|0,3|1,5)[0 0 0]{E1C16E}
+#cuboid(14|0|-3 3.5|0,3|1,5)[0 0 0]{E1C16E}
+#cuboid(21.5|0|-3 5.5|0,3|1,5)[0 0 0]{E1C16E}
+#quadrangle(22|0.3|-1.6 27|0.3|-1.6 27|7.4|0 22|7.4|0){0f0}
 
 cuboid(10|0|-3 1|0.5|0.2)[0 0 0]{fff}
 cuboid(10|0.28|-2.8 1|0.5|0.2)[0 0 0]{fff}
@@ -172,6 +172,7 @@ var fuSzin = '54db00';
 var csempeSzin = 'e1d5c3';
 var terkoSzin = 'd37a43';
 
+var utcaBalOldalSzint = -3.8;
 var utcaJobbOldalSzint = -2.5;
 var utEsTelekHatarTavolsag = 3;
 
@@ -183,7 +184,7 @@ quadrangle(-10|40|3.25 0|40|3.25 0|0|-2.2 -10|0|-2.2){f00}
 quadrangle(27|40|5.85 37|40|5.85 37|0|-0.9 27|0|-0.9){f00}
 
 // utca
-quadrangle(-10|${-utEsTelekHatarTavolsag}|-3.8 37|${-utEsTelekHatarTavolsag}|${utcaJobbOldalSzint} 37|${-utEsTelekHatarTavolsag-5}|${utcaJobbOldalSzint} -10|${-utEsTelekHatarTavolsag-5}|-3.8){666}
+quadrangle(0|${-utEsTelekHatarTavolsag}|${utcaBalOldalSzint} 27|${-utEsTelekHatarTavolsag}|${utcaJobbOldalSzint} 27|${-utEsTelekHatarTavolsag-5}|${utcaJobbOldalSzint} 0|${-utEsTelekHatarTavolsag-5}|${utcaBalOldalSzint}){666}
 `;
 }
 
@@ -286,9 +287,16 @@ cuboid(${x+6-0.15}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
 function kocsibeallo() {
 	var x = 17;
 	var sz = 6;
+	var m = 6.5;
+	var szint = -3;
+	var lejtes = 0.5;
+
+	var utcaLejtesPerMeter = utcaJobbOldalSzint;
 
 	var val = `
-cuboid(17|0|-3 ${sz}|6.5|0)[0 0 0]{${terkoSzin}}
+$cuboid(17|0|-3 ${sz}|6.5|0)[0 0 0]{${terkoSzin}}
+
+quadrangle(${x}|${m}|${szint+lejtes} ${x+sz}|${m}|${szint+lejtes} ${x+sz}|0|${szint} ${x}|0|${szint}){${terkoSzin}}
 `;
 	val += rangeRover(x + 0.75, 0.5, -3);
 	val += claMercedes(x + sz - 2.3, 1, -3);
