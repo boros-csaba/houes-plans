@@ -110,17 +110,12 @@ quadrangle(8.8|33|3.25 18.5|34|4.4 18.5|33|3.9 8.8|33|3.25){0f0}
 cuboid(18.75|34|4.4 8|5.7|0)[0 0 0]{0f0}
 quadrangle(18.5|34|4.4 26.7|34|4.4 26.7|33|3.9 18.5|33|3.9){0f0}
 
-
-
 // bal terep
 quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 
 
 // garázs
-cuboid(17|0|-3 5|6.5|0)[0 0 0]{555}
-cuboid(17|6.5|-3 5|0,3|1,5)[0 0 0]{555}
-cuboid(17|6.8|-1,5 5|0,5|0)[0 0 0]{0f0}
-cuboid(17|7.2|-1,5 5|0,3|1,5)[0 0 0]{555}
+
 
  kerites
 cuboid(0|0|-2.5 3|0,3|1,5)[0 0 0]{E1C16E}
@@ -163,10 +158,11 @@ cylinder(17|37|4 0.15|1.5|1.5)
 
 	val += terep();
 	val += meretek();
-	val += alsoTamfal();
-	val += jobbHatsoTamfal();
+	
+	val += tamfalak();
 	val += terasz();
 	val += konyha();
+	val += kocsibeallo();
 
 	val += rangeRover(20, 0.5, -3);
 
@@ -174,13 +170,15 @@ cylinder(17|37|4 0.15|1.5|1.5)
 });
 
 var tamfalSzin = '555';
-var grassColor = '54db00';
-var csempeColor = 'e1d5c3';
+var fuSzin = '54db00';
+var csempeSzin = 'e1d5c3';
+var terkoSzin = 'B4AA9C';
+
+
+var utcaJobbOldalSzint = -2.5;
+var utEsTelekHatarTavolsag = 3;
 
 function terep() {
-	var utcaJobbOldalSzint = -2.5;
-	var utEsTelekHatarTavolsag = 3;
-
 	return `
 // szomszéd telkek
 quadrangle(0|50|3.25 27|50|5.85 27|40|5.85 0|40|3.25){f00}
@@ -205,18 +203,14 @@ lineseg(10|26.55|2.55 10|31.85|2.55)
 	`;
 }
 
-function alsoTamfal() {
+function tamfalak() {
 	return `
 // alsó támfal
 cuboid(4.55|26.25|0.25 11.4|0.3|1.1)[0 0 0]{${tamfalSzin}}
 quadrangle(16|26.25|0.25 20|23.7|0.25 20|23.7|1.35 16|26.25|1.35){${tamfalSzin}}
 quadrangle(16|26.55|0.25 20|24|0.25 20|24|1.35 16|26.55|1.35){${tamfalSzin}}
 quadrangle(16|26.25|1.35 20|23.7|1.35 20|24|1.35 16|26.55|1.35){${tamfalSzin}}
-`;
-}
 
-function jobbHatsoTamfal() {
-	return `
 // jobb hatso tamfal
 cuboid(26.75|38.75|5.85 0.25|1.25|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(26.75|37.25|5.6 0.25|2.75|0.25)[0 0 0]{${tamfalSzin}}
@@ -233,7 +227,7 @@ cuboid(18.75|39,75|5.1 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(18.75|39,75|4.85 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(18.75|39,75|4.6 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(18.75|39,75|4.35 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
-	`;
+`;
 }
 
 function terasz() {
@@ -245,7 +239,7 @@ function terasz() {
 	var ph = 2.3;
 	return `
 // terasz
-cuboid(${x}|${y}|0 ${w}|${l}|${0.25}){${csempeColor}}
+cuboid(${x}|${y}|0 ${w}|${l}|${0.25}){${csempeSzin}}
 cuboid(${x}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
 cuboid(${x+w/2-0.07}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
 cuboid(${x+w-0.15}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
@@ -270,8 +264,8 @@ function konyha() {
 	var ph = 2.3;
 	return `
 // konyha
-cuboid(0.3|32.2|3.25 8|7.5|0.02){${grassColor}}
-cuboid(${x}|${y}|3.25 6|4|0.15){${csempeColor}}
+cuboid(0.3|32.2|3.25 8|7.5|0.02){${fuSzin}}
+cuboid(${x}|${y}|3.25 6|4|0.15){${csempeSzin}}
 // pergola
 cuboid(${x}|${y}|${s} 0.15|0.15|${ph}){4C2F26}
 cuboid(${x}|${y+4-0.15}|${s} 0.15|0.15|${ph}){4C2F26}
@@ -282,6 +276,15 @@ cuboid(${x}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
 cuboid(${x}|${y+4-0.15}|${s+ph} 6|0.15|0.15){4C2F26}
 cuboid(${x+6-0.15}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
 	`;
+}
+
+function kocsibeallo() {
+	return `
+cuboid(17|0|-3 5|6.5|0)[0 0 0]{555}
+cuboid(17|6.5|-3 5|0,3|1,5)[0 0 0]{555}
+cuboid(17|6.8|-1,5 5|0,5|0)[0 0 0]{0f0}
+cuboid(17|7.2|-1,5 5|0,3|1,5)[0 0 0]{555}
+`;
 }
 </script>
 
