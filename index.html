@@ -136,7 +136,7 @@ cuboid(2.5|6|-1 6.75|0.35|1)[0 0 0]{555}
 
 var tamfalSzin = '555';
 var fuSzin = '54db00';
-var meredekFuSzin = '9f0';
+var meredekFuSzin = '9f9';
 var csempeSzin = 'e1d5c3';
 var terkoSzin = 'd37a43';
 
@@ -175,7 +175,7 @@ cuboid(0.3|32.2|3.25 8.2|7.5|0){${fuSzin}}
 quadrangle(8.5|40|4.1 18.7|40|5 18.7|39|4.1 8.5|39|3.25){${meredekFuSzin}}
 quadrangle(8|40|3.251 8.5|40|4.11 8.5|39|3.251 8|39|3.251){${meredekFuSzin}}
 quadrangle(18.7|40|5.01 18.7|40|5.01 19.2|40|4.11 18.7|39|4.11){${meredekFuSzin}}
-
+quadrangle(8.5|39|3.25 18.8|39|4.1 18.8|34|4.1 8.5|32.2|3.25){${fuSzin}}
 
 // jobb felso sarok
 cuboid(18.75|34|4.1 8|5.7|0)[0 0 0]{${fuSzin}}
@@ -200,6 +200,10 @@ lineseg(10|26.55|2.55 10|31.85|2.55){${szin}}
 // bal hatso resz szelesseg
 point(4.25|33|3.3 "8.5m")[0 0 -90]
 lineseg(0|33|3.3 8.5|33|3.3){${szin}}
+
+// kozepso resz szint
+point(11|38|3.8 "0.85m szintkulonbseg")[0 0 -90]
+lineseg(8.5|38|3.25 18.7|38|4.1){${szin}}
 
 // jobb hatso resz szelesseg
 point(22|39|4.75 "8m")[0 0 -90]
