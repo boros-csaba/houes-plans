@@ -93,7 +93,7 @@ quadrangle(8.8|40|4.35 18.5|40|5 18.5|38.5|4.4 8.8|33|3.25){0f0}
 quadrangle(8.8|33|3.25 18.5|34|4.4 18.5|33|3.9 8.8|33|3.25){0f0}
 
 // konyha
-cuboid(18.75|34|4.4 8|5.7|0)[0 0 0]{0f0}
+
 quadrangle(18.5|34|4.4 26.7|34|4.4 26.7|33|3.9 18.5|33|3.9){0f0}
 
 // bal terep
@@ -183,26 +183,33 @@ cylinder(${5-1.85}|${6+3.5}|0 0.15|0.32|0.32){555}
 // hoszivattyu
 cuboid(${5-1}|${hazBalHatsoSarokY-1.5-1.6}|0 1|1.6|0.1)[0 0 0]{555}
 cuboid(${5-1+0.1}|${hazBalHatsoSarokY-1.5-1.5}|0.4 0.4|1.4|1)[0 0 0]{fff}
+
+// bal felso sarok
+cuboid(0.3|32.2|3.25 8.5|7.5|0.02){${fuSzin}}
+
+// jobb felso sarok
+cuboid(18.75|34|4.1 8|5.7|0)[0 0 0]{${fuSzin}}
 `;
 }
 
-function meretek() { //todo kiszervezni
+function meretek() { 
+	var szin = 'c11f0c';
 	return `
 // terasztol tamfalig	
 point(10|25|0.25 "2.6m")[0 0 -90]
-lineseg(10|23.65|0.25 10|26.25|0.25)
+lineseg(10|23.65|0.25 10|26.25|0.25){${szin}}
 
 // elso es masodik szint magassag
 point(10|26.55|2 "1.3m")[0 0 -90]
-lineseg(10|26.55|1.25 10|26.55|2.55)
+lineseg(10|26.55|1.25 10|26.55|2.55){${szin}}
 
 // masodik szint szelesseg
 point(10|29.2|2.55 "5.3m")[0 0 -90]
-lineseg(10|26.55|2.55 10|31.85|2.55)
+lineseg(10|26.55|2.55 10|31.85|2.55){${szin}}
 
 // bal hatso resz szelesseg
-point(4.25|39|3.5 "8.5m")[0 0 -90]
-lineseg(0|39|3.5 8.5|39|3.5)
+point(4.25|39|3.75 "8.5m")[0 0 -90]
+lineseg(0|39|3.75 8.5|39|3.75){${szin}}
 	`;
 }
 
@@ -232,21 +239,21 @@ cuboid(0|32.2|2.7 0.3|3.8|0.25)[0 0 0]{555}
 cuboid(0|32.2|2.45 0.3|2.3|0.25)[0 0 0]{555}
 
 // jobb hatso tamfal
-cuboid(26.75|38.75|5.85 0.25|1.25|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(26.75|37.25|5.6 0.25|2.75|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(26.75|36|5.35 0.25|4|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(26.75|34.5|5.1 0.25|5.5|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(26.75|33|4.85 0.25|7|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(26.75|38.75|5.6 0.25|1.25|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(26.75|37.25|5.35 0.25|2.75|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(26.75|36|5.1 0.25|4|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(26.75|34.5|4.85 0.25|5.5|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(26.75|33|4.6 0.25|7|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(26.75|33|4.35 0.25|7|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(26.75|33|4.1 0.25|4.75|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(24.75|39,75|5.85 2|0.25|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(22.75|39,75|5.6 4|0.25|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(20.75|39,75|5.35 6|0.25|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(18.75|39,75|5.1 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(26.75|33|4.1 0.25|7|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(26.75|33|3.85 0.25|4.75|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(24.75|39,75|5.6 2|0.25|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(22.75|39,75|5.35 4|0.25|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(20.75|39,75|5.1 6|0.25|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(18.75|39,75|4.85 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(18.75|39,75|4.6 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(18.75|39,75|4.35 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(18.75|39,75|4.1 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
 `;
 }
 
@@ -292,7 +299,6 @@ function konyha() {
 	var ph = 2.3;
 	return `
 // konyha
-cuboid(0.3|32.2|3.25 8|7.5|0.02){${fuSzin}}
 cuboid(${x}|${y}|3.25 6|4|0.15){${csempeSzin}}
 // pergola
 cuboid(${x}|${y}|${s} 0.15|0.15|${ph}){4C2F26}
