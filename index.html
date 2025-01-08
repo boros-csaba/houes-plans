@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(-5|20|10 10|40|0)
+	camera(10|20|15 35|40|0)
 
 // ház
 cuboid(5|8|0.25 10|11.7|3){fff}
@@ -80,22 +80,6 @@ cuboid(8.6|30.6|2.35 1.95|0.3|0.25)[0 0 0]{f00}
 cuboid(8.9|30.6|2.6 1.65|0.3|0.25)[0 0 0]{f00}
 cuboid(9.2|30.6|2.9 1.35|0.3|0.25)[0 0 0]{f00}
 
-// medence
-#cuboid(0|33|3.35 8.8|6.7|0)[0 0 0]{0f0} 
-#cuboid(1.0|35.25|3.4 5.5|3.5|0)[0 0 0]{fad7a0}
-#cuboid(1.25|35.5|3.45 5|3|0)[0 0 0]{3498db}
-#quadrangle(0.3|33|3.4 10.5|33|3.4 10.5|32.2|3 0.3|32.2|3){0f0}
-
-
-// sutogeto rész
-quadrangle(8.8|40|4.35 18.5|38.5|4.4 18.5|34|4.4 8.8|33|3.25){0f0}
-quadrangle(8.8|40|4.35 18.5|40|5 18.5|38.5|4.4 8.8|33|3.25){0f0}
-quadrangle(8.8|33|3.25 18.5|34|4.4 18.5|33|3.9 8.8|33|3.25){0f0}
-
-// konyha
-
-quadrangle(18.5|34|4.4 26.7|34|4.4 26.7|33|3.9 18.5|33|3.9){0f0}
-
 // bal terep
 quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 
@@ -146,6 +130,7 @@ cylinder(17|37|4 0.15|1.5|1.5)
 	val += tamfalak();
 	val += terasz();
 	val += konyha();
+	val += medence();
 	val += kocsibeallo();
 
 	input.val(val);
@@ -185,7 +170,7 @@ cuboid(${5-1}|${hazBalHatsoSarokY-1.5-1.6}|0 1|1.6|0.1)[0 0 0]{555}
 cuboid(${5-1+0.1}|${hazBalHatsoSarokY-1.5-1.5}|0.4 0.4|1.4|1)[0 0 0]{fff}
 
 // bal felso sarok
-cuboid(0.3|32.2|3.25 8.5|7.5|0.02){${fuSzin}}
+cuboid(0.3|32.2|3.25 8.5|7.5|0){${fuSzin}}
 
 // jobb felso sarok
 cuboid(18.75|34|4.1 8|5.7|0)[0 0 0]{${fuSzin}}
@@ -310,6 +295,23 @@ cuboid(${x}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
 cuboid(${x}|${y+4-0.15}|${s+ph} 6|0.15|0.15){4C2F26}
 cuboid(${x+6-0.15}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
 	`;
+}
+
+function medence() {
+	var val =  `
+// medence
+cuboid(19|35|4.11 5.5|3.5|0)[0 0 0]{fad7a0}
+cuboid(19.25|35.25|4.12 5|3|0)[0 0 0]{3498db}
+`;
+	val += napagy(25, 37, 4.15, -30);
+	val += napagy(25, 35, 4.15, -30);
+	return val;
+}
+
+function napagy(x, y, z, r) {
+	return `
+cuboid(${x}|${y}|${z} 0.8|2|0.2)[0 0 ${r}]{fff}
+`;
 }
 
 function kocsibeallo() {
