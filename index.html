@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(-10|-10|15 15|20|0)
+	camera(-5|-10|20 15|15|0)
 
 // terasz szint terep
 quadrangle(15.3|7.4|0 26|7.4|0 24|19.6|0 15.3|19.6|0){0f0}
@@ -254,11 +254,21 @@ function haz() {
 	var y = 6;
 	var z = 0.25;
 	var h = 3;
+	var xw = x+10-0.25;
 	var balHatsoSaroktolDolgozoAblakig = 3.4;
 	var dolgozoAblak = 1;
 	var balElsoSaroktolDolgozoAblakig = 8.3; // TODO megmerni ???
 	var balSarokKinyulas = 1;
 	var nagyAblakMagassag = 2.35;
+	var jobbHatsoSaroktolEtkezoAblakig = 0.83;
+	var etkezoAblak = 2.46;
+	var etkezoEsKonyhaAblakKozott = 1.08;
+	var konyhaAblak = 1.04;
+	var konyhaEsSzobaAblakKozott = 1.6;
+	var szobaAblak = 1.73;
+	var szobaAblaktolJobbElsoSarokig = 4.96;
+	var ablakAlattiMagassag = 0.9;
+
 
 	var val = `
 // ház alap
@@ -272,6 +282,19 @@ cuboid(${x}|${y+balSarokKinyulas}|${z} 0.25|${balElsoSaroktolDolgozoAblakig}|${h
 cuboid(${x}|${y+balSarokKinyulas+balElsoSaroktolDolgozoAblakig}|${z+nagyAblakMagassag} 0.25|${dolgozoAblak}|${h-nagyAblakMagassag}){fff}
 cuboid(${x}|${y+balSarokKinyulas+balElsoSaroktolDolgozoAblakig+dolgozoAblak}|${z} 0.25|${balHatsoSaroktolDolgozoAblakig}|${h}){fff}
 `;
+
+val += `
+// haz jobb oldali falak
+cuboid(${xw}|${y}|${z} 0.25|${szobaAblaktolJobbElsoSarokig}|${h}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig}|${z} 0.25|${szobaAblak}|${ablakAlattiMagassag}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig}|${z+nagyAblakMagassag} 0.25|${szobaAblak}|${h-nagyAblakMagassag}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak}|${z} 0.25|${konyhaEsSzobaAblakKozott}|${h}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott}|${z+nagyAblakMagassag} 0.25|${konyhaAblak}|${h-nagyAblakMagassag}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak}|${z} 0.25|${etkezoEsKonyhaAblakKozott}|${h}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak+etkezoEsKonyhaAblakKozott}|${z+nagyAblakMagassag} 0.25|${etkezoAblak}|${h-nagyAblakMagassag}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak+etkezoEsKonyhaAblakKozott+etkezoAblak}|${z} 0.25|${jobbHatsoSaroktolEtkezoAblakig}|${h}){fff}
+`;
+
 	return val;
 
 	return `
