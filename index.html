@@ -101,6 +101,7 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	val += lepcsok();
 	val += hazElottiTerasz();
 	val += terasz();
+	val += pince();
 	val += konyha();
 	val += medence();
 	val += kocsibeallo();
@@ -298,7 +299,8 @@ cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozot
 
 val += `
 // haz bal oldali kavics
-cuboid(${x+0.05-kavics}|6.85|0 ${kavics}|12.8|0.16){fff}
+cuboid(${x+0.05-kavics}|6.85|0 ${kavics}|12.8|0.01){fff}
+cuboid(${xw+0.25}|6.05|0 ${kavics}|13.6|0.01){fff}
 `;
 
 	return val;
@@ -338,14 +340,14 @@ cuboid(${x+w-0.15}|${y+0.05}|${h+ph} 0.15|${l-0.05}|0.15){4C2F26}
 function hazElottiTerasz() {
 	var val = `
 // haz elotti terasz
-cuboid(5.05|6.85|0 4.2|0.15|0.16)[0 0 0]{fff}
-cuboid(4.65|6.15|0 4.6|0.7|0.16)[0 0 0]{${csempeSzin}}
-cuboid(4.65|5.5|0 4.6|0.65|0.16)[0 0 0]{fff}
+cuboid(5.05|6.85|0 4.2|0.15|0.01)[0 0 0]{fff}
+cuboid(4.65|6.15|0 4.6|0.7|0.01)[0 0 0]{${csempeSzin}}
+cuboid(4.65|5.5|0 4.6|0.65|0.01)[0 0 0]{fff}
 
-cuboid(9.25|5.2|0 1.6|2.8|0.16)[0 0 0]{${csempeSzin}}
-cuboid(10.85|5.9|0 4.5|0.15|0.16)[0 0 0]{fff}
-cuboid(10.85|5.2|0 4.5|0.7|0.16)[0 0 0]{${csempeSzin}}
-cuboid(10.85|4.6|0 4.5|0.6|0.16)[0 0 0]{fff}
+cuboid(9.25|5.2|0 1.6|2.8|0.0.01)[0 0 0]{${csempeSzin}}
+cuboid(10.85|5.9|0 4.5|0.15|0.01)[0 0 0]{fff}
+cuboid(10.85|5.2|0 4.5|0.7|0.01)[0 0 0]{${csempeSzin}}
+cuboid(10.85|4.6|0 4.5|0.6|0.01)[0 0 0]{fff}
 `;
 	val += piciFa(5.75, 5.85, 0.16);
 	val += piciFa(6.75, 5.85, 0.16);
@@ -390,6 +392,24 @@ cuboid(6.85|3.1|-1.44 1.2|1.2|0.16)[0 0 0]{${csempeSzin}}
 		`;
 	}
 	return val;
+}
+
+function pince() {
+	var x = 18.5;
+	var y = 6.5;
+	var z = -0.8;
+	var w = 6;
+	var h = 2;
+	var m = 3;
+
+	return `
+// pince
+cuboid(${x}|${y+m}|${z-h} ${w}|0.3|${h}){${tamfalSzin}}
+cuboid(${x-0.3}|${y}|${z-h} 0.3|${m+0.3}|${h}){${tamfalSzin}}
+cuboid(${x+w}|${y}|${z-h} 0.3|${m+0.3}|${h}){${tamfalSzin}}
+cuboid(${x-0.3}|${y}|${z-h-0.3} ${w+0.6}|${m+0.3}|0.3){${tamfalSzin}}
+cuboid(${x-0.3}|${y}|${z} ${w+0.6}|${m+0.3}|0.3){${tamfalSzin}}
+	`;
 }
 
 function konyha() {
@@ -453,7 +473,7 @@ cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
 
 	var sz = 7;
 	var m = 6.5;
-	var lejtes = 0.05 * m;
+	var lejtes = 0.001 * m;
 	var x = 27 - sz - 2;
 
 	var utcaLejtesPerMeter = (utcaJobbOldalSzint-utcaBalOldalSzint)/27;
@@ -461,7 +481,7 @@ cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
 	var utcaSzintBealloJobbOldalon = utcaJobbOldalSzint - (27-x-sz)*utcaLejtesPerMeter; 
 	console.log(utcaJobbOldalSzint-utcaBalOldalSzint, utcaBalOldalSzint);
 
-	var kintiMaxLejtesPerMeter = 0.25;
+	var kintiMaxLejtesPerMeter = 0.005;
 	var szint = utcaSzintBealloJobbOldalon + kintiMaxLejtesPerMeter*utEsTelekHatarTavolsag;
 	console.log(szint, szint+lejtes);
 	var val = `
