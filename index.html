@@ -342,6 +342,12 @@ cuboid(10.85|5|0 4.45|1|0.16)[0 0 0]{f9cce3}
 	val += piciFa(6.75, 5.85, 0.16);
 	val += piciFa(7.75, 5.85, 0.16);
 	val += piciFa(8.75, 5.85, 0.16);
+	val += talajSpotLampa(6.25, 5.85, 0.16);
+	val += talajSpotLampa(7.25, 5.85, 0.16);
+	val += talajSpotLampa(8.25, 5.85, 0.16);
+	val += talajSpotLampa(6.25, 6.85, 0.16);
+	val += talajSpotLampa(7.25, 6.85, 0.16);
+	val += talajSpotLampa(8.25, 6.85, 0.16);
 	return val;
 }
 
@@ -467,6 +473,17 @@ function piciFa(x, y, z) {
 // pici fa
 cylinder(${x}|${y}|${z} ${th}|${tv}|${tv}){7B3F00}
 cylinder(${x}|${y}|${z+th} ${bh}|${tv}|${bv}){0f0}
+`;
+}
+
+function talajSpotLampa(x, y, z) {
+	var h = 0.2;
+	var w = 0.5;
+	return `
+// talaj spot lampa
+cylinder(${x}|${y}|${z} 0.01|0.05|0.05){000}
+quadrangle(${x}|${y}|${z} ${x-w}|${y}|${z+h} ${x+w}|${y}|${z+h} ${x}|${y}|${z}){FFEA00}
+quadrangle(${x}|${y}|${z} ${x}|${y-w}|${z+h} ${x}|${y+w}|${z+h} ${x}|${y}|${z}){FFEA00}
 `;
 }
 
