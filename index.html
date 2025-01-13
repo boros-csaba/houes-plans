@@ -362,15 +362,31 @@ cuboid(10.85|4.6|0 4.5|0.6|0.16)[0 0 0]{fff}
 
 function lepcsok(){
 	var val = `
-// haz elotti lepcso	
+// haz elotti lepcso
+cuboid(9.25|4.9|-0.16 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(9.25|4.6|-0.32 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(9.25|4.3|-0.48 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
+
+cuboid(9.25|3.1|-0.64 1.6|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(8.95|3.1|-0.8 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(8.65|3.1|-0.96 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(8.35|3.1|-1.12 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(8.05|3.1|-1.28 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+
+cuboid(6.85|3.1|-1.44 1.2|1.2|0.16)[0 0 0]{${csempeSzin}}
+
 `;
-	var y = 5.2;
-	var z = 0;
-	for (var i = 0; i < 18; i++) {
+	var y = 3.1;
+	var z = -1.44;
+	for (var i = 0; i < 50; i++) {
 		y -= 0.3;
 		z -= 0.16;
+		if (z < -3) {
+			console.log('y', y);
+			continue;
+		}
 		val += `
-			cuboid(9.25|${y}|${z} 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
+			cuboid(6.85|${y}|${z} 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
 		`;
 	}
 	return val;
