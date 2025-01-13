@@ -104,6 +104,7 @@ cuboid(2.5|6|-1 6.75|0.35|1)[0 0 0]{555}
 
 	val += terep();
 	val += meretek();
+	val += soveny();
 
 	val += tamfalak();
 	val += haz();
@@ -111,6 +112,7 @@ cuboid(2.5|6|-1 6.75|0.35|1)[0 0 0]{555}
 	val += konyha();
 	val += medence();
 	val += kocsibeallo();
+	val += magasAgyasok();
 
 	input.val(val);
 });
@@ -329,25 +331,9 @@ cuboid(${x+w-0.15}|${y+0.05}|${h+ph} 0.15|${l-0.05}|0.15){4C2F26}
 	`;
 }
 
-function rangeRover(x, y, z) {
-	return `
-// range rover
-cuboid(${x}|${y}|${z} 2.1|5.36|1){686b67}
-cuboid(${x}|${y}|${z+1} 2.1|${3.86}|0.97){686b67}
-cuboid(${x-1}|${y+3.25}|${z+0.5} 1|0.1|1.5){686b67}
-cuboid(${x-1}|${y+2}|${z+0.5} 1|0.1|1.5){686b67}
-cuboid(${x+2.1}|${y+3.25}|${z+0.5} 1|0.1|1.5){686b67}
-cuboid(${x+2.1}|${y+2}|${z+0.5} 1|0.1|1.5){686b67}
-	`;
-}
 
-function claMercedes(x, y, z) {
-	return `
-// cla mercedes
-cuboid(${x}|${y}|${z} 1.83|4.68|0.9){fb402a}
-cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
-	`;
-}
+
+
 
 function konyha() {
 	var x = 1.5;
@@ -387,6 +373,27 @@ cuboid(${x}|${y}|${z} 0.8|2|0.2)[0 0 ${r}]{fff}
 }
 
 function kocsibeallo() {
+
+	function rangeRover(x, y, z) {
+		return `
+// range rover
+cuboid(${x}|${y}|${z} 2.1|5.36|1){686b67}
+cuboid(${x}|${y}|${z+1} 2.1|${3.86}|0.97){686b67}
+cuboid(${x-1}|${y+3.25}|${z+0.5} 1|0.1|1.5){686b67}
+cuboid(${x-1}|${y+2}|${z+0.5} 1|0.1|1.5){686b67}
+cuboid(${x+2.1}|${y+3.25}|${z+0.5} 1|0.1|1.5){686b67}
+cuboid(${x+2.1}|${y+2}|${z+0.5} 1|0.1|1.5){686b67}
+		`;
+	}
+
+	function claMercedes(x, y, z) {
+		return `
+// cla mercedes
+cuboid(${x}|${y}|${z} 1.83|4.68|0.9){fb402a}
+cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
+		`;
+	}
+
 	var sz = 7;
 	var m = 6.5;
 	var lejtes = 0.05 * m;
@@ -410,6 +417,37 @@ quadrangle(${x}|0|${szint} ${x+sz}|0|${szint} ${x+sz}|${-utEsTelekHatarTavolsag}
 	val += claMercedes(x + sz - 2.3, 1, szint);
 
 	return val;
+}
+
+function magasAgyasok() {
+
+	function magasAgyas(x, y, z) {
+		var w = 1;
+		var l = 2;
+		var h = 0.8;
+
+		
+		return `
+// magas agyasok
+cuboid(${x}|${y}|${z} ${w}|${l}|${h}){4C2F26}
+cuboid(${x+0.1}|${y+0.1}|${z+h} ${w-0.2}|${l-0.2}|0.01){${fuSzin}}
+	`;
+	}
+
+	var val = `
+// magas agyasok
+`;
+	val += magasAgyas(1, 15.5, 0);
+	val += magasAgyas(1, 13, 0);
+	val += magasAgyas(1, 10.5, 0);
+	val += magasAgyas(1, 8, 0);
+	return val;
+}
+
+
+
+function soveny() {
+
 }
 </script>
 
