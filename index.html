@@ -22,8 +22,7 @@ $(function onEdit() {
 // terasz szint terep
 quadrangle(15.3|7.4|0 26|7.4|0 24|19.6|0 15.3|19.6|0){0f0}
 quadrangle(1.75|19.65|0 16|19.65|0 16|26.75|0.25 1.75|26.75|0.25){0f0}
-quadrangle(20|23.7|1.1 26|23.7|1.1 24|19.6|0 20|19.6|0){0f0}
-quadrangle(26|7.4|0 26|7.4|0 26|27.7|3.3 24|19.6|0){0f0}
+//quadrangle(26|7.4|0 26|7.4|0 26|27.7|3.3 24|19.6|0){0f0}
 quadrangle(18|25.1|0.25 20|23.7|1.1 20|19.6|0 20|19.6|0){0f0}
 
 // első szint támfalak
@@ -46,19 +45,6 @@ cuboid(3.35|27.3.5|1.28 1.2|0.35|0.16)[0 0 0]{fff}
 // első szint terep
 quadrangle(16|26.75|1.25 20|23.75|1.25 20|27.75|1.75 16|27.75|1.75){0f0}
 quadrangle(20|23.75|1.1 27|23.75|1.1 27|27.75|1.75 20|27.75|1.75){0f0}
-
-// masodik szint lepcso
-cuboid(9.5|30.9|2.78 1|1|0.16)[0 0 0]{f00}
-cuboid(9.2|30.9|2.62 0.3|1|0.16)[0 0 0]{f00}
-cuboid(8.9|30.9|2.46 0.3|1|0.16)[0 0 0]{f00}
-cuboid(8.6|30.9|2.3 0.3|1|0.16)[0 0 0]{f00}
-cuboid(8.3|30.9|2.14 0.3|1|0.16)[0 0 0]{f00}
-cuboid(8|30.9|1.98 0.3|1|0.16)[0 0 0]{f00}
-cuboid(10.5|30.6|2.1 0.3|1.3|1)[0 0 0]{f00}
-cuboid(8.3|30.6|2.1 2.25|0.3|0.25)[0 0 0]{f00}
-cuboid(8.6|30.6|2.35 1.95|0.3|0.25)[0 0 0]{f00}
-cuboid(8.9|30.6|2.6 1.65|0.3|0.25)[0 0 0]{f00}
-cuboid(9.2|30.6|2.9 1.35|0.3|0.25)[0 0 0]{f00}
 
 // bal terep
 quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
@@ -95,6 +81,7 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	val += terep();
 	val += meretek();
 	val += soveny();
+	val += fak();
 
 	val += tamfalak();
 	val += haz();
@@ -106,9 +93,10 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	val += medence();
 	val += kocsibeallo();
 	val += magasAgyasok();
+	val += jatszoter();
 
 	input.val(val);
-});
+}); 
 
 var tamfalSzin = '555';
 var fuSzin = '54db00';
@@ -548,6 +536,32 @@ quadrangle(${x}|${y}|${z} ${x}|${y-w}|${z+h} ${x}|${y+w}|${z+h} ${x}|${y}|${z}){
 `;
 }
 
+function jatszoter() {
+	var csuzdaX = 20;
+	var csuzdaY = 20;
+	var csuzdaZ = 1.5;
+	var val = `
+// csuzda
+quadrangle(${csuzdaX}|${csuzdaY}|${csuzdaZ} ${csuzdaX+0.5}|${csuzdaY}|${csuzdaZ} ${csuzdaX+0.5}|${csuzdaY-2.3}|${csuzdaZ-1.5} ${csuzdaX}|${csuzdaY-2.3}|${csuzdaZ-1.5}){f0f}
+`;
+	return val;
+}
+
+function fak() {
+	var x = 27-4;
+	var y = 30;
+	var z = 2.5;
+	var th = 2;
+	var tv = 0.15;
+	var lr = 1;
+	var lh = 2;
+
+	var val = `
+	cylinder(${x}|${y}|${z} ${th}|${tv}|${tv}){7B3F00}
+	cylinder(${x}|${y}|${z+th} ${lh}|${lr}){0f0}
+	`;
+	return val;
+}
 </script>
 
 
