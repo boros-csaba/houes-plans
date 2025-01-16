@@ -42,10 +42,6 @@ cuboid(3.35|26.75|0.96 1.2|0.35|0.16)[0 0 0]{fff}
 cuboid(2.85|27.05|1.12 1.7|0.35|0.16)[0 0 0]{fff}
 cuboid(3.35|27.3.5|1.28 1.2|0.35|0.16)[0 0 0]{fff}
 
-// első szint terep
-quadrangle(16|26.75|1.25 20|23.75|1.25 20|27.75|1.75 16|27.75|1.75){0f0}
-quadrangle(20|23.75|1.1 27|23.75|1.1 27|27.75|1.75 20|27.75|1.75){0f0}
-
 // bal terep
 quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 
@@ -126,7 +122,8 @@ quadrangle(3.75|31.9|2.5 19.5|31.9|2.5 19.5|27.9|2.25 3.75|27.9|2.25){${fuSzin}}
 quadrangle(22|32.2|3.25 24.7|32.2|3.25 24.7|30|3.25 22|30|3.25){${fuSzin}}
 quadrangle(19.5|32.2|2.5 22|32.2|3.25 22|30|3.25 19.5|30|2.25){${meredekFuSzin}}
 quadrangle(24.7|32.2|3.25 26.5|32.2|4.5 26.5|30|4.1 24.7|30|3.25){${meredekFuSzin}}
-quadrangle(22|30|3.25 24.7|30|3.25 24.7|27|2.25 22|27|2.25){${meredekFuSzin}}
+quadrangle(22|30|3.25 24.7|30|3.25 24.7|24.5|1.5 22|24.5|1.5){${meredekFuSzin}}
+quadrangle(20|24.5|1.5 24.7|24.5|1.5 24.7|22.2|0 20|22.2|0){${meredekFuSzin}}
 
 // bal felso sarok
 cuboid(0.3|32.2|3.25 8.2|7.5|0){${fuSzin}}
@@ -528,8 +525,8 @@ quadrangle(${x}|${y}|${z} ${x}|${y-w}|${z+h} ${x}|${y+w}|${z+h} ${x}|${y}|${z}){
 }
 
 function jatszoter() {
-	var csuzdaX = 20;
-	var csuzdaY = 20;
+	var csuzdaX = 21.8;
+	var csuzdaY = 24.4;
 	var csuzdaZ = 1.5;
 	var val = `
 // csuzda
