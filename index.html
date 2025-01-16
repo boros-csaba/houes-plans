@@ -528,6 +528,7 @@ quadrangle(${x}|${y}|${z} ${x}|${y-w}|${z+h} ${x}|${y+w}|${z+h} ${x}|${y}|${z}){
 }
 
 function jatszoter() {
+
 	var csuzdaX = 21.8;
 	var csuzdaY = 24.4;
 	var csuzdaZ = 1.5;
@@ -535,6 +536,27 @@ function jatszoter() {
 // csuzda
 quadrangle(${csuzdaX}|${csuzdaY}|${csuzdaZ} ${csuzdaX+0.5}|${csuzdaY}|${csuzdaZ} ${csuzdaX+0.5}|${csuzdaY-2.3}|${csuzdaZ-1.5} ${csuzdaX}|${csuzdaY-2.3}|${csuzdaZ-1.5}){f0f}
 `;
+
+	var fahazX = 23.5;
+	var fahazY = 20;
+	var fahazZ = 0;
+	var fahazLabH = 1.5;
+	var fahazW = 1.5;
+	var fahazL = 1.5;
+	var fahazH = 1.5;
+	val += `
+// fahaz
+cuboid(${fahazX}|${fahazY}|${fahazZ} 0.1|0.1|${fahazLabH}){7B3F00}
+cuboid(${fahazX+fahazW-0.1}|${fahazY}|${fahazZ} 0.1|0.1|${fahazLabH}){7B3F00}
+cuboid(${fahazX+fahazW-0.1}|${fahazY+fahazL-0.1}|${fahazZ} 0.1|0.1|${fahazLabH}){7B3F00}
+cuboid(${fahazX}|${fahazY+fahazL-0.1}|${fahazZ} 0.1|0.1|${fahazLabH}){7B3F00}
+
+cuboid(${fahazX}|${fahazY}|${fahazZ+fahazLabH} ${fahazW}|${fahazL}|0.05){7B3F00}
+cuboid(${fahazX}|${fahazY}|${fahazZ+fahazLabH} 0.1|${fahazL}|${fahazH}){7B3F00}
+cuboid(${fahazX+fahazW}|${fahazY}|${fahazZ+fahazLabH} 0.1|${fahazL}|${fahazH}){7B3F00}
+cuboid(${fahazX-0.1}|${fahazY-0.1}|${fahazZ+fahazLabH+fahazH} ${fahazW+0.2}|${fahazL+0.2}|0.05){7B3F00}
+`;
+
 	return val;
 }
 
