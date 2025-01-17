@@ -53,9 +53,6 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 #cuboid(14|0|-3 3.5|0,3|1,5)[0 0 0]{E1C16E}
 #cuboid(21.5|0|-3 5.5|0,3|1,5)[0 0 0]{E1C16E}
 #quadrangle(22|0.3|-1.6 27|0.3|-1.6 27|7.4|0 22|7.4|0){0f0}
-
-
-//cylinder(17|37|4 0.15|1.5|1.5)
 	`;
 
 	val += terep();
@@ -74,6 +71,8 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	val += kocsibeallo();
 	val += magasAgyasok();
 	val += jatszoter();
+	val += jacuzzi();
+	val += sutogeto();
 
 	input.val(val);
 }); 
@@ -574,6 +573,38 @@ function fak() {
 	cylinder(${x}|${y}|${z+th} ${lh}|${lr}){0f0}
 	`;
 	return val;
+}
+
+function jacuzzi() {
+	var x = 13;
+	var y = 29.5;
+	var z = 2.5;
+	return `
+// jacuzzi
+cuboid(${x}|${y}|${z} 2|2|0.9)[0 0 0]{7B3F00}
+cuboid(${x+0.1}|${y+0.1}|${z+0.91} 1.8|1.8|0.01)[0 0 0]{3498db}
+cuboid(${x-0.5}|${y-0.5}|${z+0.01} 3|3|0.01)[0 0 0]{fff}
+`;
+}
+
+
+function sutogeto() {
+	var x = 16;
+	var y = 34;
+	var z = 3.5;
+	var kozepsoReszR = 1/2;
+	var kozepsoReszH = 0.4;
+	var kulsoR = 2;
+	var maxH = 1;
+	return `
+// sutogeto
+cylinder(${x}|${y}|${z} ${kozepsoReszH}|${kozepsoReszR}|${kozepsoReszR}){fff}
+cylinder(${x}|${y}|${z} 0.01|${kulsoR}|${kulsoR}){999}
+cuboid(${x-0.75}|${y+kulsoR-0.2}|${z} 1.5|0.2|0.6){fff}
+cuboid(${x+kulsoR-0.2}|${y-0.75}|${z} 0.2|1.5|0.6){fff}
+cuboid(${x-0.1+0.6}|${y+kulsoR-0.7}|${z} 1.6|0.2|0.75)[0 0 -45]{fff}
+cuboid(${x-kulsoR}|${y+kulsoR-0.7}|${z} 1.6|0.2|0.4)[0 0 45]{fff}
+`;
 }
 </script>
 
