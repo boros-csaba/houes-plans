@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(10|10|20 20|35|0)
+	camera(0|0|10 10|10|0)
 
 // terasz szint terep
 quadrangle(15.3|7.4|0 26|7.4|0 24|19.6|0 15.3|19.6|0){0f0}
@@ -26,7 +26,6 @@ quadrangle(1.75|19.65|0 16|19.65|0 16|26.75|0.25 1.75|26.75|0.25){0f0}
 quadrangle(18|25.1|0.25 20|23.7|1.1 20|19.6|0 20|19.6|0){0f0}
 
 // első szint támfalak
-cuboid(1.75|26.15|0.25 1.5|0.3|0.75)[0 0 0]{555}
 cuboid(4.55|26.75|0.25 0.3|0.5|1.1)[0 0 0]{555}
 cuboid(4.55|27.25|0.5 0.3|0.5|1.1)[0 0 0]{555}
 
@@ -273,6 +272,33 @@ cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozot
 cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak}|${z} 0.25|${etkezoEsKonyhaAblakKozott}|${h}){fff}
 cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak+etkezoEsKonyhaAblakKozott}|${z+nagyAblakMagassag} 0.25|${etkezoAblak}|${h-nagyAblakMagassag}){fff}
 cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak+etkezoEsKonyhaAblakKozott+etkezoAblak}|${z} 0.25|${jobbHatsoSaroktolEtkezoAblakig}|${h}){fff}
+`;
+
+val += `
+// haz bal elso falak
+cuboid(${x+0.25}|${y+balSarokKinyulas}|${z} ${1.3-0.25}|0.25|${h}){fff}
+cuboid(${x+1.3}|${y+balSarokKinyulas}|${z} 1.72|0.25|${ablakAlattiMagassag}){fff}
+cuboid(${x+1.3}|${y+balSarokKinyulas}|${z+nagyAblakMagassag} 1.72|0.25|${h-nagyAblakMagassag}){fff}
+cuboid(${x+1.3+1.72}|${y+balSarokKinyulas}|${z} 1.3|0.25|${h}){fff}
+`;
+
+var hazAjtoKezdetX = x+1.3+1.72+1.3;
+var hazAjtoVegeX = hazAjtoKezdetX+0.25+0.95+0.25;
+val += `
+// haz ajto falak
+cuboid(${hazAjtoKezdetX-0.25}|${y+balSarokKinyulas+0.25}|${z} 0.25|${0.93-0.25}|${h}){fff}
+cuboid(${hazAjtoKezdetX-0.25}|${y+balSarokKinyulas+0.93}|${z} ${0.25+0.25}|0.49|${h}){fff}
+cuboid(${hazAjtoVegeX}|${y+0.25}|${z} 0.25|${1.98-0.25}|${h}){fff}
+cuboid(${hazAjtoVegeX-0.25}|${y+balSarokKinyulas+0.93}|${z} ${0.25+0.25}|0.49|${h}){fff}
+cuboid(${hazAjtoKezdetX+0.25}|${y+balSarokKinyulas+0.93+0.24}|${z+2} ${0.95}|0.25|${h-2}){fff}
+`;
+
+val += `
+// haz jobb elso falak
+cuboid(${hazAjtoVegeX}|${y}|${z} 1.25|0.25|${h}){fff}
+cuboid(${hazAjtoVegeX+1.25}|${y}|${z} 1.72|0.25|${ablakAlattiMagassag}){fff}
+cuboid(${hazAjtoVegeX+1.25}|${y}|${z+nagyAblakMagassag} 1.72|0.25|${h-nagyAblakMagassag}){fff}
+cuboid(${hazAjtoVegeX+1.25+1.72}|${y}|${z} ${1.25-0.25}|0.25|${h}){fff}
 `;
 
 val += `
