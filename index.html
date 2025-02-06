@@ -575,7 +575,6 @@ cuboid(${csuzdaX-0.2}|${csuzdaY}|${csuzdaZ} ${fahazW}|${fahazY}|0.05){7B3F00}
 	var platformLabH = 1.5;
 	var platformW = 1;
 	var platformL = 1.5;
-	var platformH = 1.8;
 	val += `
 // platform
 cuboid(${platformX}|${paltformY}|${platformZ} 0.1|0.1|${platformLabH}){7B3F00}
@@ -593,8 +592,8 @@ cuboid(${platformX+platformW-0.1}|${paltformY+platformL}|${platformZ+platformL-0
 
 val += `
 // hinta
-cuboid(${platformX}|${paltformY+platformL}|${platformZ+platformL-0.1} 0.1|${csuzdaY-paltformY-platformL}|0.1){7B3F00}
-cuboid(${platformX+platformW-0.1}|${paltformY+platformL}|${platformZ+platformL-0.1} 0.1|${csuzdaY-paltformY-platformL}|0.1){7B3F00}
+cuboid(${platformX+platformW/2-0.05}|${paltformY-2.2}|${platformZ+1.9-0.1} 0.1|2.2|0.1){7B3F00}
+cuboid(${platformX+platformW/2-0.05}|${paltformY-2.2}|${platformZ} 0.1|0.1|1.9){7B3F00}
 `;
 
 	var homokX = 20;
