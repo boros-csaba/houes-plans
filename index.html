@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(0|0|10 10|10|0)
+	camera(10|10|10 20|20|0)
 
 // terasz szint terep
 quadrangle(15.3|7.4|0 26|7.4|0 24|19.6|0 15.3|19.6|0){0f0}
@@ -554,7 +554,7 @@ quadrangle(${x}|${y}|${z} ${x}|${y-w}|${z+h} ${x}|${y+w}|${z+h} ${x}|${y}|${z}){
 
 function jatszoter() {
 
-	var csuzdaX = 21.8;
+	var csuzdaX = 21.3;
 	var csuzdaY = 24.4;
 	var csuzdaZ = 1.5;
 	var val = `
@@ -562,36 +562,51 @@ function jatszoter() {
 quadrangle(${csuzdaX}|${csuzdaY}|${csuzdaZ} ${csuzdaX+0.5}|${csuzdaY}|${csuzdaZ} ${csuzdaX+0.5}|${csuzdaY-2.3}|${csuzdaZ-1.5} ${csuzdaX}|${csuzdaY-2.3}|${csuzdaZ-1.5}){f0f}
 `;
 
-	var fahazX = 21.5;
-	var fahazY = 20;
-	var fahazZ = 0;
-	var fahazLabH = 1.5;
-	var fahazW = 1.5;
-	var fahazL = 1.5;
-	var fahazH = 1.5;
+	var fahazW = 2;
+	var fahazY = 1.5;
 	val += `
 // fahaz
-cuboid(${fahazX}|${fahazY}|${fahazZ} 0.1|0.1|${fahazLabH}){7B3F00}
-cuboid(${fahazX+fahazW-0.1}|${fahazY}|${fahazZ} 0.1|0.1|${fahazLabH}){7B3F00}
-cuboid(${fahazX+fahazW-0.1}|${fahazY+fahazL-0.1}|${fahazZ} 0.1|0.1|${fahazLabH}){7B3F00}
-cuboid(${fahazX}|${fahazY+fahazL-0.1}|${fahazZ} 0.1|0.1|${fahazLabH}){7B3F00}
+cuboid(${csuzdaX-0.2}|${csuzdaY}|${csuzdaZ} ${fahazW}|${fahazY}|0.05){7B3F00}
+	`;
 
-cuboid(${fahazX}|${fahazY}|${fahazZ+fahazLabH} ${fahazW}|${fahazL}|0.05){7B3F00}
-cuboid(${fahazX}|${fahazY}|${fahazZ+fahazLabH} 0.1|${fahazL}|${fahazH}){7B3F00}
-cuboid(${fahazX+fahazW}|${fahazY}|${fahazZ+fahazLabH} 0.1|${fahazL}|${fahazH}){7B3F00}
-cuboid(${fahazX-0.1}|${fahazY-0.1}|${fahazZ+fahazLabH+fahazH} ${fahazW+0.2}|${fahazL+0.2}|0.05){7B3F00}
+	var platformX = 22;
+	var paltformY = 19;
+	var platformZ = 0;
+	var platformLabH = 1.5;
+	var platformW = 1;
+	var platformL = 1.5;
+	var platformH = 1.8;
+	val += `
+// platform
+cuboid(${platformX}|${paltformY}|${platformZ} 0.1|0.1|${platformLabH}){7B3F00}
+cuboid(${platformX+platformW-0.1}|${paltformY}|${platformZ} 0.1|0.1|${platformLabH}){7B3F00}
+cuboid(${platformX+platformW-0.1}|${paltformY+platformL-0.1}|${platformZ} 0.1|0.1|${platformLabH}){7B3F00}
+cuboid(${platformX}|${paltformY+platformL-0.1}|${platformZ} 0.1|0.1|${platformLabH}){7B3F00}
+cuboid(${platformX}|${paltformY}|${platformZ+platformLabH} ${platformW}|${platformL}|0.05){7B3F00}
 `;
 
-	var x = 20;
-	var y = 20;
-	var z = 0;
+val += `
+// hid
+cuboid(${platformX}|${paltformY+platformL}|${platformZ+platformL-0.1} 0.1|${csuzdaY-paltformY-platformL}|0.1){7B3F00}
+cuboid(${platformX+platformW-0.1}|${paltformY+platformL}|${platformZ+platformL-0.1} 0.1|${csuzdaY-paltformY-platformL}|0.1){7B3F00}
+`;
+
+val += `
+// hinta
+cuboid(${platformX}|${paltformY+platformL}|${platformZ+platformL-0.1} 0.1|${csuzdaY-paltformY-platformL}|0.1){7B3F00}
+cuboid(${platformX+platformW-0.1}|${paltformY+platformL}|${platformZ+platformL-0.1} 0.1|${csuzdaY-paltformY-platformL}|0.1){7B3F00}
+`;
+
+	var homokX = 20;
+	var homokY = 19;
+	var homokZ = 0;
 	var w = 3;
 	var l = 3;
 	var h = 0.15;
 	val += `
 // homokozo
-cuboid(${x}|${y}|${z} ${w}|${l}|${h}){4C2F26}
-cuboid(${x+0.1}|${y+0.1}|${z+h} ${w-0.2}|${l-0.2}|0.01){ff0}
+cuboid(${homokX}|${homokY}|${homokZ} ${w}|${l}|${h}){4C2F26}
+cuboid(${homokX+0.1}|${homokY+0.1}|${homokZ+h} ${w-0.2}|${l-0.2}|0.01){ff0}
 	`;
 
 	return val;
