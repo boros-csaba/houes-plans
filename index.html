@@ -562,7 +562,7 @@ function jatszoter() {
 quadrangle(${csuzdaX}|${csuzdaY}|${csuzdaZ} ${csuzdaX+0.5}|${csuzdaY}|${csuzdaZ} ${csuzdaX+0.5}|${csuzdaY-2.3}|${csuzdaZ-1.5} ${csuzdaX}|${csuzdaY-2.3}|${csuzdaZ-1.5}){f0f}
 `;
 
-	var fahazX = 23.5;
+	var fahazX = 21.5;
 	var fahazY = 20;
 	var fahazZ = 0;
 	var fahazLabH = 1.5;
@@ -581,6 +581,18 @@ cuboid(${fahazX}|${fahazY}|${fahazZ+fahazLabH} 0.1|${fahazL}|${fahazH}){7B3F00}
 cuboid(${fahazX+fahazW}|${fahazY}|${fahazZ+fahazLabH} 0.1|${fahazL}|${fahazH}){7B3F00}
 cuboid(${fahazX-0.1}|${fahazY-0.1}|${fahazZ+fahazLabH+fahazH} ${fahazW+0.2}|${fahazL+0.2}|0.05){7B3F00}
 `;
+
+	var x = 20;
+	var y = 20;
+	var z = 0;
+	var w = 3;
+	var l = 3;
+	var h = 0.15;
+	val += `
+// homokozo
+cuboid(${x}|${y}|${z} ${w}|${l}|${h}){4C2F26}
+cuboid(${x+0.1}|${y+0.1}|${z+h} ${w-0.2}|${l-0.2}|0.01){ff0}
+	`;
 
 	return val;
 }
