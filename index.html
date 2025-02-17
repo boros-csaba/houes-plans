@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(10|10|10 20|20|0)
+	camera(-10|-20|10 10|0|0)
 
 // terasz szint terep
 quadrangle(15.3|7.4|0 26|7.4|0 24|19.6|0 15.3|19.6|0){0f0}
@@ -98,11 +98,11 @@ quadrangle(27|40|5.85 37|40|5.85 37|0|-0.9 27|0|-0.9){f00}
 // utca
 quadrangle(0|${-utEsTelekHatarTavolsag}|${utcaBalOldalSzint} 27|${-utEsTelekHatarTavolsag}|${utcaJobbOldalSzint} 27|${-utEsTelekHatarTavolsag-5}|${utcaJobbOldalSzint} 0|${-utEsTelekHatarTavolsag-5}|${utcaBalOldalSzint}){666}
 
-// villanyora - TODO, magassag?
+// villanyora
 cuboid(1.3|1.75|-2 0.4|0.32|1.08)[0 0 0]{fff}
 
 // vizakna - TODO, magassag?
-cylinder(3|1.75|-2 0.15|0.42|0.42){555}
+cylinder(3|1.75|-1.85 0.15|0.42|0.42){555}
 
 // viztartaly
 cylinder(${5-1.85}|${6+3.5}|0 0.15|0.32|0.32){555}
@@ -229,6 +229,7 @@ cuboid(18.75|39,75|4.1 8|0.25|0.25)[0 0 0]{${tamfalSzin}}
 }
 
 function haz() {
+	var labazat = 0.3;
 	var x = 5;
 	var y = 6;
 	var z = 0.25;
@@ -252,27 +253,27 @@ function haz() {
 
 	var val = `
 // ház alap
-cuboid(${x+0.05}|8|0 9.9|11.65|0.25){555}
-cuboid(${x+0.05}|7.05|0 4.25|0.95|0.25){555}
-cuboid(10.8|6.05|0 4.15|1.95|0.25){555}
+cuboid(${x+0.05}|8|0 9.9|11.65|${labazat}){555}
+cuboid(${x+0.05}|7.05|0 4.25|0.95|${labazat}){555}
+cuboid(10.8|6.05|0 4.15|1.95|${labazat}){555}
 	`;
 	val += `
 // haz bal oldali falak
-cuboid(${x}|${y+balSarokKinyulas}|${z} 0.25|${balElsoSaroktolDolgozoAblakig}|${h}){fff}
-cuboid(${x}|${y+balSarokKinyulas+balElsoSaroktolDolgozoAblakig}|${z+nagyAblakMagassag} 0.25|${dolgozoAblak}|${h-nagyAblakMagassag}){fff}
-cuboid(${x}|${y+balSarokKinyulas+balElsoSaroktolDolgozoAblakig+dolgozoAblak}|${z} 0.25|${balHatsoSaroktolDolgozoAblakig}|${h}){fff}
+cuboid(${x}|${y+balSarokKinyulas}|${z} ${labazat}|${balElsoSaroktolDolgozoAblakig}|${h}){fff}
+cuboid(${x}|${y+balSarokKinyulas+balElsoSaroktolDolgozoAblakig}|${z+nagyAblakMagassag} ${labazat}|${dolgozoAblak}|${h-nagyAblakMagassag}){fff}
+cuboid(${x}|${y+balSarokKinyulas+balElsoSaroktolDolgozoAblakig+dolgozoAblak}|${z} ${labazat}|${balHatsoSaroktolDolgozoAblakig}|${h}){fff}
 `;
 
 val += `
 // haz jobb oldali falak
-cuboid(${xw}|${y}|${z} 0.25|${szobaAblaktolJobbElsoSarokig}|${h}){fff}
-cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig}|${z} 0.25|${szobaAblak}|${ablakAlattiMagassag}){fff}
-cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig}|${z+nagyAblakMagassag} 0.25|${szobaAblak}|${h-nagyAblakMagassag}){fff}
-cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak}|${z} 0.25|${konyhaEsSzobaAblakKozott}|${h}){fff}
-cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott}|${z+nagyAblakMagassag} 0.25|${konyhaAblak}|${h-nagyAblakMagassag}){fff}
-cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak}|${z} 0.25|${etkezoEsKonyhaAblakKozott}|${h}){fff}
-cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak+etkezoEsKonyhaAblakKozott}|${z+nagyAblakMagassag} 0.25|${etkezoAblak}|${h-nagyAblakMagassag}){fff}
-cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak+etkezoEsKonyhaAblakKozott+etkezoAblak}|${z} 0.25|${jobbHatsoSaroktolEtkezoAblakig}|${h}){fff}
+cuboid(${xw}|${y}|${z} ${labazat}|${szobaAblaktolJobbElsoSarokig}|${h}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig}|${z} ${labazat}|${szobaAblak}|${ablakAlattiMagassag}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig}|${z+nagyAblakMagassag} ${labazat}|${szobaAblak}|${h-nagyAblakMagassag}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak}|${z} ${labazat}|${konyhaEsSzobaAblakKozott}|${h}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott}|${z+nagyAblakMagassag} ${labazat}|${konyhaAblak}|${h-nagyAblakMagassag}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak}|${z} ${labazat}|${etkezoEsKonyhaAblakKozott}|${h}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak+etkezoEsKonyhaAblakKozott}|${z+nagyAblakMagassag} ${labazat}|${etkezoAblak}|${h-nagyAblakMagassag}){fff}
+cuboid(${xw}|${y+szobaAblaktolJobbElsoSarokig+szobaAblak+konyhaEsSzobaAblakKozott+konyhaAblak+etkezoEsKonyhaAblakKozott+etkezoAblak}|${z} ${labazat}|${jobbHatsoSaroktolEtkezoAblakig}|${h}){fff}
 `;
 
 val += `
@@ -287,9 +288,9 @@ var hazAjtoKezdetX = x+1.3+1.72+1.3;
 var hazAjtoVegeX = hazAjtoKezdetX+0.25+0.95+0.25;
 val += `
 // haz ajto falak
-cuboid(${hazAjtoKezdetX-0.25}|${y+balSarokKinyulas+0.25}|${z} 0.25|${0.93-0.25}|${h}){fff}
+cuboid(${hazAjtoKezdetX-0.25}|${y+balSarokKinyulas+0.25}|${z} ${labazat}|${0.93-0.25}|${h}){fff}
 cuboid(${hazAjtoKezdetX-0.25}|${y+balSarokKinyulas+0.93}|${z} ${0.25+0.25}|0.49|${h}){fff}
-cuboid(${hazAjtoVegeX}|${y+0.25}|${z} 0.25|${1.98-0.25}|${h}){fff}
+cuboid(${hazAjtoVegeX}|${y+0.25}|${z} ${labazat}|${1.98-0.25}|${h}){fff}
 cuboid(${hazAjtoVegeX-0.25}|${y+balSarokKinyulas+0.93}|${z} ${0.25+0.25}|0.49|${h}){fff}
 cuboid(${hazAjtoKezdetX+0.25}|${y+balSarokKinyulas+0.93+0.24}|${z+2} ${0.95}|0.25|${h-2}){fff}
 `;
