@@ -386,9 +386,20 @@ cuboid(8.05|2.8|-1.44 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
 
 cuboid(6.85|2.8|-1.6 1.2|1.2|0.16)[0 0 0]{${csempeSzin}}
 
+cuboid(6.85|2.5|-1.76 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(6.85|2.3|-1.92 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(6.85|2|-2.08 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(6.85|1.7|-2.24 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(6.85|1.4|-2.4 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+
+cuboid(6.85|0.3|-2.56 1.2|1.2|0.16)[0 0 0]{${csempeSzin}}
+
+cuboid(8.05|0.3|-2.72 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(8.35|0.3|-2.88 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
 `;
-	var y = 3.1;
-	var z = -1.44;
+
+	var y = 6.5;
+	var z = 0;
 	for (var i = 0; i < 50; i++) {
 		y -= 0.3;
 		z -= 0.16;
@@ -397,9 +408,10 @@ cuboid(6.85|2.8|-1.6 1.2|1.2|0.16)[0 0 0]{${csempeSzin}}
 			continue;
 		}
 		val += `
-			cuboid(6.85|${y}|${z} 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+			cuboid(17.4|${y}|${z} 0.8|0.3|0.16)[0 0 0]{${csempeSzin}}
 		`;
 	}
+
 	return val;
 }
 
@@ -671,15 +683,20 @@ cuboid(${x+0.5}|${y-1.5}|${z} 1.6|0.2|1)[0 0 45]{fff}
 }
 
 function utcaFrontKerites() {
-	var kapuX = 10;
+	var kapuX = 9;
 	var kapuZ = -3;
+	var lepcsoVegX = 8.65;
 
 	return `
 // kapu
-cuboid(${kapuX}|0|${kapuZ} 2|1.5|0.1){${terkoSzin}}
+cuboid(${lepcsoVegX}|0|${kapuZ} 9.5|1.5|0.1){${csempeSzin}}
+
+// kuka tarolo
+cuboid(5|0.3|-3 1.5|0.9|1.25){522}
 
 // kerites
-cuboid(6|0|-2.9 4|0,3|1,5)[0 0 0]{E1C16E}
+cuboid(6|0|-2.9 ${kapuX-6}|0,3|1,5)[0 0 0]{E1C16E}
+cuboid(${kapuX}|0|-2.9 10|0,3|1,5)[0 0 0]{E1C16E}
 	`;
 }
 </script>
