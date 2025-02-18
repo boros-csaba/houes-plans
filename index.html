@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(-10|-20|10 10|0|0)
+	camera(0|-10|10 10|10|0)
 
 // terasz szint terep
 quadrangle(15.3|7.4|0 26|7.4|0 24|19.6|0 15.3|19.6|0){0f0}
@@ -28,7 +28,6 @@ quadrangle(18|25.1|0.25 20|23.7|1.1 20|19.6|0 20|19.6|0){0f0}
 // első szint támfalak
 cuboid(4.55|26.75|0.25 0.3|0.5|1.1)[0 0 0]{555}
 cuboid(4.55|27.25|0.5 0.3|0.5|1.1)[0 0 0]{555}
-
 
 // elso szint lepcsok
 cuboid(3.35|25.05|0.15 1.85|1.4|0.16)[0 0 0]{fff}
@@ -47,7 +46,6 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
  //kerites
 #cuboid(0|0|-2.5 3|0,3|1,5)[0 0 0]{E1C16E}
 #cuboid(3|0|-2.7 3|0,3|1,5)[0 0 0]{E1C16E}
-#cuboid(6|0|-2.9 4|0,3|1,5)[0 0 0]{E1C16E}
 #cuboid(11|0|-3 3|0,3|1,5)[0 0 0]{E1C16E}
 #cuboid(14|0|-3 3.5|0,3|1,5)[0 0 0]{E1C16E}
 #cuboid(21.5|0|-3 5.5|0,3|1,5)[0 0 0]{E1C16E}
@@ -58,6 +56,7 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	val += meretek();
 	val += soveny();
 	val += fak();
+	val += utcaFrontKerites();
 
 	val += tamfalak();
 	val += haz();
@@ -176,7 +175,7 @@ function tamfalak() {
 //haz elotti tamfalak
 cuboid(2.8|5.9|-1 2.1|0.3|1.16)[0 0 -40]{${tamfalSzin}}
 cuboid(4.65|5.2|-1 4.65|0.3|1.16)[0 0 0]{${tamfalSzin}}
-cuboid(10.85|4.3|-1 4.1|0.3|1.16)[0 0 0]{${tamfalSzin}} 
+cuboid(10.85|3.8|-1 4.1|0.3|1.16)[0 0 0]{${tamfalSzin}} 
 --cuboid(9.25|5.3|-1 0.3|1.5|1)[0 0 0]{555}
 
 // alsó támfal
@@ -350,7 +349,9 @@ cuboid(5.05|6.85|0 4.2|0.15|0.01)[0 0 0]{fff}
 cuboid(4.65|6.15|0 4.6|0.7|0.01)[0 0 0]{${csempeSzin}}
 cuboid(4.65|5.5|0 4.6|0.65|0.01)[0 0 0]{fff}
 
-cuboid(9.25|5.2|0 1.6|2.8|0.0.01)[0 0 0]{${csempeSzin}}
+cuboid(9.25|7|0 1.6|1|0.28)[0 0 0]{${csempeSzin}}
+cuboid(9.25|6.7|0 1.6|0.3|0.14)[0 0 0]{${csempeSzin}}
+cuboid(9.25|5.2|0 1.6|2.65|0.01)[0 0 0]{${csempeSzin}}
 cuboid(10.85|5.9|0 4.5|0.15|0.01)[0 0 0]{fff}
 cuboid(10.85|5.2|0 4.5|0.7|0.01)[0 0 0]{${csempeSzin}}
 cuboid(10.85|4.6|0 4.5|0.6|0.01)[0 0 0]{fff}
@@ -374,14 +375,16 @@ function lepcsok(){
 cuboid(9.25|4.9|-0.16 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
 cuboid(9.25|4.6|-0.32 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
 cuboid(9.25|4.3|-0.48 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(9.25|4|-0.64 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(9.25|3.1|-0.64 1.6|1.2|0.16)[0 0 0]{${csempeSzin}}
-cuboid(8.95|3.1|-0.8 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
-cuboid(8.65|3.1|-0.96 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
-cuboid(8.35|3.1|-1.12 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
-cuboid(8.05|3.1|-1.28 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(9.25|2.8|-0.8 1.6|1.2|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(6.85|3.1|-1.44 1.2|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(8.95|2.8|-0.96 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(8.65|2.8|-1.12 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(8.35|2.8|-1.28 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(8.05|2.8|-1.44 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+
+cuboid(6.85|2.8|-1.6 1.2|1.2|0.16)[0 0 0]{${csempeSzin}}
 
 `;
 	var y = 3.1;
@@ -644,7 +647,6 @@ cuboid(${x-0.5}|${y-0.5}|${z+0.01} 3|3|0.01)[0 0 0]{fff}
 `;
 }
 
-
 function sutogeto() {
 	var x = 13;
 	var y = 35;
@@ -666,6 +668,19 @@ cuboid(${x-0.75}|${y-kulsoR}|${z} 1.5|0.2|1){fff}
 cuboid(${x-kulsoR}|${y-1.5}|${z} 1.6|0.2|1)[0 0 -45]{fff}
 cuboid(${x+0.5}|${y-1.5}|${z} 1.6|0.2|1)[0 0 45]{fff}
 `;
+}
+
+function utcaFrontKerites() {
+	var kapuX = 10;
+	var kapuZ = -3;
+
+	return `
+// kapu
+cuboid(${kapuX}|0|${kapuZ} 2|1.5|0.1){${terkoSzin}}
+
+// kerites
+cuboid(6|0|-2.9 4|0,3|1,5)[0 0 0]{E1C16E}
+	`;
 }
 </script>
 
