@@ -140,8 +140,16 @@ cuboid(18.75|34|4.1 8|5.7|0)[0 0 0]{${fuSzin}}
 quadrangle(18.8|34|4.1 26.7|34|4.1 26.7|33.15|3.25 18.8|33.15|3.25){${fuSzin1p1}}
 
 // kocsi beallo mellett bal oldalon
-quadrangle(15.4|6.5|0 17.4|6.5|0 16.4|3.8|0 15|3.8|0){${fuSzin}}
-quadrangle(15|3.8|-1 17.4|3.8|-1 17.4|1.5|-2.8 15|1.5|-2.8){${fuSzin}}
+quadrangle(15.4|6.5|0 17|6.5|0 17|4.1|0 15.4|4.1|0){${fuSzin}}
+quadrangle(13.55|3.8|-1.64 17|3.8|-1.64 17|1.8|-2.8 13.55|1.8|-2.8){${fuSzin}}
+
+// haz elott lepcsotol balra
+quadrangle(4.65|5.2|-0.3 9.3|5.2|-0.3 9.3|2.8|-0.96 4.65|2.8|-0.96){${fuSzin}}
+quadrangle(4.65|2.8|-0.96 10.9|2.8|-0.96 10.9|2|-1.9 4.65|2|-1.9){${fuSzin}}
+quadrangle(10.9|2.8|-0.96 12.35|2.8|-1.92 12.35|2|-1.9 10.9|2|-1.9){${fuSzin}}
+quadrangle(4.65|2|-1.92 7.65|2|-1.92 7.65|0.3|-2.4 4.65|0.3|-2.2){${fuSzin}}
+
+quadrangle(0|2.2|-1.85 4.65|2.2|-1.85 4.65|0.3|-2.2 0|0.3|-1.85){${fuSzin}}
 `;
 }
 
@@ -171,16 +179,45 @@ lineseg(8.5|38|3.25 18.7|38|4.1){${szin}}
 // jobb hatso resz szelesseg
 point(22|39|4.75 "8m")[0 0 -90]
 lineseg(18.75|39|4.75 27|39|4.75){${szin}}
+
+// elol tolo kapu csuszka
+lineseg(15|1|-2.75 15|1|0){${szin}}
+lineseg(15|1|0 15|6|0){${szin}}
+point(15|1|-1.75 "2.75m")[0 0 0]
+
+// kocsibeallo bal
+lineseg(15|6|0.5 17|6|0.5){${szin}}
+point(15.5|6|0.5 "2m")[0 0 -90]
+lineseg(17|6|0 17.8|6|0){${szin}}
+point(17.4|6|0 "80cm")[0 0 -90]
+
+// lepcsok
+lineseg(9.25|4.5|-0.15 10.85|4.5|-0.15){${szin}}
+point(10|4.5|-0.15 "1.6cm")[0 0 -90]
+
+lineseg(11|2.8|-0.9 11|3.8|-0.9){${szin}}
+point(11|3.2|-0.9 "1m")[0 0 -90]
+
+lineseg(12.35|2.5|-1.85 13.55|2.5|-1.85){${szin}}
+point(13|2.5|-1.85 "1.2cm")[0 0 -90]
+
+lineseg(12.35|1|-2.6 17.8|1|-2.6){${szin}}
+point(15|1|-2.6 "5.5m")[0 0 -90]
+
+lineseg(13.8|0.3|-2.6 13.8|1.8|-2.6){${szin}}
+point(13.8|0.6|-2.6 "1.5m")[0 0 0]
 	`;
 }
 
 function tamfalak() {
 	return `
 //haz elotti tamfalak
-cuboid(2.8|5.9|-1 2.1|0.3|1.16)[0 0 -40]{${tamfalSzin}}
-cuboid(4.65|5.2|-1 4.65|0.3|1.16)[0 0 0]{${tamfalSzin}}
-cuboid(10.85|3.8|-1 6.5|0.3|1.16)[0 0 0]{${tamfalSzin}} 
---cuboid(9.25|5.3|-1 0.3|1.5|1)[0 0 0]{555}
+cuboid(2.8|5.9|-1.64 2.1|0.3|1.64)[0 0 -40]{${tamfalSzin}}
+cuboid(4.65|5.2|-1.64 4.65|0.3|1.64)[0 0 0]{${tamfalSzin}}
+cuboid(10.85|3.8|-1.64 6.1|0.3|1.64)[0 0 0]{${tamfalSzin}} 
+
+//kapu tamfal
+cuboid(7.65|1.8|-3 4.7|0.2|1.2)[0 0 0]{${tamfalSzin}} 
 
 // alsó támfal
 cuboid(4.8|26.25|0.25 11.4|0.3|1.1)[0 0 0]{${tamfalSzin}}
@@ -382,32 +419,32 @@ cuboid(9.25|4.3|-0.48 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
 cuboid(9.25|4|-0.64 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
 cuboid(9.25|3.7|-0.8 1.6|0.3|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(9.25|2.5|-0.96 1.6|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(9.25|2.8|-0.96 1.6|1|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(10.85|2.5|-1.12 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
-cuboid(11.15|2.5|-1.28 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
-cuboid(11.45|2.5|-1.44 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
-cuboid(11.75|2.5|-1.6 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
-cuboid(12.05|2.5|-1.75 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(10.85|2.8|-1.12 0.3|1|0.16)[0 0 0]{${csempeSzin}}
+cuboid(11.15|2.8|-1.28 0.3|1|0.16)[0 0 0]{${csempeSzin}}
+cuboid(11.45|2.8|-1.44 0.3|1|0.16)[0 0 0]{${csempeSzin}}
+cuboid(11.75|2.8|-1.6 0.3|1|0.16)[0 0 0]{${csempeSzin}}
+cuboid(12.05|2.8|-1.75 0.3|1|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(12.35|2.5|-1.92 1.2|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(12.35|2.8|-1.92 1.2|1|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(12.35|2.2|-2.08 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
-cuboid(12.35|2|-2.24 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
-cuboid(12.35|1.7|-2.4 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
-cuboid(12.35|1.4|-2.56 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(12.35|2.5|-2.08 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(12.35|2.2|-2.24 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(12.35|1.9|-2.4 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
+cuboid(12.35|1.6|-2.56 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(12.35|0.3|-2.72 6.15|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(12.35|0.3|-2.72 5.45|1.5|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(12.05|0.3|-2.88 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
-cuboid(11.75|0.3|-3 0.3|1.2|0.16)[0 0 0]{${csempeSzin}}
+cuboid(12.05|0.3|-2.88 0.3|1.5|0.16)[0 0 0]{${csempeSzin}}
+cuboid(11.75|0.3|-3 0.3|1.5|0.16)[0 0 0]{${csempeSzin}}
 
 //korlat
-cuboid(18.2|6.5|0 0.01|0.1|1.1)[0 0 0]{000}
-cuboid(18.2|4|-1.4 0.01|0.1|1.1)[0 0 0]{000}
-cuboid(18.2|1.5|-2.8 0.01|0.1|1.1)[0 0 0]{000}
-quadrangle(18.2|6.5|1 18.2|6.5|1.1 18.2|1.5|-1.8 18.2|1.5|-1.7){000}
-cuboid(18.2|6.5|1 7|0.1|0.1)[0 0 0]{000}
+cuboid(17.8|6.5|0 0.01|0.1|1.1)[0 0 0]{000}
+cuboid(17.8|4|-1.4 0.01|0.1|1.1)[0 0 0]{000}
+cuboid(17.8|1.5|-2.8 0.01|0.1|1.1)[0 0 0]{000}
+quadrangle(17.8|6.5|1 17.8|6.5|1.1 17.8|1.5|-1.8 17.8|1.5|-1.7){000}
+cuboid(17.8|6.5|1 7|0.1|0.1)[0 0 0]{000}
 cuboid(20.2|6.5|0 0.1|0.1|1.1)[0 0 0]{000}
 cuboid(22.2|6.5|0 0.1|0.1|1.1)[0 0 0]{000}
 `;
@@ -422,7 +459,7 @@ cuboid(22.2|6.5|0 0.1|0.1|1.1)[0 0 0]{000}
 			continue;
 		}
 		val += `
-			cuboid(17.4|${y}|${z} 0.8|0.3|0.16)[0 0 0]{${csempeSzin}}
+			cuboid(17|${y}|${z} 0.8|0.3|0.16)[0 0 0]{${csempeSzin}}
 		`;
 	}
 
@@ -430,10 +467,10 @@ cuboid(22.2|6.5|0 0.1|0.1|1.1)[0 0 0]{000}
 }
 
 function pince() {
-	var x = 18.5;
+	var x = 18.2;
 	var y = 6.5;
 	var z = -0.8;
-	var w = 6;
+	var w = 7;
 	var h = 2;
 	var m = 3;
 
@@ -509,7 +546,7 @@ cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
 	var sz = 7;
 	var m = 6.5;
 	var lejtes = 0.001 * m;
-	var x = 27 - sz - 2;
+	var x = 17.8;
 
 	var utcaLejtesPerMeter = (utcaJobbOldalSzint-utcaBalOldalSzint)/27;
 	var utcaSzintBealloBalOldalon = utcaJobbOldalSzint - (27-x)*utcaLejtesPerMeter; 
@@ -523,8 +560,8 @@ cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
 quadrangle(${x}|${m}|${szint+lejtes} ${x+sz}|${m}|${szint+lejtes} ${x+sz}|0|${szint} ${x}|0|${szint}){${terkoSzin}}
 quadrangle(${x}|0|${szint} ${x+sz}|0|${szint} ${x+sz}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloJobbOldalon} ${x}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloBalOldalon}){${terkoSzin}}
 `;
-	val += rangeRover(x + 1.25, 0.5, szint);
-	val += claMercedes(x + sz - 2.3, 1, szint);
+	//val += rangeRover(x + 1.25, 0.5, szint);
+	//val += claMercedes(x + sz - 2.3, 1, szint);
 
 	return val;
 }
@@ -698,7 +735,7 @@ function utcaFrontKerites() {
 	var kapuX = 9.55;
 	var kapuZ = -3;
 	var kapuH = 1.6;
-	var tolokapuX = 13;
+	var tolokapuX = 18.5; //13
 	var tolokapuY = -2.5;
 	var tolokapuW = 5;
 	var tolokapuH = 1.5;
@@ -707,7 +744,7 @@ function utcaFrontKerites() {
 
 	return `
 // kapu
-cuboid(${kapuX-1-0.9}|0|${kapuZ} ${11.75-(kapuX-1-0.9)}|1.5|0.01){${csempeSzin}}
+cuboid(${kapuX-1-0.9}|0.3|${kapuZ} ${11.75-(kapuX-1-0.9)}|1.5|0.01){${csempeSzin}}
 
 // kuka tarolo
 cuboid(${kapuX-1-0.9}|0.3|-3 0.9|1.5|1.25){522}
