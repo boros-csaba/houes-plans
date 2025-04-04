@@ -49,7 +49,7 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	val += terep();
 	val += meretek();
 	val += soveny();
-	val += fak();
+	//val += fak();
 	val += utcaFrontKerites();
 
 	val += tamfalak();
@@ -63,7 +63,7 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	val += kocsibeallo();
 	val += magasAgyasok();
 	val += jatszoter();
-	val += jacuzzi();
+	//val += jacuzzi();
 	val += sutogeto();
 
 	input.val(val);
@@ -120,14 +120,11 @@ quadrangle(1.75|19.65|0 16|19.65|0 16|26.75|0.25 1.75|26.75|0.25){0f0}
 quadrangle(18|25.1|0.25 20|23.7|1.1 20|19.6|0 20|19.6|0){0f0}
 
 // kozepso resz
-quadrangle(3.75|31.9|2.25 19.75|31.9|2.25 19.75|27.9|2.25 3.75|27.9|2.25){${fuSzin}}
+quadrangle(3.75|30.7|1.25 19.75|30.7|1.25 19.75|26.55|1.25 3.75|26,55|1.25){${fuSzin}}
 
 // kozepso resz jobb oldala
 quadrangle(20.75|33.15|3.5 24.7|33.15|3.5 24.7|29.7|3.5 20.75|29.7|3.5){${fuSzin}}
-quadrangle(19.75|32.2|2.5 20.75|32.2|3.5 20.75|29.7|3.5 19.75|29.7|2.25){${fuSzin1p1}}
 quadrangle(24.7|33.2|3.5 26|32.9|4.6 26|29.7|4.2 24.7|29.7|3.5){${meredekFuSzin}}
-quadrangle(20.75|29.7|3.5 24.7|29.7|3.5 24.7|29|2.25 20.75|29|2.25){${fuSzin1p1}}
-quadrangle(19.75|29.7|2.25 20.75|29.7|3.5 24.7|29|2.25 19.75|29|2.25){${fuSzin1p1}}
 quadrangle(22|29|2.25 24.7|29|2.25 24.7|24.5|1.5 22|24.5|1.5){${meredekFuSzin}}
 quadrangle(20|24.5|1.5 24.7|24.5|1.5 24.7|22.2|0 20|22.2|0){${meredekFuSzin}}
 
@@ -237,12 +234,19 @@ quadrangle(16|26.25|0.25 19|24.15|0.25 19|24.15|1.35 16|26.25|1.35){${tamfalSzin
 quadrangle(16|26.55|0.25 19|24.4|0.25 19|24.4|1.35 16|26.55|1.35){${tamfalSzin}}
 quadrangle(16|26.25|1.35 19|24.15|1.35 19|24.4|1.35 16|26.55|1.35){${tamfalSzin}}
 
+// második szint támfal közép
+cuboid(3.75|30.7|2.25 15|0.3|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(3.75|30.7|2 15|0.3|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(3.75|30.7|1.75 15|0.3|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(3.75|30.7|1.5 15|0.3|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(3.75|30.7|1.25 15|0.3|0.25)[0 0 0]{${tamfalSzin}}
+
 // második szint támfal
-cuboid(3.75|31.7|3.25 17|0.3|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(3.75|31.7|3 17|0.3|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(3.75|31.7|2.75 17|0.3|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(3.75|31.7|2.5 17|0.3|0.25)[0 0 0]{${tamfalSzin}}
-cuboid(3.75|31.7|2.25 17|0.3|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(3.75|31.7|3.25 23.25|0.3|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(3.75|31.7|3 23.25|0.3|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(3.75|31.7|2.75 23.25|0.3|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(3.75|31.7|2.5 23.25|0.3|0.25)[0 0 0]{${tamfalSzin}}
+cuboid(3.75|31.7|2.25 23.25|0.3|0.25)[0 0 0]{${tamfalSzin}}
 
 // bal hatso tamfal - hatso resz
 cuboid(0|39.7|3.25 8.5|0.3|0.25)[0 0 0]{${tamfalSzin}}
