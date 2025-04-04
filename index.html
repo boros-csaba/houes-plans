@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(0|-10|10 10|10|0)
+	camera(0|0|20 17|20|5)
 
 // első szint támfalak
 cuboid(4.55|26.75|0.25 0.3|0.5|1.1)[0 0 0]{555}
@@ -86,7 +86,10 @@ function terep() {
 // szomszéd telkek
 quadrangle(0|50|3.25 27|50|5.85 27|40|5.85 0|40|3.25){f00}
 quadrangle(-10|40|3.25 0|40|3.25 0|0|-2.2 -10|0|-2.2){f00}
-quadrangle(27|40|5.85 37|40|5.85 37|0|-0.9 27|0|-0.9){f00}
+quadrangle(27|40|5.85 37|40|5.85 37|19.65|2.7 27|19.65|2.7){f00}
+quadrangle(27|19.65|2.7 37|19.65|2.7 37|11|1.2 27|11|1.2){f00}
+quadrangle(27|11|1.2 37|11|1.2 37|6|0.2 27|6|0.2){f00}
+quadrangle(27|6|0.2 37|6|0.2 37|0|-0.9 27|0|-0.9){f00}
 
 // utca
 quadrangle(0|${-utEsTelekHatarTavolsag}|${utcaBalOldalSzint} 27|${-utEsTelekHatarTavolsag}|${utcaJobbOldalSzint} 27|${-utEsTelekHatarTavolsag-5}|${utcaJobbOldalSzint} 0|${-utEsTelekHatarTavolsag-5}|${utcaBalOldalSzint}){666}
@@ -105,7 +108,10 @@ cuboid(${5-1}|${hazBalHatsoSarokY-1.5-1.6}|0 1|1.6|0.1)[0 0 0]{555}
 cuboid(${5-1+0.1}|${hazBalHatsoSarokY-1.5-1.5}|0.4 0.4|1.4|1)[0 0 0]{fff}
 
 // jobb oldali terep
-quadrangle(26.5|7.4|0.4 27|7.4|0.4 27|33|4.7 26.5|33|4.7){${fuSzin}}
+quadrangle(26|33|4.6 27|33|4.6 27|6|0.2 26|6|0.2){${fuSzin}}
+
+//quadrangle(23.3|19.65|0 26|19.65|2.7 26|6|0.2 25.8|6|0.2){f00}
+quadrangle(23.1|22|0 26|22|2.9 26|6|0.2 25.8|6|0.2){f00}
 
 // terasz szint terep
 quadrangle(15.4|6.5|0 26|6.5|0 24|19.6|0 15.4|19.6|0){${fuSzin}}
@@ -117,13 +123,15 @@ quadrangle(18|25.1|0.25 20|23.7|1.1 20|19.6|0 20|19.6|0){0f0}
 quadrangle(3.75|31.9|2.25 19.75|31.9|2.25 19.75|27.9|2.25 3.75|27.9|2.25){${fuSzin}}
 
 // kozepso resz jobb oldala
-quadrangle(20.75|33.15|3.25 24.7|33.15|3.25 24.7|29.7|3.25 20.75|29.7|3.25){${fuSzin}}
-quadrangle(19.75|32.2|2.5 20.75|32.2|3.25 20.75|30|3.25 19.75|30|2.25){${fuSzin1p1}}
-quadrangle(24.7|32.2|3.25 26.5|32.2|4.5 26.5|30|4.1 24.7|30|3.25){${meredekFuSzin}}
-quadrangle(20.75|30|3.25 24.7|30|3.25 24.7|29|2.25 20.75|29|2.25){${fuSzin1p1}}
-quadrangle(19.75|30|2.25 20.75|30|3.25 24.7|29|2.25 19.75|29|2.25){${fuSzin1p1}}
+quadrangle(20.75|33.15|3.5 24.7|33.15|3.5 24.7|29.7|3.5 20.75|29.7|3.5){${fuSzin}}
+quadrangle(19.75|32.2|2.5 20.75|32.2|3.5 20.75|29.7|3.5 19.75|29.7|2.25){${fuSzin1p1}}
+quadrangle(24.7|33.2|3.5 26|32.9|4.6 26|29.7|4.2 24.7|29.7|3.5){${meredekFuSzin}}
+quadrangle(20.75|29.7|3.5 24.7|29.7|3.5 24.7|29|2.25 20.75|29|2.25){${fuSzin1p1}}
+quadrangle(19.75|29.7|2.25 20.75|29.7|3.5 24.7|29|2.25 19.75|29|2.25){${fuSzin1p1}}
 quadrangle(22|29|2.25 24.7|29|2.25 24.7|24.5|1.5 22|24.5|1.5){${meredekFuSzin}}
 quadrangle(20|24.5|1.5 24.7|24.5|1.5 24.7|22.2|0 20|22.2|0){${meredekFuSzin}}
+
+quadrangle(24|29.7|2.25 26|29.7|4.2 26|24.5|3.1 24.7|24.5|1.5){${fuSzin1p1}}
 
 // bal felso sarok
 cuboid(0.3|32.2|3.25 8.2|7.5|0){${fuSzin}}
@@ -137,7 +145,7 @@ quadrangle(8.5|34|3.25 18.8|34|4.1 18.8|32.2|3.25 8.5|32.2|3.25){${meredekFuSzin
 
 // jobb felso sarok
 cuboid(18.75|34|4.1 8|5.7|0)[0 0 0]{${fuSzin}}
-quadrangle(18.8|34|4.1 26.7|34|4.1 26.7|33.15|3.25 18.8|33.15|3.25){${fuSzin1p1}}
+quadrangle(18.8|34|4.1 26.7|34|4.1 26.7|33.15|3.5 18.8|33.15|3.5){${fuSzin1p1}}
 
 // kocsi beallo mellett bal oldalon
 quadrangle(15.4|6.5|0 17|6.5|0 17|4.1|0 15.4|4.1|0){${fuSzin}}
@@ -206,6 +214,10 @@ point(15|1|-2.6 "5.5m")[0 0 -90]
 
 lineseg(13.8|0.3|-2.6 13.8|1.8|-2.6){${szin}}
 point(13.8|0.6|-2.6 "1.5m")[0 0 0]
+
+// jobb oldal terep
+lineseg(26|15|2 27|15|2){${szin}}
+point(26.3|15|2 "1m")[0 0 -90]
 	`;
 }
 
@@ -375,7 +387,7 @@ function terasz() {
 // terasz
 cuboid(${x}|${y}|0 ${w}|${l}|${0.25}){${csempeSzin}}
 cuboid(${x}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
-cuboid(${x+w/2-0.07}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
+cuboid(${x+3.65}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
 cuboid(${x+w-0.15}|${y+l-0.15}|${h} 0.15|0.15|${ph}){4C2F26}
 cuboid(${x}|${y+l-0.15}|${h+ph} ${w}|0.15|0.15){4C2F26}
 cuboid(${x}|${y+0.05}|${h+ph} 0.15|${l-0.05}|0.15){4C2F26}
@@ -455,7 +467,6 @@ cuboid(22.2|6.5|0 0.1|0.1|1.1)[0 0 0]{000}
 		y -= 0.3;
 		z -= 0.16;
 		if (z < -2.8) {
-			console.log('y', y);
 			continue;
 		}
 		val += `
@@ -492,6 +503,9 @@ function konyha() {
 	return `
 // konyha
 cuboid(${x}|${y}|3.25 6|4|0.15){${csempeSzin}}
+
+cuboid(${x}|${y}|3.25 6|4|0.15){${csempeSzin}}
+
 // pergola
 cuboid(${x}|${y}|${s} 0.15|0.15|${ph}){4C2F26}
 cuboid(${x}|${y+4-0.15}|${s} 0.15|0.15|${ph}){4C2F26}
@@ -551,11 +565,9 @@ cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
 	var utcaLejtesPerMeter = (utcaJobbOldalSzint-utcaBalOldalSzint)/27;
 	var utcaSzintBealloBalOldalon = utcaJobbOldalSzint - (27-x)*utcaLejtesPerMeter; 
 	var utcaSzintBealloJobbOldalon = utcaJobbOldalSzint - (27-x-sz)*utcaLejtesPerMeter; 
-	console.log(utcaJobbOldalSzint-utcaBalOldalSzint, utcaBalOldalSzint);
 
 	var kintiMaxLejtesPerMeter = 0.005;
 	var szint = utcaSzintBealloJobbOldalon + kintiMaxLejtesPerMeter*utEsTelekHatarTavolsag;
-	console.log('szint', szint, szint+lejtes);
 	var val = `
 quadrangle(${x}|${m}|${szint+lejtes} ${x+sz}|${m}|${szint+lejtes} ${x+sz}|0|${szint} ${x}|0|${szint}){${terkoSzin}}
 quadrangle(${x}|0|${szint} ${x+sz}|0|${szint} ${x+sz}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloJobbOldalon} ${x}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloBalOldalon}){${terkoSzin}}
@@ -620,7 +632,7 @@ quadrangle(${x}|${y}|${z} ${x}|${y-w}|${z+h} ${x}|${y+w}|${z+h} ${x}|${y}|${z}){
 
 function jatszoter() {
 
-	var csuzdaX = 21.3;
+	var csuzdaX = 22.3;
 	var csuzdaY = 24.4;
 	var csuzdaZ = 1.5;
 	var val = `
@@ -665,7 +677,7 @@ cuboid(${platformX+platformW/2-0.05}|${paltformY-2.2}|${platformZ+1.9-0.1} 0.1|2
 cuboid(${platformX+platformW/2-0.05}|${paltformY-2.2}|${platformZ} 0.1|0.1|1.9){7B3F00}
 `;
 
-	var homokX = 20;
+	var homokX = 21.7;
 	var homokY = 19;
 	var homokZ = 0;
 	var w = 3;
@@ -677,6 +689,19 @@ cuboid(${homokX}|${homokY}|${homokZ} ${w}|${l}|${h}){4C2F26}
 cuboid(${homokX+0.1}|${homokY+0.1}|${homokZ+h} ${w-0.2}|${l-0.2}|0.01){ff0}
 	`;
 
+val += `
+// fal
+cuboid(24.7|22.5|0.5 0.3|0.5|1){${tamfalSzin}}
+cuboid(24.7|22|0.25 0.3|0.5|1.25){${tamfalSzin}}
+cuboid(24.7|19|0 0.3|3|1.5){${tamfalSzin}}
+cuboid(24.7|18.5|0 0.3|0.5|1.25){${tamfalSzin}}
+cuboid(24.7|18|0 0.3|0.5|1){${tamfalSzin}}
+cuboid(24.7|17.5|0 0.3|0.5|0.75){${tamfalSzin}}
+cuboid(24.7|17.5|0 0.3|0.5|0.75){${tamfalSzin}}
+cuboid(24.7|17|0 0.3|0.5|0.5){${tamfalSzin}}
+cuboid(24.7|16.5|0 0.3|0.5|0.25){${tamfalSzin}}
+	`;
+
 	return val;
 }
 
@@ -686,12 +711,12 @@ function fak() {
 	var z = 3.25;
 	var th = 2;
 	var tv = 0.15;
-	var lr = 1;
-	var lh = 2;
+	var lr = 7;
+	var lh = 15;
 
 	var val = `
 	cylinder(${x}|${y}|${z} ${th}|${tv}|${tv}){7B3F00}
-	cylinder(${x}|${y}|${z+th} ${lh}|${lr}){0f0}
+	cylinder(${x}|${y}|${z+th} ${lh}|${lr-1}|${lr}){0f0}
 	`;
 	return val;
 }
