@@ -110,11 +110,8 @@ cuboid(${5-1+0.1}|${hazBalHatsoSarokY-1.5-1.5}|0.4 0.4|1.4|1)[0 0 0]{fff}
 // jobb oldali terep
 quadrangle(26|33|4.6 27|33|4.6 27|6|0.2 26|6|0.2){${fuSzin}}
 
-//quadrangle(23.3|19.65|0 26|19.65|2.7 26|6|0.2 25.8|6|0.2){f00}
-quadrangle(23.1|22|0 26|22|2.9 26|6|0.2 25.8|6|0.2){f00}
-
 // terasz szint terep
-quadrangle(15.4|6.5|0 26|6.5|0 24|19.6|0 15.4|19.6|0){${fuSzin}}
+quadrangle(15.4|9.8|0 26|9.8|0 24|19.6|0 15.4|19.6|0){${fuSzin}}
 quadrangle(1.75|19.65|0 16|19.65|0 16|26.75|0.25 1.75|26.75|0.25){0f0}
 //quadrangle(26|7.4|0 26|7.4|0 26|27.7|3.3 24|19.6|0){0f0}
 quadrangle(18|25.1|0.25 20|23.7|1.1 20|19.6|0 20|19.6|0){0f0}
@@ -235,6 +232,9 @@ cuboid(4.8|26.25|0.25 11.4|0.3|1.1)[0 0 0]{${tamfalSzin}}
 quadrangle(16|26.25|0.25 19|24.15|0.25 19|24.15|1.35 16|26.25|1.35){${tamfalSzin}}
 quadrangle(16|26.55|0.25 19|24.4|0.25 19|24.4|1.35 16|26.55|1.35){${tamfalSzin}}
 quadrangle(16|26.25|1.35 19|24.15|1.35 19|24.4|1.35 16|26.55|1.35){${tamfalSzin}}
+
+// jobb oldali flora kosar
+quadrangle(24.5|22|0 26|22|2.9 26|6|0.2 25|6|0.2){${tamfalSzin}}
 
 // második szint szegélykő
 cuboid(3.75|28.75|2.25 10|0.1|0.1)[0 0 0]{${tamfalSzin}}
@@ -487,9 +487,9 @@ cuboid(22.2|6.5|0 0.1|0.1|1.1)[0 0 0]{000}
 function pince() {
 	var x = 18.2;
 	var y = 6.5;
-	var z = -0.8;
+	var z = 0;
 	var w = 7;
-	var h = 2;
+	var h = 2.8;
 	var m = 3;
 
 	return `
@@ -673,20 +673,14 @@ cuboid(${platformX}|${paltformY}|${platformZ+platformLabH+1.2} ${platformW/2+0.1
 `;
 
 val += `
-// hid
-cuboid(${platformX}|${paltformY+platformL}|${platformZ+platformL-0.1} 0.1|${csuzdaY-paltformY-platformL}|0.1){7B3F00}
-cuboid(${platformX+platformW-0.1}|${paltformY+platformL}|${platformZ+platformL-0.1} 0.1|${csuzdaY-paltformY-platformL}|0.1){7B3F00}
-`;
-
-val += `
 // hinta
 cuboid(${platformX+platformW/2-0.05}|${paltformY-2.2}|${platformZ+1.9-0.1} 0.1|2.2|0.1){7B3F00}
 cuboid(${platformX+platformW/2-0.05}|${paltformY-2.2}|${platformZ} 0.1|0.1|1.9){7B3F00}
 `;
 
 	var homokX = 21.7;
-	var homokY = 19;
-	var homokZ = 0;
+	var homokY = 6.5;
+	var homokZ = 0.15;
 	var w = 3;
 	var l = 3;
 	var h = 0.15;
@@ -694,19 +688,6 @@ cuboid(${platformX+platformW/2-0.05}|${paltformY-2.2}|${platformZ} 0.1|0.1|1.9){
 // homokozo
 cuboid(${homokX}|${homokY}|${homokZ} ${w}|${l}|${h}){4C2F26}
 cuboid(${homokX+0.1}|${homokY+0.1}|${homokZ+h} ${w-0.2}|${l-0.2}|0.01){ff0}
-	`;
-
-val += `
-// fal
-cuboid(24.7|22.5|0.5 0.3|0.5|1){${tamfalSzin}}
-cuboid(24.7|22|0.25 0.3|0.5|1.25){${tamfalSzin}}
-cuboid(24.7|19|0 0.3|3|1.5){${tamfalSzin}}
-cuboid(24.7|18.5|0 0.3|0.5|1.25){${tamfalSzin}}
-cuboid(24.7|18|0 0.3|0.5|1){${tamfalSzin}}
-cuboid(24.7|17.5|0 0.3|0.5|0.75){${tamfalSzin}}
-cuboid(24.7|17.5|0 0.3|0.5|0.75){${tamfalSzin}}
-cuboid(24.7|17|0 0.3|0.5|0.5){${tamfalSzin}}
-cuboid(24.7|16.5|0 0.3|0.5|0.25){${tamfalSzin}}
 	`;
 
 	return val;
