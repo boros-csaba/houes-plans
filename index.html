@@ -195,6 +195,18 @@ point(15.5|6|0.5 "2m")[0 0 -90]
 lineseg(17|6|0 17.8|6|0){${szin}}
 point(17.4|6|0 "80cm")[0 0 -90]
 
+// kocsibeallo
+lineseg(20|0|-2.7 20|7.5|-2.7){${szin}}
+point(20|4|-2.7 "7.5m")[0 0 -90]
+lineseg(17.8|3|-2.7 26.7|3|-2.7){${szin}}
+point(23|3|-2.7 "8.9m")[0 0 -90]
+
+// pince
+lineseg(17.7|7.4|-2 23.7|7.4|-2){${szin}}
+point(20|7.4|-2 "6m")[0 0 -90]
+lineseg(24|7.4|0 27|7.4|0){${szin}}
+point(25|7.4|0 "3m")[0 0 -90]
+
 // lepcsok
 lineseg(9.25|4.5|-0.15 10.85|4.5|-0.15){${szin}}
 point(10|4.5|-0.15 "1.6cm")[0 0 -90]
@@ -540,8 +552,8 @@ cuboid(${x+w-0.8}|${y}|${z-h} 0.8|0.3|${h}){${tamfalSzin}}
 	var space = 0.2;
 	for (var i = 0; i < 25; i++) {
 		res += `
-			cuboid(${x + space}|${y-1}|${z} 0.15|1|0.15){CD7F32}
-			cuboid(${x + space}|${y-1}|${z-h} 0.15|0.15|${h}){CD7F32}
+			//cuboid(${x + space}|${y-1}|${z} 0.15|1|0.15){CD7F32}
+			//cuboid(${x + space}|${y-1}|${z-h} 0.15|0.15|${h}){CD7F32}
 	`;
 		space += 0.5;
 		if (space > w - 1 - 1) {
@@ -552,8 +564,8 @@ cuboid(${x+w-0.8}|${y}|${z-h} 0.8|0.3|${h}){${tamfalSzin}}
 	var space = w - 0.4;
 	for (var i = 0; i < 25; i++) {
 		res += `
-			cuboid(${x + space}|${y-1}|${z} 0.15|1|0.15){CD7F32}
-			cuboid(${x + space}|${y-1}|${z-h} 0.15|0.15|${h}){CD7F32}
+			//cuboid(${x + space}|${y-1}|${z} 0.15|1|0.15){CD7F32}
+			//cuboid(${x + space}|${y-1}|${z-h} 0.15|0.15|${h}){CD7F32}
 	`;
 		space += 0.5;
 		if (x + space > 26.7) {
@@ -641,8 +653,8 @@ cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
 quadrangle(${x}|${m}|-2.7 ${x+sz}|${m}|-2.7 ${x+sz}|0|${szint} ${x}|0|${szint}){${terkoSzin}}
 quadrangle(${x}|0|${szint} ${x+sz}|0|${szint} ${x+sz}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloJobbOldalon} ${x}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloBalOldalon}){${terkoSzin}}
 `;
-	val += rangeRover(x + 1.25, 0.5, szint);
-	val += claMercedes(x + 7 - 2.3, 1, szint);
+	//val += rangeRover(x + 1.25, 0.5, szint);
+	//val += claMercedes(x + 7 - 2.3, 1, szint);
 
 	return val;
 }
