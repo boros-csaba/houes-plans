@@ -810,20 +810,21 @@ cuboid(${x}|${y}|${z} 2|2|0.9)[0 0 0]{7B3F00}
 cuboid(${x+0.1}|${y+0.1}|${z+0.91} 1.8|1.8|0.01)[0 0 0]{3498db}
 cuboid(${x-0.5}|${y-0.5}|${z+0.01} 3|2.6|0.01)[0 0 0]{7B3F00}
 
+cuboid(${x-0.5}|${y-0.5}|${z+0.01-0.3} ${3+faRes}|0.01|0.3)[0 0 0]{7B3F00}
+
 // kis asztal resz
-cuboid(${x-0.5+3+faRes}|${y-0.5}|${z+0.01} ${uloSzelesseg}|2.6|0.01)[0 0 0]{7B3F00}
+cuboid(${x-0.5+3+faRes}|${y}|${z+0.01} ${uloSzelesseg}|2.1|0.01)[0 0 0]{7B3F00}
 
 // fa
-cuboid(${x-0.5+3}|${y-0.5}|${z+0.01} ${faRes}|${1.5-faRes}|0.01)[0 0 0]{7B3F00}
-cuboid(${x-0.5+3}|${y-0.5+faRes+1.5}|${z+0.01} ${faRes}|${1.25-faRes}|0.01)[0 0 0]{7B3F00}
-cylinder(${x-0.5+3+faRes/2}|${y+1}|${z} ${th}|${tv}|${tv}){7B3F00}
-cylinder(${x-0.5+3+faRes/2}|${y+1}|${z+th} ${lh}|${lr-1}|${lr}){0f0}
+cuboid(${x-0.5+3}|${y-0.5+faRes}|${z+0.01} ${faRes}|${2.5-faRes}|0.01)[0 0 0]{7B3F00}
+cylinder(${x-0.5+3+faRes/2}|${y-faRes/2}|${z} ${th}|${tv}|${tv}){7B3F00}
+cylinder(${x-0.5+3+faRes/2}|${y-faRes/2}|${z+th} ${lh}|${lr-1}|${lr}){0f0}
 
 // kanape
-cuboid(${x-0.5+3}|${y-0.5}|${z+0.01-0.16} ${uloSzelesseg+faRes}|0.01|0.16)[0 0 0]{7B3F00}
-cuboid(${x-0.5+3}|${y-0.5-0.3}|${z+0.01-0.16} ${uloSzelesseg+faRes}|0.3|0.01)[0 0 0]{7B3F00}
-cuboid(${x-0.5+3}|${y-0.5-0.3}|${z+0.01-0.32} ${uloSzelesseg+faRes}|0.01|0.16)[0 0 0]{7B3F00}
-cuboid(${x-0.5+3}|${y-0.5-2-0.3}|${z+0.01-0.32} ${uloSzelesseg+faRes}|2|0.01)[0 0 0]{7B3F00}
+cuboid(${x-0.5+3+faRes}|${y}|${z+0.01-0.16} ${uloSzelesseg}|0.01|0.16)[0 0 0]{7B3F00}
+cuboid(${x-0.5+3+faRes}|${y-0.3}|${z+0.01-0.16} ${uloSzelesseg}|0.3|0.01)[0 0 0]{7B3F00}
+cuboid(${x-0.5+3+faRes}|${y-0.3}|${z+0.01-0.32} ${uloSzelesseg}|0.01|0.16)[0 0 0]{7B3F00}
+cuboid(${x-0.5+3+faRes}|${y-2-0.3}|${z+0.01-0.32} ${uloSzelesseg}|2|0.01)[0 0 0]{7B3F00}
 
 // asztal
 cylinder(${x-0.5+3+faRes+uloSzelesseg/2}|${y+1}|${z+0.6} ${0.1}|${0.6/2}|${0.6/2}){f0f}
