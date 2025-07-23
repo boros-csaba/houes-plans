@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(0|0|20 23|20|5)
+	camera(10|-25|12 23|5|0)
 
 // első szint támfalak
 cuboid(4.55|26.75|0.25 0.3|0.5|1.1)[0 0 0]{555}
@@ -57,9 +57,7 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	val += lepcsok();
 	val += hazElottiTerasz();
 	val += terasz();
-	val += pince();
 	val += konyha();
-	val += medence();
 	val += kocsibeallo();
 	val += magasAgyasok();
 	//val += jatszoter();
@@ -240,17 +238,6 @@ cuboid(16.65|4.1|-1.64 0.3|2.5|1.64)[0 0 0]{${tamfalSzin}}
 
 //kapu tamfal
 cuboid(7.65|1.8|-3 4.7|0.2|1.2)[0 0 0]{${tamfalSzin}} 
-
-// kocsibeallo lepcso tamfal
-cuboid(17.5|1.8|-2.7 0.3|5.7|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(17.5|2.2|-2.4 0.3|5.3|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(17.5|2.6|-2.1 0.3|4.9|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(17.5|3.2|-1.8 0.3|4.3|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(17.5|3.7|-1.5 0.3|3.8|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(17.5|4.4|-1.2 0.3|3.1|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(17.5|5|-0.9 0.3|2.5|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(17.5|5.5|-0.6 0.3|2|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(17.5|6.5|-0.3 0.3|1|0.3)[0 0 0]{${tamfalSzin}}
 
 // kocsibeallo tamfal
 cuboid(26.7|0|-2.7 0.3|7.5|0.3)[0 0 0]{${tamfalSzin}}
@@ -507,77 +494,10 @@ cuboid(12.35|0.3|-2.72 5.45|1.5|0.16)[0 0 0]{${csempeSzin}}
 cuboid(12.05|0.3|-2.88 0.3|1.5|0.16)[0 0 0]{${csempeSzin}}
 cuboid(11.75|0.3|-3 0.3|1.5|0.16)[0 0 0]{${csempeSzin}}
 
-//korlat
-//cuboid(17.8|6.5|0 0.01|0.1|1.1)[0 0 0]{000}
-//cuboid(17.8|4|-1.4 0.01|0.1|1.1)[0 0 0]{000}
-//cuboid(17.8|1.5|-2.8 0.01|0.1|1.1)[0 0 0]{000}
-//quadrangle(17.8|6.5|1 17.8|6.5|1.1 17.8|1.5|-1.8 17.8|1.5|-1.7){000}
-//cuboid(17.8|6.5|1 7|0.1|0.1)[0 0 0]{000}
-//cuboid(20.2|6.5|0 0.1|0.1|1.1)[0 0 0]{000}
-//cuboid(22.2|6.5|0 0.1|0.1|1.1)[0 0 0]{000}
+
 `;
 
-	var y = 6.5;
-	var z = 0;
-	for (var i = 0; i < 50; i++) {
-		y -= 0.3;
-		z -= 0.16;
-		if (z < -2.8) {
-			continue;
-		}
-		val += `
-			cuboid(17|${y}|${z} 0.8|0.3|0.16)[0 0 0]{${csempeSzin}}
-		`;
-	}
-
 	return val;
-}
-
-function pince() {
-	var y = 7.5;
-	var z = -0.3;
-	var w = 6;
-	var x = 27-3-w-0.3;
-	var h = 2.4;
-	var m = 3;
-
-	var res = `
-// pince
-cuboid(${x}|${y+m}|${z-h} ${w}|0.3|${h}){${tamfalSzin}}
-cuboid(${x-0.3}|${y}|${z-h} 0.3|${m+0.3}|${h}){${tamfalSzin}}
-cuboid(${x+w}|${y}|${z-h} 0.3|${m+0.3}|${h}){${tamfalSzin}}
-cuboid(${x-0.3}|${y}|${z-h-0.3} ${w+0.6}|${m+0.3}|0.3){${tamfalSzin}}
-cuboid(${x-0.3}|${y}|${z} ${w+0.6}|${m+0.3}|0.3){${tamfalSzin}}
-
-cuboid(${x}|${y}|${z-h} ${w-1-0.8}|0.3|${h}){${tamfalSzin}}
-cuboid(${x+w-0.8}|${y}|${z-h} 0.8|0.3|${h}){${tamfalSzin}}
-
-	`;
-	var space = 0.2;
-	for (var i = 0; i < 25; i++) {
-		res += `
-			//cuboid(${x + space}|${y-1}|${z} 0.15|1|0.15){CD7F32}
-			//cuboid(${x + space}|${y-1}|${z-h} 0.15|0.15|${h}){CD7F32}
-	`;
-		space += 0.5;
-		if (space > w - 1 - 1) {
-			break;
-		}
-	}	
-
-	var space = w - 0.4;
-	for (var i = 0; i < 25; i++) {
-		res += `
-			//cuboid(${x + space}|${y-1}|${z} 0.15|1|0.15){CD7F32}
-			//cuboid(${x + space}|${y-1}|${z-h} 0.15|0.15|${h}){CD7F32}
-	`;
-		space += 0.5;
-		if (x + space > 26.7) {
-			break;
-		}
-	}
-
-	return res;
 }
 
 function konyha() {
@@ -601,17 +521,6 @@ cuboid(${x}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
 cuboid(${x}|${y+4-0.15}|${s+ph} 6|0.15|0.15){4C2F26}
 cuboid(${x+6-0.15}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
 	`;
-}
-
-function medence() {
-	var val =  `
-// medence
-cuboid(19|35|4.11 7.5|3.5|0)[0 0 0]{${csempeSzin}}
-cuboid(19.25|35.25|4.12 5|3|0)[0 0 0]{3498db}
-`;
-	val += napagy(25, 36.4, 4.15, -40);
-	val += napagy(25, 35, 4.15, -40);
-	return val;
 }
 
 function napagy(x, y, z, r) {
@@ -644,7 +553,7 @@ cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
 
 	var sz = 8.9;
 	var m = 7.5;
-	var lejtes = 0.001 * m;
+	var lejtes = 0.05 * m;
 	var x = 17.8;
 
 	var utcaLejtesPerMeter = (utcaJobbOldalSzint-utcaBalOldalSzint)/27;
@@ -654,11 +563,11 @@ cuboid(${x}|${y+1}|${z+0.9} 1.83|2.5|0.53){fb402a}
 	var kintiMaxLejtesPerMeter = 0.005;
 	var szint = utcaSzintBealloJobbOldalon + kintiMaxLejtesPerMeter*utEsTelekHatarTavolsag;
 	var val = `
-quadrangle(${x}|${m}|-2.7 ${x+sz}|${m}|-2.7 ${x+sz}|0|${szint} ${x}|0|${szint}){${terkoSzin}}
+quadrangle(${x}|${m}|${-2.7+lejtes} ${x+sz}|${m}|${-2.7+lejtes} ${x+sz}|0|${szint} ${x}|0|${szint}){${terkoSzin}}
 quadrangle(${x}|0|${szint} ${x+sz}|0|${szint} ${x+sz}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloJobbOldalon} ${x}|${-utEsTelekHatarTavolsag}|${utcaSzintBealloBalOldalon}){${terkoSzin}}
 `;
-	//val += rangeRover(x + 1.25, 0.5, szint);
-	//val += claMercedes(x + 7 - 2.3, 1, szint);
+	val += rangeRover(x + 1.25, 0.5, szint);
+	val += claMercedes(x + 7 - 2.3, 1, szint);
 
 	return val;
 }
