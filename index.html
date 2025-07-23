@@ -65,6 +65,7 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	//val += jatszoter();
 	val += sutogeto();
 	val += nyugisarok();
+	val += falepcsoSziklakert();
 
 	input.val(val);
 }); 
@@ -666,7 +667,7 @@ function magasAgyasok() {
 
 	function magasAgyas(x, y, z) {
 		var w = 1;
-		var l = 2;
+		var l = 1.6;
 		var h = 0.8;
 
 		
@@ -680,10 +681,10 @@ cuboid(${x+0.1}|${y+0.1}|${z+h} ${w-0.2}|${l-0.2}|0.01){${fuSzin}}
 	var val = `
 // magas agyasok
 `;
-	val += magasAgyas(1, 15.5, 0);
-	val += magasAgyas(1, 13, 0);
-	val += magasAgyas(1, 10.5, 0);
-	val += magasAgyas(1, 8, 0);
+	val += magasAgyas(1.5, 14.8, 0);
+	val += magasAgyas(1.5, 13.2, 0);
+	val += magasAgyas(1.5, 11.6, 0);
+	val += magasAgyas(1.5, 10, 0);
 	return val;
 }
 
@@ -900,6 +901,11 @@ cuboid(${kapuX+0.05}|0.4|${kapuZ} 0.1|0.1|${kapuH}){000}
 cuboid(${kapuX+0.05}|0.4|${kapuZ+kapuH} 0.9|0.1|0.1){000}
 cuboid(${kapuX+0.05+0.9-0.1}|0.4|${kapuZ} 0.1|0.1|${kapuH}){000}
 	`;
+}
+
+function falepcsoSziklakert() {
+	return `
+`;
 }
 </script>
 
