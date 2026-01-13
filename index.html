@@ -17,7 +17,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(-1|-1|11 0|0|10)
+	camera(-20|-20|41 10|10|10)
 
 
 // bal terep
@@ -32,7 +32,6 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 #quadrangle(22|0.3|-1.6 27|0.3|-1.6 27|7.4|0 22|7.4|0){0f0}
 	`;
 
-	val += jatekTarolo();
 	val += terep();
 	val += meretek();
 	val += soveny();
@@ -55,6 +54,13 @@ quadrangle(0|20|0 1.8|20|0 1.8|33.1|2.25 0|33.1|2.25){0f0}
 	input.val(val);
 }); 
 
+// teljesen biztos
+
+// csak megtippelt
+var balTelekSz = 26;
+
+
+
 var tamfalSzin = '555';
 var fuSzin = '54db00';
 var meredekFuSzin = '9f9';
@@ -67,65 +73,19 @@ var utcaJobbOldalSzint = -2.5;
 var utEsTelekHatarTavolsag = 3.5;
 var hazBalHatsoSarokY = 19.65; // todo
 
-function jatekTarolo() {
-	var faszin = 'E1C16E';
-	var jatek = `
-// játék tároló
-
-
-cuboid(0|0|10 0.04|0.04|0.4)[0 0 0]{${faszin}}
-cuboid(0.04|0|10.05 0.67|0.04|0.04)[0 0 0]{${faszin}}
-cuboid(0.71|0|10 0.04|0.04|0.4)[0 0 0]{${faszin}}
-cuboid(0.75|0|10.05 0.67|0.04|0.04)[0 0 0]{${faszin}}
-cuboid(1.42|0|10 0.04|0.04|0.4)[0 0 0]{${faszin}}
-
-cuboid(0|0.04|10.03 0.04|0.67|0.04)[0 0 0]{${faszin}}
-cuboid(0|0.04|10.36 0.04|0.67|0.04)[0 0 0]{${faszin}}
-
-cuboid(0|0.71|10 0.04|0.04|0.4)[0 0 0]{${faszin}}
-cuboid(0.04|0.71|10.05 0.67|0.04|0.04)[0 0 0]{${faszin}}
-cuboid(0.71|0.71|10 0.04|0.04|0.4)[0 0 0]{${faszin}}
-cuboid(0.75|0.71|10.05 0.67|0.04|0.04)[0 0 0]{f00}
-cuboid(1.42|0.71|10 0.04|0.04|0.4)[0 0 0]{${faszin}}
-
-cuboid(1.42|0.04|10.03 0.04|0.67|0.04)[0 0 0]{${faszin}}
-cuboid(1.42|0.04|10.36 0.04|0.67|0.04)[0 0 0]{${faszin}}
-
-cuboid(-0.02|-0.02|10.03 1.5|0.02|0.09)[0 0 0]{${faszin}}
-cuboid(-0.02|-0.02|10.13 1.5|0.02|0.09)[0 0 0]{${faszin}}
-cuboid(-0.02|-0.02|10.23 1.5|0.02|0.09)[0 0 0]{${faszin}}
-cuboid(-0.02|-0.02|10.33 1.5|0.02|0.09)[0 0 0]{${faszin}}
-
-cuboid(-0.02|0.75|10.03 1.5|0.02|0.09)[0 0 0]{${faszin}}
-cuboid(-0.02|0.75|10.13 1.5|0.02|0.09)[0 0 0]{${faszin}}
-cuboid(-0.02|0.75|10.23 1.5|0.02|0.09)[0 0 0]{${faszin}}
-cuboid(-0.02|0.75|10.33 1.5|0.02|0.09)[0 0 0]{${faszin}}
-
-cuboid(-0.02|0|10.03 0.02|0.75|0.09)[0 0 0]{${faszin}}
-cuboid(-0.02|0|10.13 0.02|0.75|0.09)[0 0 0]{${faszin}}
-cuboid(-0.02|0|10.23 0.02|0.75|0.09)[0 0 0]{${faszin}}
-cuboid(-0.02|0|10.33 0.02|0.75|0.09)[0 0 0]{${faszin}}
-
-
-
-
-
-// hosszu oldalak:  4
-	`;
-	return jatek;
-}
-
 function terep() {
 	return `
 // szomszéd telkek
+quadrangle(${-balTelekSz}|50|3.25 0|50|3.25 0|40|3.25 ${-balTelekSz}|40|3.25){f00}
 quadrangle(0|50|3.25 27|50|5.85 27|40|5.85 0|40|3.25){f00}
-quadrangle(-10|40|3.25 0|40|3.25 0|0|-2.2 -10|0|-2.2){f00}
+quadrangle(${-balTelekSz-10}|40|3.25 ${-balTelekSz}|40|3.25 ${-balTelekSz}|0|-2.2 ${-balTelekSz-10}|0|-2.2){f00}
 quadrangle(27|40|5.85 37|40|5.85 37|19.65|2.7 27|19.65|2.7){f00}
 quadrangle(27|19.65|2.7 37|19.65|2.7 37|11|1.2 27|11|1.2){f00}
 quadrangle(27|11|1.2 37|11|1.2 37|6|0.2 27|6|0.2){f00}
 quadrangle(27|6|0.2 37|6|0.2 37|0|-0.9 27|0|-0.9){f00}
 
 // utca
+quadrangle(${-balTelekSz}|${-utEsTelekHatarTavolsag}|${utcaBalOldalSzint} 0|${-utEsTelekHatarTavolsag}|${utcaBalOldalSzint} 0|${-utEsTelekHatarTavolsag-5}|${utcaBalOldalSzint} ${-balTelekSz}|${-utEsTelekHatarTavolsag-5}|${utcaBalOldalSzint}){666}
 quadrangle(0|${-utEsTelekHatarTavolsag}|${utcaBalOldalSzint} 27|${-utEsTelekHatarTavolsag}|${utcaJobbOldalSzint} 27|${-utEsTelekHatarTavolsag-5}|${utcaJobbOldalSzint} 0|${-utEsTelekHatarTavolsag-5}|${utcaBalOldalSzint}){666}
 
 // villanyora
