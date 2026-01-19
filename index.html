@@ -14,10 +14,17 @@
 
 $(function onEdit() {
 
+	/*
+	TODO list:
+	- megmerni a kocsibeallot
+	- elso szint lepcso
+	- athelyezni a dezsafurdot
+	*/	
+
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(-20|-20|41 10|10|10)
+	camera(0|-20|11 10|10|00)
 
 
 // bal terep
@@ -138,9 +145,6 @@ cuboid(18.75|34|4.1 8|5.7|0)[0 0 0]{${fuSzin}}
 quadrangle(18.8|34|4.1 26.7|34|4.1 26.7|32|3.5 18.8|32|3.5){${meredekFuSzin}}
 
 // haz elott lepcsotol balra
-quadrangle(4.65|5.2|-0.3 9.3|5.2|-0.3 9.3|2.8|-0.96 4.65|2.8|-0.96){${fuSzin}}
-quadrangle(4.65|2.8|-0.96 10.9|2.8|-0.96 10.9|2|-1.9 4.65|2|-1.9){${fuSzin}}
-quadrangle(10.9|2.8|-0.96 12.35|2.8|-1.92 12.35|2|-1.9 10.9|2|-1.9){${fuSzin}}
 quadrangle(4.65|2|-1.92 7.65|2|-1.92 7.65|0.3|-2.4 4.65|0.3|-2.2){${fuSzin}}
 
 quadrangle(0|2.2|-1.85 4.65|2.2|-1.85 4.65|0.3|-2.2 0|0.3|-1.85){${fuSzin}}
@@ -221,15 +225,10 @@ function tamfalak() {
 //haz elotti tamfalak
 cuboid(2.8|5.9|-1.64 2.1|0.3|1.64)[0 0 -40]{${tamfalSzin}}
 cuboid(4.65|5.2|-1.64 4.65|0.3|1.64)[0 0 0]{${tamfalSzin}}
-cuboid(10.85|3.8|-2.7 6.1|0.3|2.7)[0 0 0]{${tamfalSzin}} 
-cuboid(16.65|4.1|-2.7 0.3|3.4|2.7)[0 0 0]{${tamfalSzin}} 
-
-//kapu tamfal
-cuboid(7.65|1.8|-3 4.7|0.2|1.2)[0 0 0]{${tamfalSzin}} 
+cuboid(10.85|3.8|-1.84 6.1|0.3|1.84)[0 0 0]{${tamfalSzin}} 
+cuboid(16.65|4.1|-1.84 0.3|3.4|1.84)[0 0 0]{${tamfalSzin}} 
 
 // kocsibeallo tamfal
-cuboid(25.7|0|-2.7 0.3|7.5|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(25.7|0|-2.4 0.3|7.5|0.3)[0 0 0]{${tamfalSzin}}
 cuboid(25.7|0|-2.1 0.3|7.5|0.3)[0 0 0]{${tamfalSzin}}
 cuboid(25.7|0|-1.8 0.3|7.5|0.3)[0 0 0]{${tamfalSzin}}
 cuboid(25.7|0|-1.5 0.3|7.5|0.3)[0 0 0]{${tamfalSzin}}
@@ -238,7 +237,7 @@ cuboid(25.7|0|-0.9 0.3|7.5|0.3)[0 0 0]{${tamfalSzin}}
 cuboid(25.7|2|-0.6 0.3|5.5|0.3)[0 0 0]{${tamfalSzin}}
 cuboid(25.7|4|-0.3 0.3|3.5|0.3)[0 0 0]{${tamfalSzin}}
 cuboid(25.7|6|0 0.3|1.5|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(16.95|7.5|-2.7 8.75|0.3|2.7)[0 0 0]{${tamfalSzin}}
+cuboid(16.95|7.5|-1.84 8.75|0.3|1.84)[0 0 0]{${tamfalSzin}}
 
 
 // alsó támfal
