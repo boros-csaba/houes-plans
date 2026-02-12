@@ -24,7 +24,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(0|10|11 25|37|00)
+	camera(-5|-15|8 10|0|-2)
 
 
 // bal terep
@@ -225,8 +225,8 @@ function tamfalak() {
 //haz elotti tamfalak
 cuboid(2.8|5.9|-1.64 2.1|0.3|1.64)[0 0 -40]{${tamfalSzin}}
 cuboid(4.65|5.2|-1.64 4.65|0.3|1.64)[0 0 0]{${tamfalSzin}}
-cuboid(10.85|3.8|-1.84 6.1|0.3|1.84)[0 0 0]{${tamfalSzin}} 
-cuboid(16.65|4.1|-1.84 0.3|3.4|1.84)[0 0 0]{${tamfalSzin}} 
+cuboid(10.85|3.8|-1.84 7.35|0.3|1.84)[0 0 0]{${tamfalSzin}} 
+cuboid(18.2|4.1|-1.84 0.3|3.4|1.84)[0 0 0]{${tamfalSzin}} 
 
 // kocsibeallo tamfal
 cuboid(25.7|0|-2.1 0.3|7.5|0.3)[0 0 0]{${tamfalSzin}}
@@ -237,7 +237,7 @@ cuboid(25.7|0|-0.9 0.3|7.5|0.3)[0 0 0]{${tamfalSzin}}
 cuboid(25.7|2|-0.6 0.3|5.5|0.3)[0 0 0]{${tamfalSzin}}
 cuboid(25.7|4|-0.3 0.3|3.5|0.3)[0 0 0]{${tamfalSzin}}
 cuboid(25.7|6|0 0.3|1.5|0.3)[0 0 0]{${tamfalSzin}}
-cuboid(16.95|7.5|-1.84 8.75|0.3|1.84)[0 0 0]{${tamfalSzin}}
+cuboid(18.5|7.5|-1.84 7.5|0.3|1.84)[0 0 0]{${tamfalSzin}}
 
 
 // alsó támfal
@@ -491,10 +491,11 @@ cuboid(12.35|2.2|-2.24 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
 cuboid(12.35|1.9|-2.4 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
 cuboid(12.35|1.6|-2.56 1.2|0.3|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(12.35|0.3|-2.72 5.45|1.5|0.16)[0 0 0]{${csempeSzin}}
+//cuboid(12.35|0.3|-2.72 5.45|1.5|0.16)[0 0 0]{${csempeSzin}}
+cuboid(9.35|0.3|-2.72 8.45|1.5|0.16)[0 0 0]{${csempeSzin}}
 
-cuboid(12.05|0.3|-2.88 0.3|1.5|0.16)[0 0 0]{${csempeSzin}}
-cuboid(11.75|0.3|-3 0.3|1.5|0.16)[0 0 0]{${csempeSzin}}
+//cuboid(12.05|0.3|-2.88 0.3|1.5|0.16)[0 0 0]{${csempeSzin}}
+//cuboid(11.75|0.3|-3 0.3|1.5|0.16)[0 0 0]{${csempeSzin}}
 
 
 `;
@@ -770,12 +771,12 @@ cuboid(${x+3.6+0.3}|${y-3.3}|${z} 0.3|3|1){fff}
 }
 
 function utcaFrontKerites() {
-	var kapuX = 9.55;
-	var kapuZ = -3;
+	var kapuX = 9.5;
+	var kapuZ = -2.5;
 	var kapuH = 1.6;
-	var tolokapuX = 18.5; //13
+	var tolokapuX = 27-1.5-7; //13
 	var tolokapuY = -2.5;
-	var tolokapuW = 5;
+	var tolokapuW = 7;
 	var tolokapuH = 1.5;
 	var keritesH = 1.8;
 	var keritesLH = 0.8;
@@ -785,27 +786,85 @@ function utcaFrontKerites() {
 //cuboid(${kapuX-1-0.9}|0.3|${kapuZ} ${11.75-(kapuX-1-0.9)}|1.5|0.01){${csempeSzin}}
 
 // kuka tarolo
-cuboid(${kapuX-1-0.9}|0.3|-3 0.9|1.5|1.25){522}
+//cuboid(${kapuX-1-0.9}|0.3|-3 0.9|1.5|1.25){522}
+
+// befele
+cuboid(0|0.25|-2.5 0.3|1.75|0.23)[0 0 0]{fff}
+cuboid(0|0.25|-2.27 0.3|1.75|0.23)[0 0 0]{fff}
+cuboid(0|0.25|-2.04 0.3|1.75|0.23)[0 0 0]{fff}
+
+cuboid(0|0.25|-1.81 0.3|1.75|0.23)[0 0 0]{fff}
+cuboid(0|0.25|-1.58 0.3|1.75|0.23)[0 0 0]{fff}
+cuboid(0|0.25|-1.35 0.3|1.75|0.23)[0 0 0]{fff}
+cuboid(0|0.25|-1.12 0.3|1.75|0.23)[0 0 0]{fff}
 
 // kerites
-cuboid(0|0.3|-2.5 0.3|0.7|${keritesH})[0 0 0]{fff}
-cuboid(0|0|-2.5 1|0.3|${keritesH})[0 0 0]{fff}
-cuboid(1|0|-2.5 2.5|0.3|${keritesLH})[0 0 0]{fff}
-cuboid(3.5|0|-2.75 0.3|0.3|${keritesH})[0 0 0]{fff}
-cuboid(3.8|0|-2.75 2.5|0.3|${keritesLH})[0 0 0]{fff}
-cuboid(6.3|0|-3 0.3|0.3|${keritesH})[0 0 0]{fff}
-cuboid(6.6|0|-3 ${kapuX-6.6-0.3}|0.3|${keritesLH})[0 0 0]{fff}
-cuboid(${kapuX-0.3}|0|-3 0.3|0.3|${keritesH})[0 0 0]{fff}
+cuboid(0|0|-2.5 9.5|0.3|0.23)[0 0 0]{fff}
+cuboid(0|0|-2.27 9.5|0.3|0.23)[0 0 0]{fff}
+cuboid(0|0|-2.04 9.5|0.3|0.23)[0 0 0]{fff}
+
+cuboid(0|0|-1.81 1.75|0.3|0.23)[0 0 0]{fff}
+cuboid(0|0|-1.58 1.75|0.3|0.23)[0 0 0]{fff}
+cuboid(0|0|-1.35 1.75|0.3|0.23)[0 0 0]{fff}
+cuboid(0|0|-1.12 1.75|0.3|0.23)[0 0 0]{fff}
+
+cuboid(3.6|0|-1.81 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(3.6|0|-1.58 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(3.6|0|-1.35 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(3.6|0|-1.12 0.3|0.3|0.23)[0 0 0]{fff}
+
+cuboid(5.6|0|-1.81 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(5.6|0|-1.58 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(5.6|0|-1.35 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(5.6|0|-1.12 0.3|0.3|0.23)[0 0 0]{fff}
+
+cuboid(7.75|0|-1.81 1.75|0.3|0.23)[0 0 0]{fff}
+cuboid(7.75|0|-1.58 1.75|0.3|0.23)[0 0 0]{fff}
+cuboid(7.75|0|-1.35 1.75|0.3|0.23)[0 0 0]{fff}
+cuboid(7.75|0|-1.12 1.75|0.3|0.23)[0 0 0]{fff}
+
+//kapu utan
+cuboid(10.5|0|-2.5 8|0.3|0.23)[0 0 0]{fff}
+cuboid(10.5|0|-2.27 8|0.3|0.23)[0 0 0]{fff}
+cuboid(10.5|0|-2.04 8|0.3|0.23)[0 0 0]{fff}
+
+cuboid(10.5|0|-1.81 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(10.5|0|-1.58 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(10.5|0|-1.35 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(10.5|0|-1.12 0.3|0.3|0.23)[0 0 0]{fff}
+
+cuboid(12.45|0|-1.81 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(12.45|0|-1.58 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(12.45|0|-1.35 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(12.45|0|-1.12 0.3|0.3|0.23)[0 0 0]{fff}
+
+cuboid(14.45|0|-1.81 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(14.45|0|-1.58 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(14.45|0|-1.35 0.3|0.3|0.23)[0 0 0]{fff}
+cuboid(14.45|0|-1.12 0.3|0.3|0.23)[0 0 0]{fff}
+
+cuboid(16.75|0|-1.81 1.75|0.3|0.23)[0 0 0]{fff}
+cuboid(16.75|0|-1.58 1.75|0.3|0.23)[0 0 0]{fff}
+cuboid(16.75|0|-1.35 1.75|0.3|0.23)[0 0 0]{fff}
+cuboid(16.75|0|-1.12 1.75|0.3|0.23)[0 0 0]{fff}
+
+// kerites alap
+cuboid(-0.15|0.45|${-3.1} 0.6|1.55|0.6){500}
+cuboid(-0.15|-0.15|${-3.1} 27.15|0.6|0.6){500}
+cuboid(13|0.45|${-3.1} 0.6|1.55|0.6){500}
+cuboid(26.4|0.45|${-3.1} 0.6|1.55|0.6){500}
 
 // tolokapu
-//cuboid(${tolokapuX}|0.4|${tolokapuY} ${tolokapuW}|0.1|0.1){000}
-//cuboid(${tolokapuX}|0.4|${tolokapuY+tolokapuH} ${tolokapuW}|0.1|0.1){000}
-//cuboid(${tolokapuX}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
-//cuboid(${tolokapuX+1}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
-//cuboid(${tolokapuX+2}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
-//cuboid(${tolokapuX+3}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
-//cuboid(${tolokapuX+4}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
-//cuboid(${tolokapuX+tolokapuW-0.1}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
+cuboid(${tolokapuX}|0.4|${tolokapuY} ${tolokapuW}|0.1|0.1){000}
+cuboid(${tolokapuX}|0.4|${tolokapuY+tolokapuH} ${tolokapuW}|0.1|0.1){000}
+cuboid(${tolokapuX}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
+cuboid(${tolokapuX+1}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
+cuboid(${tolokapuX+2}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
+cuboid(${tolokapuX+3}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
+cuboid(${tolokapuX+4}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
+cuboid(${tolokapuX+5}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
+cuboid(${tolokapuX+6}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
+cuboid(${tolokapuX+tolokapuW-0.1}|0.4|${tolokapuY} 0.1|0.1|${tolokapuH}){000}
 
 // kis kapu
 cuboid(${kapuX+0.05}|0.4|${kapuZ} 0.9|0.1|0.1){000}
