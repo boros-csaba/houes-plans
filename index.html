@@ -24,7 +24,7 @@ $(function onEdit() {
 	var input = $('#val_drawings');
 	var val = `
 
-	camera(5|0|8 -10|20|2)
+	camera(15|20|10 27|40|2)
 
 
 // bal terep
@@ -291,7 +291,7 @@ cuboid(4|39.7|3.75 4.5|0.3|0.25)[0 0 0]{${tamfalSzin}}
 cuboid(6.5|39.7|4 2|0.3|0.25)[0 0 0]{${tamfalSzin}}
 // bal hatso tamfal - jobb oldali resz -!!!!!!
 #cuboid(8.5|35|3.25 0.3|5|0.25)[0 0 0]{f00}
-#cuboid(8.5|36|3.5 0.3|4|0.25)[0 0 0]{f00}
+#cuboid(8.5|36|3.5 0.3|4|0.25)[0 0 0]{ff0}
 #cuboid(8.5|37|3.75 0.3|3|0.25)[0 0 0]{f00}
 #cuboid(8.5|38|4 0.3|2|0.25)[0 0 0]{f00}
 // bal hatso tamfal - bal oldali resz
@@ -500,25 +500,42 @@ cuboid(7.75|0.3|-2.72 10.75|1.2|0.16)[0 0 0]{${csempeSzin}}
 }
 
 function konyha() {
-	var x = 27 - 1.5 - 6;
-	var y = 40 - 4 - 1.5;
+	var x = 27 - 1.5 - 5.9;
+	var y = 40 - 3.3 - 1.5;
 	var s = 4.1 + 0.15
 	var ph = 2.3;
 	return `
 // konyha
-cuboid(${x}|${y}|4.1 6|4|0.15){${csempeSzin}}
-cuboid(${x}|${y}|4.1 6|4|0.15){${csempeSzin}}
+cuboid(${x}|${y}|4.1 5.9|3.3|0.15){${csempeSzin}}
+cuboid(${x}|${y}|4.1 5.9|3.3|0.15){${csempeSzin}}
 
 // pergola
 cuboid(${x}|${y}|${s} 0.15|0.15|${ph}){4C2F26}
-cuboid(${x}|${y+4-0.15}|${s} 0.15|0.15|${ph}){4C2F26}
-cuboid(${x+6-0.15}|${y}|${s} 0.15|0.15|${ph}){4C2F26}
-cuboid(${x+6-0.15}|${y+4-0.15}|${s} 0.15|0.15|${ph}){4C2F26}
-cuboid(${x}|${y}|${s+ph} 6|0.15|0.15){4C2F26}
-cuboid(${x}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
-cuboid(${x}|${y+4-0.15}|${s+ph} 6|0.15|0.15){4C2F26}
-cuboid(${x+6-0.15}|${y+0.15}|${s+ph} 0.15|3.7|0.15){4C2F26}
+cuboid(${x}|${y+3.3-0.15}|${s} 0.15|0.15|${ph}){4C2F26}
+cuboid(${x+5.9-0.15}|${y}|${s} 0.15|0.15|${ph}){4C2F26}
+cuboid(${x+5.9-0.15}|${y+3.3-0.15}|${s} 0.15|0.15|${ph}){4C2F26}
+cuboid(${x}|${y}|${s+ph} 5.9|0.15|0.15){4C2F26}
+cuboid(${x}|${y+0.15}|${s+ph} 0.15|3|0.15){4C2F26}
+cuboid(${x}|${y+3.3-0.15}|${s+ph} 5.9|0.15|0.15){4C2F26}
+cuboid(${x+5.9-0.15}|${y+0.15}|${s+ph} 0.15|3|0.15){4C2F26}
+
+// butor
+cuboid(${x+5.9-2.6+1}|${y}|4.25 1.6|0.6|0.9){fff}
+cuboid(${x+5.9-2.6}|${y}|5.05 1|2.4|0.1){fff}
+cuboid(${x+5.9-2.6+0.4}|${y}|4.25 0.6|2.4|0.8){fff}
+
+// asztal
+cylinder(${x+1.5}|${y+1.7}|4.7 0.1|${1.65/2}|0.1){fff}
+cylinder(${x+1.5}|${y+1.7}|4.2 0.5|0.1|0.1){fff}
+
+// pizza
+cuboid(${x+5.9-0.6}|${y+3.3-0.9}|4.25 0.6|0.9|0.9){fff}
+
+// huto
+cuboid(${x+5.9-0.6}|${y+3.3-0.9-0.6}|4.25 0.6|0.6|0.9){fff}
 	`;
+
+
 }
 
 function napagy(x, y, z, r) {
